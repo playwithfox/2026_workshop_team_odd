@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeSettings">
+    <configurations />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c2d7377-7dc0-4638-9663-aa13aec48d18" name="변경" comment="" />
+    <list default="true" id="85b9d27d-2eb7-4d5e-9478-8d4d245277f5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.My project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.My project/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,11 +21,15 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7,
+  &quot;associatedIndex&quot;: 6,
   &quot;fromUser&quot;: false
 }</component>
-  <component name="ProjectId" id="3DilzsveiBgensE25NgwjDrON1L" />
+  <component name="ProjectId" id="3DilzGtihqfYYzYezbUmKYmWpTW" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -22,30 +37,39 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "cidr.known.project.marker": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "playwithfox",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/playwithfox/OneDrive/문서/GitHub/2026_workshop_team_odd/My project",
-    "settings.editor.selected.configurable": "preferences.fileTypes",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="디폴트 작업">
-      <changelist id="6c2d7377-7dc0-4638-9663-aa13aec48d18" name="변경" comment="" />
-      <created>1778773041479</created>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="85b9d27d-2eb7-4d5e-9478-8d4d245277f5" name="Changes" comment="" />
+      <created>1778773033784</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1778773041479</updated>
-      <workItem from="1778773045831" duration="262000" />
-      <workItem from="1778773338882" duration="207000" />
-      <workItem from="1778773603021" duration="416000" />
+      <updated>1778773033784</updated>
+      <workItem from="1778773036719" duration="47000" />
+      <workItem from="1778773107929" duration="1162000" />
+      <workItem from="1778774992495" duration="36000" />
+      <workItem from="1778775048763" duration="1176000" />
     </task>
     <servers />
   </component>
@@ -77,5 +101,9 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
