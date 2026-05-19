@@ -1,0 +1,41 @@
+﻿{
+  "events": [
+    {
+      "EventID": "EVT_001",
+      "Phase": "전반부",
+      "Title": "공식 SNS 말실수",
+      "Description": "운영진 계정으로 유저를 비하하는 듯한 사담이 업로드되었습니다. 커뮤니티가 불타기 시작합니다.",
+      "ImageID": "img_sns_mistake",
+      "ConditionFlag": "None",
+      "ConditionStat": "None",
+      "ActivePopups": ["UserAnalysis", "CommunityBoard"],
+      "ChoiceIDs": ["CH_001", "CH_002"]
+    }
+  ],
+  "choices": [
+    {
+      "ChoiceID": "CH_001",
+      "ChoiceName": "즉시 사과문을 올린다.",
+      "Description": "빠른 인정이 상책입니다. 예산은 들지 않지만 여론 추이를 봐야 합니다.",
+      "StatChange_User": 0,
+      "StatChange_Public": 15,
+      "StatChange_Server": 0,
+      "StatChange_Dev": -5,
+      "StatChange_Budget": 0,
+      "ResultFlag": "None",
+      "ResultComment": "유저들: '"
+    },
+    {
+      "ChoiceID": "CH_002",
+      "ChoiceName": "글을 조용히 삭제하고 모른 척한다.",
+      "Description": "조용히 넘어가길 기도합니다. 하지만 박제되었을 확률이 높습니다.",
+      "StatChange_User": -10,
+      "StatChange_Public": -25,
+      "StatChange_Server": 0,
+      "StatChange_Dev": 0,
+      "StatChange_Budget": 0,
+      "ResultFlag": "삭제글 박제",
+      "ResultComment": "유저들: '"
+    }
+  ]
+}
