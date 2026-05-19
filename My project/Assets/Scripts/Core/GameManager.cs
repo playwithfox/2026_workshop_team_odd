@@ -29,6 +29,10 @@ public class GameManager : MonoBehaviour // Unity 오브젝트에 붙일 수 있
         Debug.Log($"{currentDay}일차 시작"); // 콘솔에 현재 날짜 시작 로그를 출력합니다.
     } // StartGame 함수의 끝입니다.
 
+    public void printlog()
+    {
+        Debug.Log("버튼 할당이 되었습니다.");
+    }
 
     public int GetStatValue(StatData stat) // 특정 지표의 현재 수치를 가져오는 함수입니다.
     { // GetStatValue 함수의 시작입니다.
