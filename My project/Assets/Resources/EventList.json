@@ -8,6 +8,9 @@
       "ImageID": "img_sns_mistake",
       "ConditionFlag": "None",
       "ConditionStat": "None",
+      "ConditionStatType": "None",
+      "ConditionOperator": "None",
+      "ConditionValue": 0,
       "ActivePopups": ["UserAnalysis", "CommunityBoard"],
       "ChoiceIDs": ["CH_001", "CH_002"]
     },
@@ -19,6 +22,9 @@
       "ImageID": "img_server_overload",
       "ConditionFlag": "None",
       "ConditionStat": "None",
+      "ConditionStatType": "None",
+      "ConditionOperator": "None",
+      "ConditionValue": 0,
       "ActivePopups": ["ServerStatus", "UserAnalysis"],
       "ChoiceIDs": ["CH_003", "CH_004"]
     },
@@ -30,6 +36,9 @@
       "ImageID": "img_bm_issue",
       "ConditionFlag": "None",
       "ConditionStat": "None",
+      "ConditionStatType": "None",
+      "ConditionOperator": "None",
+      "ConditionValue": 0,
       "ActivePopups": ["CommunityBoard", "BudgetReport"],
       "ChoiceIDs": ["CH_005", "CH_006"]
     },
@@ -41,6 +50,9 @@
       "ImageID": "img_cheater_wave",
       "ConditionFlag": "None",
       "ConditionStat": "None",
+      "ConditionStatType": "None",
+      "ConditionOperator": "None",
+      "ConditionValue": 0,
       "ActivePopups": ["UserAnalysis", "CommunityBoard"],
       "ChoiceIDs": ["CH_007", "CH_008"]
     },
@@ -52,6 +64,9 @@
       "ImageID": "img_maintenance_delay",
       "ConditionFlag": "None",
       "ConditionStat": "Server 40 이하",
+      "ConditionStatType": "Server",
+      "ConditionOperator": "<=",
+      "ConditionValue": 40,
       "ActivePopups": ["ServerStatus", "CommunityBoard"],
       "ChoiceIDs": ["CH_009", "CH_010"]
     },
@@ -63,6 +78,9 @@
       "ImageID": "img_streamer_criticism",
       "ConditionFlag": "None",
       "ConditionStat": "Public 50 이하",
+      "ConditionStatType": "Public",
+      "ConditionOperator": "<=",
+      "ConditionValue": 50,
       "ActivePopups": ["CommunityBoard", "UserAnalysis"],
       "ChoiceIDs": ["CH_011", "CH_012"]
     },
@@ -74,6 +92,9 @@
       "ImageID": "img_balance_backlash",
       "ConditionFlag": "None",
       "ConditionStat": "None",
+      "ConditionStatType": "None",
+      "ConditionOperator": "None",
+      "ConditionValue": 0,
       "ActivePopups": ["UserAnalysis", "CommunityBoard"],
       "ChoiceIDs": ["CH_013", "CH_014"]
     },
@@ -85,6 +106,9 @@
       "ImageID": "img_dev_burnout",
       "ConditionFlag": "None",
       "ConditionStat": "Dev 35 이하",
+      "ConditionStatType": "Dev",
+      "ConditionOperator": "<=",
+      "ConditionValue": 35,
       "ActivePopups": ["DevStatus", "BudgetReport"],
       "ChoiceIDs": ["CH_015", "CH_016"]
     },
@@ -96,6 +120,9 @@
       "ImageID": "img_refund_wave",
       "ConditionFlag": "BM_논란_방치",
       "ConditionStat": "Public 40 이하",
+      "ConditionStatType": "Public",
+      "ConditionOperator": "<=",
+      "ConditionValue": 40,
       "ActivePopups": ["BudgetReport", "CommunityBoard"],
       "ChoiceIDs": ["CH_017", "CH_018"]
     },
@@ -107,6 +134,9 @@
       "ImageID": "img_return_event",
       "ConditionFlag": "None",
       "ConditionStat": "User 45 이하",
+      "ConditionStatType": "User",
+      "ConditionOperator": "<=",
+      "ConditionValue": 45,
       "ActivePopups": ["UserAnalysis", "BudgetReport"],
       "ChoiceIDs": ["CH_019", "CH_020"]
     }

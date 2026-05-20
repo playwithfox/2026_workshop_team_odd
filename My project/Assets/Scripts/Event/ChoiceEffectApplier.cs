@@ -15,7 +15,12 @@ public static class ChoiceEffectApplier
         stats.Dev = ClampStat(stats.Dev + choice.StatChange_Dev);
         stats.Budget = ClampStat(stats.Budget + choice.StatChange_Budget);
 
-        if (!string.IsNullOrEmpty(choice.ResultFlag) && choice.ResultFlag != "None")
+        if (stats.Flags == null)
+        {
+            stats.Flags = new System.Collections.Generic.List<string>();
+        }
+
+        if (!string.IsNullOrEmpty(choice.ResultFlag) && choice.ResultFlag != "None" && !stats.Flags.Contains(choice.ResultFlag))
         {
             stats.Flags.Add(choice.ResultFlag);
         }

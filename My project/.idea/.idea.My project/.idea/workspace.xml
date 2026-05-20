@@ -30,8 +30,11 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Event.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Event.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Event/ChoiceData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Event/ChoiceData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Event/ChoiceData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Event/ChoiceData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Event/ChoiceEffectApplier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Event/ChoiceEffectApplier.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Event/ChoiceResult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Event/ChoiceResult.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Event/EventData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Event/EventData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Event/EventData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Event/EventData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Event/GameStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Event/GameStats.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/Lit2DSceneTemplate.scenetemplate" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Lit2DSceneTemplate.scenetemplate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/Lit2DSceneTemplate.scenetemplate.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Lit2DSceneTemplate.scenetemplate.meta" afterDir="false" />
@@ -86,10 +89,72 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Resources/EventList.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event/ChoiceEffectApplier.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event/GameStats.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.000017865410698" />
+      <entry key="S5" value="1.0627369690805548" />
+      <entry key="S10" value="1.9666461662074433" />
+      <entry key="S30" value="7.159820606741927" />
+      <entry key="S60" value="11.688594634105275" />
+      <entry key="M2" value="16.440970912849675" />
+      <entry key="M5" value="21.576582454442278" />
+      <entry key="M10" value="24.015288998849464" />
+      <entry key="M15" value="24.94226082327079" />
+      <entry key="M30" value="25.935112090339246" />
+      <entry key="H1" value="26.45814172894001" />
+      <entry key="H2" value="26.72666375388367" />
+      <entry key="H4" value="26.862723257122646" />
+      <entry key="D1" value="26.977035424424212" />
+      <entry key="W1" value="26.99671725409847" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="0.0" />
+      <entry key="M15" value="0.0" />
+      <entry key="M30" value="0.0" />
+      <entry key="H1" value="0.0" />
+      <entry key="H2" value="0.0" />
+      <entry key="H4" value="0.0" />
+      <entry key="D1" value="0.0" />
+      <entry key="W1" value="0.0" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.9460576467255959" />
+      <entry key="MS500" value="0.9889709163809315" />
+      <entry key="S2" value="0.9972490846098415" />
+      <entry key="S5" value="1.0615826883722248" />
+      <entry key="S10" value="1.9657365015979449" />
+      <entry key="S30" value="7.158855598645413" />
+      <entry key="S60" value="11.687683711890203" />
+      <entry key="M2" value="16.44005259523725" />
+      <entry key="M5" value="21.575864533405067" />
+      <entry key="M10" value="24.0148202928577" />
+      <entry key="M15" value="24.94191780269751" />
+      <entry key="M30" value="25.93492342530248" />
+      <entry key="H1" value="26.45804271766888" />
+      <entry key="H2" value="26.726613026219415" />
+      <entry key="H4" value="26.862697581003502" />
+      <entry key="D1" value="26.97703110111101" />
+      <entry key="W1" value="26.99671663539802" />
+    </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7,
@@ -177,7 +242,11 @@
       <workItem from="1778775025914" duration="20000" />
       <workItem from="1778775074246" duration="922000" />
       <workItem from="1779200632318" duration="949000" />
-      <workItem from="1779261208889" duration="1963000" />
+      <workItem from="1779261208889" duration="2246000" />
+      <workItem from="1779283832836" duration="11000" />
+      <workItem from="1779283861213" duration="28000" />
+      <workItem from="1779283958764" duration="53000" />
+      <workItem from="1779284101435" duration="462000" />
     </task>
     <servers />
   </component>
