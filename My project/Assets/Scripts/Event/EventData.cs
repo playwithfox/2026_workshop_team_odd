@@ -17,3 +17,10 @@ public class EventData
     public List<string> ActivePopups; // 강조될 지표 팝업 리스트 (예: ["UserAnalysis", "CommunityBoard"])
     public List<string> ChoiceIDs;    // 이 사건에 달릴 선택지 ID 리스트 (예: ["CH_001", "CH_002"])
 }
+
+[System.Serializable]
+public class EventListData
+{
+    public List<EventData> events;
+    public List<ChoiceData> choices;
+}
