@@ -3,11 +3,14 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
   <component name="CMakeSettings">
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c2d7377-7dc0-4638-9663-aa13aec48d18" name="변경" comment="">
+    <list default="true" id="85b9d27d-2eb7-4d5e-9478-8d4d245277f5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.My project/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.My project/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.My project/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.My project/.idea/encodings.xml" afterDir="false" />
@@ -33,6 +36,8 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Event/ChoiceResult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Event/ChoiceResult.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Event/EventData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Event/EventData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Event/EventData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Event/EventData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Event/EventDaySchedule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Event/EventDaySchedule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Event/EventRandomSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Event/EventRandomSelector.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Event/GameStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Event/GameStats.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/Lit2DSceneTemplate.scenetemplate" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Lit2DSceneTemplate.scenetemplate" afterDir="false" />
@@ -81,16 +86,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="2" />
+    <option name="cachedIndexableFilesCount" value="4" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;JMRGconch&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/playwithfox/2026_workshop_team_odd.git&quot;,
+    &quot;accountId&quot;: &quot;189f581d-97a7-4150-b8bd-d0949b3f0c56&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/EventList.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event/ChoiceEffectApplier.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event/GameStats.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/DefaultVolumeProfile.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/StatData.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
@@ -99,22 +114,22 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000000139805854" />
-      <entry key="S2" value="1.0108737999362076" />
-      <entry key="S5" value="1.1639020083929392" />
-      <entry key="S10" value="1.4140532469531188" />
-      <entry key="S30" value="2.626590800927479" />
-      <entry key="S60" value="4.967419147810877" />
-      <entry key="M2" value="8.226163639508272" />
-      <entry key="M5" value="14.547879311190103" />
-      <entry key="M10" value="22.66970232315818" />
-      <entry key="M15" value="29.25442050099169" />
-      <entry key="M30" value="42.845623399201195" />
-      <entry key="H1" value="55.72875815052117" />
-      <entry key="H2" value="64.98776380721903" />
-      <entry key="H4" value="70.59668281540455" />
-      <entry key="D1" value="75.87240161072752" />
-      <entry key="W1" value="76.83736247646718" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0" />
+      <entry key="S60" value="1.0" />
+      <entry key="M2" value="1.0" />
+      <entry key="M5" value="1.0" />
+      <entry key="M10" value="1.0" />
+      <entry key="M15" value="1.0" />
+      <entry key="M30" value="1.0" />
+      <entry key="H1" value="1.0" />
+      <entry key="H2" value="1.0" />
+      <entry key="H4" value="1.0" />
+      <entry key="D1" value="1.0" />
+      <entry key="W1" value="1.0" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -136,65 +151,65 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.8350879194283694" />
-      <entry key="MS500" value="0.9645981984105305" />
-      <entry key="S2" value="1.0018732563814154" />
-      <entry key="S5" value="1.160122462905399" />
-      <entry key="S10" value="1.4120248043989965" />
-      <entry key="S30" value="2.625744129986288" />
-      <entry key="S60" value="4.966849993909186" />
-      <entry key="M2" value="8.225778582649648" />
-      <entry key="M5" value="14.547618507092794" />
-      <entry key="M10" value="22.669456335190876" />
-      <entry key="M15" value="29.254179982525677" />
-      <entry key="M30" value="42.84541610831376" />
-      <entry key="H1" value="55.72861070852029" />
-      <entry key="H2" value="64.98767387822728" />
-      <entry key="H4" value="70.59663286846413" />
-      <entry key="D1" value="75.87239249796563" />
-      <entry key="W1" value="76.83736115394767" />
+      <entry key="MS100" value="0.9526379980439373" />
+      <entry key="MS500" value="0.9903428719330246" />
+      <entry key="S2" value="0.9975769252644544" />
+      <entry key="S5" value="0.9990300646389034" />
+      <entry key="S10" value="0.9995149146655609" />
+      <entry key="S30" value="0.9998382787361629" />
+      <entry key="S60" value="0.9999191360985962" />
+      <entry key="M2" value="0.9999595672318937" />
+      <entry key="M5" value="0.9999838266965763" />
+      <entry key="M10" value="0.9999919133155909" />
+      <entry key="M15" value="0.9999946088697945" />
+      <entry key="M30" value="0.9999973044312642" />
+      <entry key="H1" value="0.9999986522147238" />
+      <entry key="H2" value="0.9999993261071348" />
+      <entry key="H4" value="0.9999996630535106" />
+      <entry key="D1" value="0.9999999438422439" />
+      <entry key="W1" value="0.9999999919774633" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7,
+  &quot;associatedIndex&quot;: 6,
   &quot;fromUser&quot;: false
 }</component>
-  <component name="ProjectId" id="3DilzsveiBgensE25NgwjDrON1L" />
+  <component name="ProjectId" id="3DilzGtihqfYYzYezbUmKYmWpTW" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;hsmhsm&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/playwithfox/OneDrive/문서/GitHub/2026_workshop_team_odd/My project&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "hsmhsm",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.4.6f1\Editor\Unity.exe" />
-      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;C:\Users\tmdal\Documents\GitHub\2026_workshop_team_odd\My project&quot; -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
-      <option name="WORKING_DIRECTORY" value="C:\Users\tmdal\Documents\GitHub\2026_workshop_team_odd\My project" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;C:\Users\playwithfox\OneDrive\문서\GitHub\2026_workshop_team_odd\My project&quot; -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\playwithfox\OneDrive\문서\GitHub\2026_workshop_team_odd\My project" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="ENV_FILE_PATHS" value="" />
       <option name="REDIRECT_INPUT_PATH" value="" />
@@ -203,8 +218,8 @@
     </configuration>
     <configuration name="Unity 시작" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.4.6f1\Editor\Unity.exe" />
-      <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;C:\Users\tmdal\Documents\GitHub\2026_workshop_team_odd\My project&quot; -debugCodeOptimization" />
-      <option name="WORKING_DIRECTORY" value="C:\Users\tmdal\Documents\GitHub\2026_workshop_team_odd\My project" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;C:\Users\playwithfox\OneDrive\문서\GitHub\2026_workshop_team_odd\My project&quot; -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\playwithfox\OneDrive\문서\GitHub\2026_workshop_team_odd\My project" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="ENV_FILE_PATHS" value="" />
       <option name="REDIRECT_INPUT_PATH" value="" />
@@ -229,24 +244,19 @@
     </configuration>
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="디폴트 작업">
-      <changelist id="6c2d7377-7dc0-4638-9663-aa13aec48d18" name="변경" comment="" />
-      <created>1778773041479</created>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="85b9d27d-2eb7-4d5e-9478-8d4d245277f5" name="Changes" comment="" />
+      <created>1778773033784</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1778773041479</updated>
-      <workItem from="1778773045831" duration="262000" />
-      <workItem from="1778773338882" duration="207000" />
-      <workItem from="1778773603021" duration="416000" />
-      <workItem from="1778775025914" duration="20000" />
-      <workItem from="1778775074246" duration="922000" />
-      <workItem from="1779200632318" duration="949000" />
-      <workItem from="1779261208889" duration="2246000" />
-      <workItem from="1779283832836" duration="11000" />
-      <workItem from="1779283861213" duration="28000" />
-      <workItem from="1779283958764" duration="53000" />
-      <workItem from="1779284101435" duration="2702000" />
-      <workItem from="1779458538360" duration="1563000" />
+      <updated>1778773033784</updated>
+      <workItem from="1778773036719" duration="47000" />
+      <workItem from="1778773107929" duration="1162000" />
+      <workItem from="1778774992495" duration="36000" />
+      <workItem from="1778775048763" duration="1176000" />
+      <workItem from="1779021398589" duration="1004000" />
+      <workItem from="1779086914080" duration="395000" />
+      <workItem from="1779285949626" duration="11000" />
     </task>
     <servers />
   </component>
@@ -259,6 +269,7 @@
     <option name="unityProject" value="true" />
     <option name="unityProjectFolder" value="true" />
   </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
