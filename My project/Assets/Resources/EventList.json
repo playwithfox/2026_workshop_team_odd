@@ -139,6 +139,34 @@
       "ConditionValue": 45,
       "ActivePopups": ["UserAnalysis", "BudgetReport"],
       "ChoiceIDs": ["CH_019", "CH_020"]
+    },
+    {
+      "EventID": "EVT_011",
+      "Phase": "후반부",
+      "Title": "최종 업데이트 승인",
+      "Description": "운영팀이 마지막 대형 업데이트 배포 승인을 요청했습니다. 성공하면 분위기를 뒤집을 수 있지만 실패하면 남은 신뢰까지 흔들립니다.",
+      "ImageID": "img_final_update",
+      "ConditionFlag": "None",
+      "ConditionStat": "None",
+      "ConditionStatType": "None",
+      "ConditionOperator": "None",
+      "ConditionValue": 0,
+      "ActivePopups": ["DevStatus", "ServerStatus"],
+      "ChoiceIDs": ["CH_021", "CH_022"]
+    },
+    {
+      "EventID": "EVT_012",
+      "Phase": "후반부",
+      "Title": "운영 방향 최종 발표",
+      "Description": "7일간의 대응을 정리해 유저들에게 앞으로의 운영 방향을 발표해야 합니다. 마지막 메시지가 게임의 인상을 결정합니다.",
+      "ImageID": "img_final_announcement",
+      "ConditionFlag": "None",
+      "ConditionStat": "None",
+      "ConditionStatType": "None",
+      "ConditionOperator": "None",
+      "ConditionValue": 0,
+      "ActivePopups": ["CommunityBoard", "UserAnalysis"],
+      "ChoiceIDs": ["CH_023", "CH_024"]
     }
   ],
   "choices": [
@@ -381,6 +409,54 @@
       "StatChange_Budget": -12,
       "ResultFlag": "기존_유저_보상",
       "ResultComment": "유저들: '복귀보다 남아있던 사람 챙긴 건 마음에 든다.'"
+    },
+    {
+      "ChoiceID": "CH_021",
+      "ChoiceName": "안정성 검증 후 배포한다.",
+      "Description": "배포 속도는 늦어지지만 마지막 날 서버 사고를 줄일 수 있습니다.",
+      "StatChange_User": -2,
+      "StatChange_Public": 6,
+      "StatChange_Server": 15,
+      "StatChange_Dev": -8,
+      "StatChange_Budget": -6,
+      "ResultFlag": "최종업데이트_안정배포",
+      "ResultComment": "유저들: '늦어도 터지지 않는 게 낫다. 이번엔 판단 괜찮네.'"
+    },
+    {
+      "ChoiceID": "CH_022",
+      "ChoiceName": "즉시 배포해 분위기를 바꾼다.",
+      "Description": "빠른 반전은 노릴 수 있지만 서버와 개발팀에 큰 부담을 줍니다.",
+      "StatChange_User": 10,
+      "StatChange_Public": 4,
+      "StatChange_Server": -18,
+      "StatChange_Dev": -15,
+      "StatChange_Budget": -10,
+      "ResultFlag": "최종업데이트_강행",
+      "ResultComment": "유저들: '내용은 좋은데 또 불안하다. 마지막까지 서버가 문제네.'"
+    },
+    {
+      "ChoiceID": "CH_023",
+      "ChoiceName": "구체적인 개선 로드맵을 공개한다.",
+      "Description": "책임과 일정을 공개해 신뢰 회복을 노립니다. 운영 부담은 늘어납니다.",
+      "StatChange_User": 6,
+      "StatChange_Public": 18,
+      "StatChange_Server": 0,
+      "StatChange_Dev": -8,
+      "StatChange_Budget": -5,
+      "ResultFlag": "운영로드맵_공개",
+      "ResultComment": "유저들: '말뿐인지 지켜보겠지만, 적어도 뭘 고칠지는 보인다.'"
+    },
+    {
+      "ChoiceID": "CH_024",
+      "ChoiceName": "감성적인 사과문으로 마무리한다.",
+      "Description": "빠르게 여론을 달래려 하지만 구체적인 후속 계획이 부족합니다.",
+      "StatChange_User": -3,
+      "StatChange_Public": -8,
+      "StatChange_Server": 0,
+      "StatChange_Dev": 2,
+      "StatChange_Budget": 0,
+      "ResultFlag": "운영로드맵_미흡",
+      "ResultComment": "유저들: '사과는 알겠는데 그래서 다음엔 뭐가 달라지는데?'"
     }
   ]
 }
