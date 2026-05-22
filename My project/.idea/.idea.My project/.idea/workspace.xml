@@ -99,6 +99,7 @@
       <change beforePath="$PROJECT_DIR$/ProjectSettings/VersionControlSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/VersionControlSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/XRSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/XRSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.My project/.idea/indexLayout.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,6 +124,18 @@
     &quot;accountId&quot;: &quot;189f581d-97a7-4150-b8bd-d0949b3f0c56&quot;
   }
 }</component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "JMRGconch"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/playwithfox/2026_workshop_team_odd.git",
+    "accountId": "189f581d-97a7-4150-b8bd-d0949b3f0c56"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/DefaultVolumeProfile.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/EventList.json" root0="FORCE_HIGHLIGHTING" />
@@ -231,8 +244,32 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "gorong",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.4.6f1\Editor\Unity.exe" />
