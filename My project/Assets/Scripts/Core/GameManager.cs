@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour // Unity 오브젝트에 붙일 수 있
     private readonly Dictionary<StatData, int> currentStatValues = new(); // 각 지표의 현재 수치를 저장하는 딕셔너리입니다.
 
     private int currentDay = 1; // 현재 날짜를 저장합니다.
-    private bool isGameOver; // 게임 오버 상태인지 저장합니다.
+    private bool isGameOver; // 게임 오버 상태인지 저장합니다.^^
 
     public int CurrentDay => currentDay; // 다른 스크립트가 현재 날짜를 읽을 수 있게 합니다.
     public bool IsGameOver => isGameOver; // 다른 스크립트가 게임 오버 여부를 읽을 수 있게 합니다.
