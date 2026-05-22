@@ -24,10 +24,43 @@ public class GameManager : MonoBehaviour // Unity 오브젝트에 붙일 수 있
         isGameOver = false; // 게임 오버 상태를 해제합니다.
 
         gameStats.Initialize(stats); // 지표 수치를 무작위 시작값으로 초기화합니다.
+        InitializeCurrentStatValues();
 
         Debug.Log("게임 시작"); // 콘솔에 게임 시작 로그를 출력합니다.
         Debug.Log($"{currentDay}일차 시작"); // 콘솔에 현재 날짜 시작 로그를 출력합니다.
+        LogCurrentStatValues();
     } // StartGame 함수의 끝입니다.
+
+    private void InitializeCurrentStatValues()
+    {
+        currentStatValues.Clear();
+
+        if (stats == null)
+        {
+            return;
+        }
+
+        foreach (StatData stat in stats)
+        {
+            if (stat == null)
+            {
+                continue;
+            }
+
+            currentStatValues[stat] = gameStats.GetValue(stat);
+        }
+    }
+
+    private void LogCurrentStatValues()
+    {
+        foreach (var pair in currentStatValues)
+        {
+            StatData stat = pair.Key;
+            string statName = string.IsNullOrWhiteSpace(stat.DisplayName) ? stat.name : stat.DisplayName;
+
+            Debug.Log($"{statName}: {pair.Value}");
+        }
+    }
 
     public void printlog()
     {
