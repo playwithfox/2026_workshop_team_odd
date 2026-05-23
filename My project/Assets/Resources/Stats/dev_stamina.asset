@@ -17,5 +17,5 @@ MonoBehaviour:
   displayColor: {r: 1, g: 1, b: 1, a: 1}
   minValue: 0
   maxValue: 100
-  startMinValue: 80
-  startMaxValue: 100
+  startMinValue: 70
+  startMaxValue: 80
