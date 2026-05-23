@@ -18,4 +18,4 @@ MonoBehaviour:
   minValue: 0
   maxValue: 100
   startMinValue: 80
-  startMaxValue: 100
+  startMaxValue: 90
