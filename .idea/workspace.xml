@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeSettings">
+    <configurations />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cec1bd4c-07bb-44bd-9081-38d5204bf6fd" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/.idea/.idea.My project/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/.idea/.idea.My project/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/.idea/.idea.My project/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/.idea/.idea.My project/.idea/projectSettingsUpdater.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/.idea/.idea.My project/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/.idea/.idea.My project/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/IconImage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/IconImage/budget_test.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/IconImage/budget_test.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/IconImage/community_test.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/IconImage/community_test.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/IconImage/developer_test.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/IconImage/developer_test.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/IconImage/server_test.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/IconImage/server_test.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/IconImage/user_test.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/IconImage/user_test.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +30,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="37467" />
+    <option name="cachedIndexableFilesCount" value="37440" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -68,6 +78,11 @@
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;gorong&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -88,6 +103,8 @@
       <workItem from="1779484652942" duration="22000" />
       <workItem from="1779484699419" duration="2000" />
       <workItem from="1779484858343" duration="155000" />
+      <workItem from="1779626537142" duration="1218000" />
+      <workItem from="1779716167662" duration="1574000" />
     </task>
     <servers />
   </component>
