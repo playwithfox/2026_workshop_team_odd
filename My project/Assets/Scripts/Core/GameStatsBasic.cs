@@ -1,7 +1,7 @@
 using System.Collections.Generic; // Dictionary, IReadOnlyList 같은 컬렉션 자료형을 사용하기 위해 필요합니다.
 using UnityEngine; // Unity의 Random, Mathf 기능을 사용하기 위해 필요합니다.
 
-public class GameStats // 게임 진행 중 지표들의 현재 값을 관리하는 클래스입니다.
+public class GameStatsBasic // 게임 진행 중 지표들의 현재 값을 관리하는 클래스입니다.
 {
     private readonly Dictionary<StatData, int> currentValues = new(); // 각 지표 데이터와 현재 수치를 함께 저장하는 Dictionary입니다.
 
