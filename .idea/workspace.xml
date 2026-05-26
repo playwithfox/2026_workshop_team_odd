@@ -10,27 +10,14 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cec1bd4c-07bb-44bd-9081-38d5204bf6fd" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/IconImage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/IconImage/budget_test.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/IconImage/budget_test.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/IconImage/community_test.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/IconImage/community_test.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/IconImage/developer_test.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/IconImage/developer_test.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/IconImage/server_test.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/IconImage/server_test.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/IconImage/user_test.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/IconImage/user_test.png.meta" beforeDir="false" />
-    </list>
+    <list default="true" id="cec1bd4c-07bb-44bd-9081-38d5204bf6fd" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="37440" />
+    <option name="cachedIndexableFilesCount" value="38031" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,6 +35,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/My project/Assets/Scripts/Core/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/My project/Assets/Scripts/UI/SimpleScreenController.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
@@ -105,6 +93,7 @@
       <workItem from="1779484858343" duration="155000" />
       <workItem from="1779626537142" duration="1218000" />
       <workItem from="1779716167662" duration="1574000" />
+      <workItem from="1779806367894" duration="768000" />
     </task>
     <servers />
   </component>
