@@ -6,38 +6,21 @@ public class GameStats
 {
     private const int MinStatValue = 0;
     private const int MaxStatValue = 100;
-
-    public int User = 50;
-    public int Public = 50;
-    public int Server = 50;
-    public int Dev = 50;
-    public int Budget = 50;
+    public int User = 90;
+    public int Public = 55;
+    public int Server = 80;
+    public int Dev = 75;
+    public int Budget = 85;
     public List<string> Flags = new List<string>();
 
-    public void InitializeRandom(int startMinValue = 45, int startMaxValue = 65)
+    public void InitializeRandom()
     {
-        startMinValue = Mathf.Clamp(startMinValue, MinStatValue, MaxStatValue);
-        startMaxValue = Mathf.Clamp(startMaxValue, MinStatValue, MaxStatValue);
-
-        if (startMaxValue < startMinValue)
-        {
-            startMaxValue = startMinValue;
-        }
-
-        User = GetRandomStatValue(startMinValue, startMaxValue);
-        Public = GetRandomStatValue(startMinValue, startMaxValue);
-        Server = GetRandomStatValue(startMinValue, startMaxValue);
-        Dev = GetRandomStatValue(startMinValue, startMaxValue);
-        Budget = GetRandomStatValue(startMinValue, startMaxValue);
-
-        if (Flags == null)
-        {
-            Flags = new List<string>();
-        }
-        else
-        {
-            Flags.Clear();
-        }
+        User = GetRandomStatValue(85, 95);
+        Public = GetRandomStatValue(50, 60);
+        Server = GetRandomStatValue(75, 85);
+        Dev = GetRandomStatValue(70, 80);
+        Budget = GetRandomStatValue(80, 90);
+        Flags.Clear();
     }
 
     private int GetRandomStatValue(int minValue, int maxValue)
