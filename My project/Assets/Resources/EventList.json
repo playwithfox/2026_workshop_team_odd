@@ -1,462 +1,1263 @@
-{
-  "events": [
-    {
-      "EventID": "EVT_001",
-      "Phase": "전반부",
-      "Title": "공식 SNS 말실수",
-      "Description": "운영진 계정으로 유저를 비하하는 듯한 사담이 업로드되었습니다. 커뮤니티가 불타기 시작합니다.",
-      "ImageID": "img_sns_mistake",
-      "ConditionFlag": "None",
-      "ConditionStat": "None",
-      "ConditionStatType": "None",
-      "ConditionOperator": "None",
-      "ConditionValue": 0,
-      "ActivePopups": ["UserAnalysis", "CommunityBoard"],
-      "ChoiceIDs": ["CH_001", "CH_002"]
-    },
-    {
-      "EventID": "EVT_002",
-      "Phase": "전반부",
-      "Title": "출시 첫날 서버 폭주",
-      "Description": "예상보다 많은 접속자가 몰리며 로그인 대기열이 길어졌습니다. 첫인상이 흔들리고 있습니다.",
-      "ImageID": "img_server_overload",
-      "ConditionFlag": "None",
-      "ConditionStat": "None",
-      "ConditionStatType": "None",
-      "ConditionOperator": "None",
-      "ConditionValue": 0,
-      "ActivePopups": ["ServerStatus", "UserAnalysis"],
-      "ChoiceIDs": ["CH_003", "CH_004"]
-    },
-    {
-      "EventID": "EVT_003",
-      "Phase": "전반부",
-      "Title": "BM 논란",
-      "Description": "새 패키지가 성능에 직접 영향을 준다는 분석글이 퍼졌습니다. 과금 유도 논란이 커지고 있습니다.",
-      "ImageID": "img_bm_issue",
-      "ConditionFlag": "None",
-      "ConditionStat": "None",
-      "ConditionStatType": "None",
-      "ConditionOperator": "None",
-      "ConditionValue": 0,
-      "ActivePopups": ["CommunityBoard", "BudgetReport"],
-      "ChoiceIDs": ["CH_005", "CH_006"]
-    },
-    {
-      "EventID": "EVT_004",
-      "Phase": "전반부",
-      "Title": "핵 유저 증가",
-      "Description": "랭킹전 상위권에서 비정상 플레이 의심 사례가 늘어났습니다. 정상 유저들이 이탈 조짐을 보입니다.",
-      "ImageID": "img_cheater_wave",
-      "ConditionFlag": "None",
-      "ConditionStat": "None",
-      "ConditionStatType": "None",
-      "ConditionOperator": "None",
-      "ConditionValue": 0,
-      "ActivePopups": ["UserAnalysis", "CommunityBoard"],
-      "ChoiceIDs": ["CH_007", "CH_008"]
-    },
-    {
-      "EventID": "EVT_005",
-      "Phase": "중반부",
-      "Title": "긴급 점검 연장",
-      "Description": "점검이 두 번 연장되었습니다. 보상 공지가 늦어지자 유저들의 불만이 쌓이고 있습니다.",
-      "ImageID": "img_maintenance_delay",
-      "ConditionFlag": "None",
-      "ConditionStat": "Server 40 이하",
-      "ConditionStatType": "Server",
-      "ConditionOperator": "<=",
-      "ConditionValue": 40,
-      "ActivePopups": ["ServerStatus", "CommunityBoard"],
-      "ChoiceIDs": ["CH_009", "CH_010"]
-    },
-    {
-      "EventID": "EVT_006",
-      "Phase": "중반부",
-      "Title": "스트리머 공개 비판",
-      "Description": "대형 스트리머가 방송 중 운영 미숙을 강하게 비판했습니다. 클립이 빠르게 퍼지고 있습니다.",
-      "ImageID": "img_streamer_criticism",
-      "ConditionFlag": "None",
-      "ConditionStat": "Public 50 이하",
-      "ConditionStatType": "Public",
-      "ConditionOperator": "<=",
-      "ConditionValue": 50,
-      "ActivePopups": ["CommunityBoard", "UserAnalysis"],
-      "ChoiceIDs": ["CH_011", "CH_012"]
-    },
-    {
-      "EventID": "EVT_007",
-      "Phase": "중반부",
-      "Title": "밸런스 패치 역풍",
-      "Description": "인기 캐릭터가 크게 약화되자 유저들이 환불과 롤백을 요구하고 있습니다.",
-      "ImageID": "img_balance_backlash",
-      "ConditionFlag": "None",
-      "ConditionStat": "None",
-      "ConditionStatType": "None",
-      "ConditionOperator": "None",
-      "ConditionValue": 0,
-      "ActivePopups": ["UserAnalysis", "CommunityBoard"],
-      "ChoiceIDs": ["CH_013", "CH_014"]
-    },
-    {
-      "EventID": "EVT_008",
-      "Phase": "후반부",
-      "Title": "개발팀 번아웃",
-      "Description": "잦은 긴급 대응으로 개발팀 체력이 바닥났습니다. 내부 일정이 밀리기 시작합니다.",
-      "ImageID": "img_dev_burnout",
-      "ConditionFlag": "None",
-      "ConditionStat": "Dev 35 이하",
-      "ConditionStatType": "Dev",
-      "ConditionOperator": "<=",
-      "ConditionValue": 35,
-      "ActivePopups": ["DevStatus", "BudgetReport"],
-      "ChoiceIDs": ["CH_015", "CH_016"]
-    },
-    {
-      "EventID": "EVT_009",
-      "Phase": "후반부",
-      "Title": "환불 요구 확산",
-      "Description": "유저들이 단체 환불 인증을 올리고 있습니다. 예산과 여론이 동시에 흔들립니다.",
-      "ImageID": "img_refund_wave",
-      "ConditionFlag": "BM_논란_방치",
-      "ConditionStat": "Public 40 이하",
-      "ConditionStatType": "Public",
-      "ConditionOperator": "<=",
-      "ConditionValue": 40,
-      "ActivePopups": ["BudgetReport", "CommunityBoard"],
-      "ChoiceIDs": ["CH_017", "CH_018"]
-    },
-    {
-      "EventID": "EVT_010",
-      "Phase": "후반부",
-      "Title": "복귀 이벤트 제안",
-      "Description": "운영팀이 대규모 복귀 이벤트를 제안했습니다. 예산은 많이 들지만 분위기를 바꿀 기회입니다.",
-      "ImageID": "img_return_event",
-      "ConditionFlag": "None",
-      "ConditionStat": "User 45 이하",
-      "ConditionStatType": "User",
-      "ConditionOperator": "<=",
-      "ConditionValue": 45,
-      "ActivePopups": ["UserAnalysis", "BudgetReport"],
-      "ChoiceIDs": ["CH_019", "CH_020"]
-    },
-    {
-      "EventID": "EVT_011",
-      "Phase": "후반부",
-      "Title": "최종 업데이트 승인",
-      "Description": "운영팀이 마지막 대형 업데이트 배포 승인을 요청했습니다. 성공하면 분위기를 뒤집을 수 있지만 실패하면 남은 신뢰까지 흔들립니다.",
-      "ImageID": "img_final_update",
-      "ConditionFlag": "None",
-      "ConditionStat": "None",
-      "ConditionStatType": "None",
-      "ConditionOperator": "None",
-      "ConditionValue": 0,
-      "ActivePopups": ["DevStatus", "ServerStatus"],
-      "ChoiceIDs": ["CH_021", "CH_022"]
-    },
-    {
-      "EventID": "EVT_012",
-      "Phase": "후반부",
-      "Title": "운영 방향 최종 발표",
-      "Description": "7일간의 대응을 정리해 유저들에게 앞으로의 운영 방향을 발표해야 합니다. 마지막 메시지가 게임의 인상을 결정합니다.",
-      "ImageID": "img_final_announcement",
-      "ConditionFlag": "None",
-      "ConditionStat": "None",
-      "ConditionStatType": "None",
-      "ConditionOperator": "None",
-      "ConditionValue": 0,
-      "ActivePopups": ["CommunityBoard", "UserAnalysis"],
-      "ChoiceIDs": ["CH_023", "CH_024"]
-    }
-  ],
-  "choices": [
-    {
-      "ChoiceID": "CH_001",
-      "ChoiceName": "즉시 사과문을 올린다.",
-      "Description": "빠른 인정이 상책입니다. 예산은 들지 않지만 운영팀 피로가 늘어납니다.",
-      "StatChange_User": 0,
-      "StatChange_Public": 15,
-      "StatChange_Server": 0,
-      "StatChange_Dev": -5,
-      "StatChange_Budget": 0,
-      "ResultFlag": "None",
-      "ResultComment": "유저들: '그래도 바로 인정한 건 낫다. 다음부터 조심해라.'"
-    },
-    {
-      "ChoiceID": "CH_002",
-      "ChoiceName": "글을 삭제하고 모른 척한다.",
-      "Description": "조용히 넘어가길 기대합니다. 하지만 이미 캡처가 퍼졌을 수 있습니다.",
-      "StatChange_User": -10,
-      "StatChange_Public": -25,
-      "StatChange_Server": 0,
-      "StatChange_Dev": 0,
-      "StatChange_Budget": 0,
-      "ResultFlag": "삭제글_박제",
-      "ResultComment": "유저들: '삭제하면 끝인 줄 아나? 캡처 다 떠놨다.'"
-    },
-    {
-      "ChoiceID": "CH_003",
-      "ChoiceName": "서버를 즉시 증설한다.",
-      "Description": "비용은 크지만 접속 문제를 빠르게 줄일 수 있습니다.",
-      "StatChange_User": 8,
-      "StatChange_Public": 10,
-      "StatChange_Server": 20,
-      "StatChange_Dev": -5,
-      "StatChange_Budget": -20,
-      "ResultFlag": "None",
-      "ResultComment": "유저들: '돈 쓰니까 바로 나아지네. 출시 때부터 이랬어야지.'"
-    },
-    {
-      "ChoiceID": "CH_004",
-      "ChoiceName": "대기열 공지만 올린다.",
-      "Description": "예산은 아끼지만 접속 문제 자체는 오래 남습니다.",
-      "StatChange_User": -12,
-      "StatChange_Public": -15,
-      "StatChange_Server": -5,
-      "StatChange_Dev": 0,
-      "StatChange_Budget": 5,
-      "ResultFlag": "서버_불만_누적",
-      "ResultComment": "유저들: '공지 읽으려고 게임 산 거 아니다. 접속을 시켜달라고.'"
-    },
-    {
-      "ChoiceID": "CH_005",
-      "ChoiceName": "패키지 능력치를 낮춘다.",
-      "Description": "매출 기대치는 줄지만 과금 논란을 빠르게 완화합니다.",
-      "StatChange_User": 5,
-      "StatChange_Public": 18,
-      "StatChange_Server": 0,
-      "StatChange_Dev": -8,
-      "StatChange_Budget": -12,
-      "ResultFlag": "BM_수정",
-      "ResultComment": "유저들: '이 정도면 일단 지켜본다. 다음 BM도 이렇게 내라.'"
-    },
-    {
-      "ChoiceID": "CH_006",
-      "ChoiceName": "그대로 출시한다.",
-      "Description": "단기 예산은 확보되지만 여론 악화를 감수해야 합니다.",
-      "StatChange_User": -15,
-      "StatChange_Public": -25,
-      "StatChange_Server": 0,
-      "StatChange_Dev": 0,
-      "StatChange_Budget": 25,
-      "ResultFlag": "BM_논란_방치",
-      "ResultComment": "유저들: '게임이 아니라 지갑 테스트였네. 바로 접는다.'"
-    },
-    {
-      "ChoiceID": "CH_007",
-      "ChoiceName": "대규모 제재 명단을 공개한다.",
-      "Description": "핵 대응 의지를 보여주지만 검수와 운영 부담이 큽니다.",
-      "StatChange_User": 10,
-      "StatChange_Public": 15,
-      "StatChange_Server": 0,
-      "StatChange_Dev": -12,
-      "StatChange_Budget": -5,
-      "ResultFlag": "핵_제재_공개",
-      "ResultComment": "유저들: '명단 보니까 속이 시원하다. 계속 잡아라.'"
-    },
-    {
-      "ChoiceID": "CH_008",
-      "ChoiceName": "조용히 탐지 로직만 강화한다.",
-      "Description": "장기 대응에는 좋지만 당장 보이는 변화가 적습니다.",
-      "StatChange_User": -3,
-      "StatChange_Public": -8,
-      "StatChange_Server": 5,
-      "StatChange_Dev": -6,
-      "StatChange_Budget": -8,
-      "ResultFlag": "핵_대응_비공개",
-      "ResultComment": "유저들: '잡고 있는 건 맞냐? 랭킹이 아직도 이상한데.'"
-    },
-    {
-      "ChoiceID": "CH_009",
-      "ChoiceName": "보상과 연장 사유를 함께 공개한다.",
-      "Description": "예산은 들지만 유저가 납득할 정보를 제공합니다.",
-      "StatChange_User": 4,
-      "StatChange_Public": 12,
-      "StatChange_Server": 10,
-      "StatChange_Dev": -6,
-      "StatChange_Budget": -15,
-      "ResultFlag": "None",
-      "ResultComment": "유저들: '보상도 있고 이유도 설명했네. 이번은 넘어간다.'"
-    },
-    {
-      "ChoiceID": "CH_010",
-      "ChoiceName": "점검 완료 후 일괄 공지한다.",
-      "Description": "개발 집중도는 유지하지만 기다리는 유저의 불만이 커집니다.",
-      "StatChange_User": -8,
-      "StatChange_Public": -18,
-      "StatChange_Server": 8,
-      "StatChange_Dev": 3,
-      "StatChange_Budget": 0,
-      "ResultFlag": "점검_불신",
-      "ResultComment": "유저들: '몇 시간째 말이 없냐. 운영이 제일 큰 버그다.'"
-    },
-    {
-      "ChoiceID": "CH_011",
-      "ChoiceName": "방송 이후 공식 간담회를 연다.",
-      "Description": "공개 질의응답으로 신뢰를 회복할 기회를 만듭니다.",
-      "StatChange_User": 6,
-      "StatChange_Public": 16,
-      "StatChange_Server": 0,
-      "StatChange_Dev": -10,
-      "StatChange_Budget": -8,
-      "ResultFlag": "공식_간담회",
-      "ResultComment": "유저들: '대답이 완벽하진 않아도 얼굴 보이고 말한 건 인정.'"
-    },
-    {
-      "ChoiceID": "CH_012",
-      "ChoiceName": "광고 계약으로 대응한다.",
-      "Description": "비판 여론을 덮으려 하지만 진정성이 의심받을 수 있습니다.",
-      "StatChange_User": -5,
-      "StatChange_Public": -14,
-      "StatChange_Server": 0,
-      "StatChange_Dev": 0,
-      "StatChange_Budget": -18,
-      "ResultFlag": "광고_역풍",
-      "ResultComment": "유저들: '비판하니까 광고비로 입 막으려는 거냐?'"
-    },
-    {
-      "ChoiceID": "CH_013",
-      "ChoiceName": "핫픽스로 일부 롤백한다.",
-      "Description": "빠르게 불만을 줄이지만 밸런스 작업을 다시 해야 합니다.",
-      "StatChange_User": 8,
-      "StatChange_Public": 12,
-      "StatChange_Server": 0,
-      "StatChange_Dev": -12,
-      "StatChange_Budget": -4,
-      "ResultFlag": "밸런스_부분_롤백",
-      "ResultComment": "유저들: '완전 롤백은 아니지만 방향은 맞다. 수치 더 봐라.'"
-    },
-    {
-      "ChoiceID": "CH_014",
-      "ChoiceName": "패치 방향을 유지한다.",
-      "Description": "장기 밸런스를 지키지만 당장의 유저 반발이 큽니다.",
-      "StatChange_User": -12,
-      "StatChange_Public": -18,
-      "StatChange_Server": 0,
-      "StatChange_Dev": 4,
-      "StatChange_Budget": 0,
-      "ResultFlag": "밸런스_강행",
-      "ResultComment": "유저들: '소통한다더니 결국 마음대로 하네. 주캐 망했다.'"
-    },
-    {
-      "ChoiceID": "CH_015",
-      "ChoiceName": "일정을 줄이고 휴식일을 준다.",
-      "Description": "업데이트 속도는 늦어지지만 개발팀 체력을 회복합니다.",
-      "StatChange_User": -3,
-      "StatChange_Public": 2,
-      "StatChange_Server": 0,
-      "StatChange_Dev": 22,
-      "StatChange_Budget": -5,
-      "ResultFlag": "개발팀_회복",
-      "ResultComment": "유저들: '업데이트 늦는 건 아쉽지만 사람이 먼저긴 하지.'"
-    },
-    {
-      "ChoiceID": "CH_016",
-      "ChoiceName": "외주 인력을 긴급 투입한다.",
-      "Description": "속도는 유지하지만 예산 부담과 품질 리스크가 생깁니다.",
-      "StatChange_User": 2,
-      "StatChange_Public": -4,
-      "StatChange_Server": -3,
-      "StatChange_Dev": 8,
-      "StatChange_Budget": -25,
-      "ResultFlag": "외주_품질_리스크",
-      "ResultComment": "유저들: '업데이트는 빨라졌는데 버그가 같이 늘어난 느낌이다.'"
-    },
-    {
-      "ChoiceID": "CH_017",
-      "ChoiceName": "조건부 환불안을 발표한다.",
-      "Description": "예산 손실은 크지만 사태 확산을 막을 수 있습니다.",
-      "StatChange_User": 5,
-      "StatChange_Public": 14,
-      "StatChange_Server": 0,
-      "StatChange_Dev": -6,
-      "StatChange_Budget": -30,
-      "ResultFlag": "환불안_발표",
-      "ResultComment": "유저들: '늦었지만 기준을 공개한 건 다행이다.'"
-    },
-    {
-      "ChoiceID": "CH_018",
-      "ChoiceName": "약관상 불가 입장을 낸다.",
-      "Description": "예산은 지키지만 여론 악화와 이탈을 감수해야 합니다.",
-      "StatChange_User": -18,
-      "StatChange_Public": -28,
-      "StatChange_Server": 0,
-      "StatChange_Dev": 0,
-      "StatChange_Budget": 5,
-      "ResultFlag": "환불_거부",
-      "ResultComment": "유저들: '돈 받을 땐 빠르고 책임질 땐 약관이냐.'"
-    },
-    {
-      "ChoiceID": "CH_019",
-      "ChoiceName": "복귀 보상 이벤트를 연다.",
-      "Description": "큰 비용을 들여 이탈 유저를 다시 불러옵니다.",
-      "StatChange_User": 18,
-      "StatChange_Public": 8,
-      "StatChange_Server": -5,
-      "StatChange_Dev": -5,
-      "StatChange_Budget": -22,
-      "ResultFlag": "복귀_이벤트",
-      "ResultComment": "유저들: '보상 때문에 들어왔는데 생각보다 할 만해졌네.'"
-    },
-    {
-      "ChoiceID": "CH_020",
-      "ChoiceName": "기존 유저 보상만 지급한다.",
-      "Description": "복귀 효과는 작지만 남아있는 유저의 박탈감을 줄입니다.",
-      "StatChange_User": 5,
-      "StatChange_Public": 10,
-      "StatChange_Server": 0,
-      "StatChange_Dev": -2,
-      "StatChange_Budget": -12,
-      "ResultFlag": "기존_유저_보상",
-      "ResultComment": "유저들: '복귀보다 남아있던 사람 챙긴 건 마음에 든다.'"
-    },
-    {
-      "ChoiceID": "CH_021",
-      "ChoiceName": "안정성 검증 후 배포한다.",
-      "Description": "배포 속도는 늦어지지만 마지막 날 서버 사고를 줄일 수 있습니다.",
-      "StatChange_User": -2,
-      "StatChange_Public": 6,
-      "StatChange_Server": 15,
-      "StatChange_Dev": -8,
-      "StatChange_Budget": -6,
-      "ResultFlag": "최종업데이트_안정배포",
-      "ResultComment": "유저들: '늦어도 터지지 않는 게 낫다. 이번엔 판단 괜찮네.'"
-    },
-    {
-      "ChoiceID": "CH_022",
-      "ChoiceName": "즉시 배포해 분위기를 바꾼다.",
-      "Description": "빠른 반전은 노릴 수 있지만 서버와 개발팀에 큰 부담을 줍니다.",
-      "StatChange_User": 10,
-      "StatChange_Public": 4,
-      "StatChange_Server": -18,
-      "StatChange_Dev": -15,
-      "StatChange_Budget": -10,
-      "ResultFlag": "최종업데이트_강행",
-      "ResultComment": "유저들: '내용은 좋은데 또 불안하다. 마지막까지 서버가 문제네.'"
-    },
-    {
-      "ChoiceID": "CH_023",
-      "ChoiceName": "구체적인 개선 로드맵을 공개한다.",
-      "Description": "책임과 일정을 공개해 신뢰 회복을 노립니다. 운영 부담은 늘어납니다.",
-      "StatChange_User": 6,
-      "StatChange_Public": 18,
-      "StatChange_Server": 0,
-      "StatChange_Dev": -8,
-      "StatChange_Budget": -5,
-      "ResultFlag": "운영로드맵_공개",
-      "ResultComment": "유저들: '말뿐인지 지켜보겠지만, 적어도 뭘 고칠지는 보인다.'"
-    },
-    {
-      "ChoiceID": "CH_024",
-      "ChoiceName": "감성적인 사과문으로 마무리한다.",
-      "Description": "빠르게 여론을 달래려 하지만 구체적인 후속 계획이 부족합니다.",
-      "StatChange_User": -3,
-      "StatChange_Public": -8,
-      "StatChange_Server": 0,
-      "StatChange_Dev": 2,
-      "StatChange_Budget": 0,
-      "ResultFlag": "운영로드맵_미흡",
-      "ResultComment": "유저들: '사과는 알겠는데 그래서 다음엔 뭐가 달라지는데?'"
-    }
-  ]
+﻿{
+    "events":  [
+                   {
+                       "EventID":  "EVT_001",
+                       "Phase":  "전반부",
+                       "Title":  "공식 SNS 말실수",
+                       "Description":  "공식 SNS 계정이 유저 불만글에 장난식 답글을 달았다. 의도는 가벼운 농담이었지만, 커뮤니티에서는 운영진이 유저를 조롱한다는 반응이 퍼지고 있다.",
+                       "ImageID":  "1000002077",
+                       "ConditionFlag":  "None",
+                       "ConditionStat":  "None",
+                       "ConditionStatType":  "None",
+                       "ConditionOperator":  "None",
+                       "ConditionValue":  0,
+                       "ActivePopups":  [
+                                            "CommunityBoard",
+                                            "UserAnalysis"
+                                        ],
+                       "ChoiceIDs":  [
+                                         "CH_001",
+                                         "CH_002",
+                                         "CH_003"
+                                     ]
+                   },
+                   {
+                       "EventID":  "EVT_002",
+                       "Phase":  "전반부",
+                       "Title":  "점검 보상 부족 논란",
+                       "Description":  "예정된 점검이 3시간 연장되었지만 보상이 너무 적다는 불만이 커지고 있다. 커뮤니티에서는 운영이 유저 시간을 너무 가볍게 본다는 글이 추천을 받고 있다.",
+                       "ImageID":  "1000002078",
+                       "ConditionFlag":  "None",
+                       "ConditionStat":  "None",
+                       "ConditionStatType":  "None",
+                       "ConditionOperator":  "None",
+                       "ConditionValue":  0,
+                       "ActivePopups":  [
+                                            "CommunityBoard",
+                                            "BudgetReport"
+                                        ],
+                       "ChoiceIDs":  [
+                                         "CH_004",
+                                         "CH_005",
+                                         "CH_006"
+                                     ]
+                   },
+                   {
+                       "EventID":  "EVT_003",
+                       "Phase":  "전반부",
+                       "Title":  "서버 접속 지연",
+                       "Description":  "저녁 시간대 접속자가 몰리며 로그인 대기열이 발생했다. 일부 유저는 출석 보상을 받지 못했고, 커뮤니티에 접속 실패 인증글이 올라오고 있다.",
+                       "ImageID":  "1000002079",
+                       "ConditionFlag":  "None",
+                       "ConditionStat":  "None",
+                       "ConditionStatType":  "None",
+                       "ConditionOperator":  "None",
+                       "ConditionValue":  0,
+                       "ActivePopups":  [
+                                            "ServerStatus",
+                                            "CommunityBoard"
+                                        ],
+                       "ChoiceIDs":  [
+                                         "CH_007",
+                                         "CH_008",
+                                         "CH_009"
+                                     ]
+                   },
+                   {
+                       "EventID":  "EVT_004",
+                       "Phase":  "전반부",
+                       "Title":  "신규 이벤트 난이도 논란",
+                       "Description":  "신규 이벤트의 난이도가 예상보다 높아 클리어 실패 유저가 많아지고 있다. 상위권 유저는 괜찮다고 하지만, 일반 유저들은 보상을 인질로 잡았다고 반발하고 있다.",
+                       "ImageID":  "1000002081",
+                       "ConditionFlag":  "None",
+                       "ConditionStat":  "None",
+                       "ConditionStatType":  "None",
+                       "ConditionOperator":  "None",
+                       "ConditionValue":  0,
+                       "ActivePopups":  [
+                                            "UserAnalysis",
+                                            "CommunityBoard"
+                                        ],
+                       "ChoiceIDs":  [
+                                         "CH_010",
+                                         "CH_011",
+                                         "CH_012"
+                                     ]
+                   },
+                   {
+                       "EventID":  "EVT_005",
+                       "Phase":  "중반부",
+                       "Title":  "핵/매크로 의혹 확산",
+                       "Description":  "랭킹전 상위권 유저 일부가 비정상적인 기록을 세웠다. 커뮤니티에서는 핵과 매크로 의혹이 커지고 있으며, 정상 플레이 유저들이 박탈감을 느끼고 있다.",
+                       "ImageID":  "1000002076",
+                       "ConditionFlag":  "None",
+                       "ConditionStat":  "None",
+                       "ConditionStatType":  "None",
+                       "ConditionOperator":  "None",
+                       "ConditionValue":  0,
+                       "ActivePopups":  [
+                                            "CommunityBoard",
+                                            "DevStatus"
+                                        ],
+                       "ChoiceIDs":  [
+                                         "CH_013",
+                                         "CH_014",
+                                         "CH_015"
+                                     ]
+                   },
+                   {
+                       "EventID":  "EVT_006",
+                       "Phase":  "중반부",
+                       "Title":  "사기 캐릭터 밸런스 논란",
+                       "Description":  "최근 출시된 신규 캐릭터가 PvP 메타를 완전히 장악했다. 뽑은 유저는 너프를 반대하고, 못 뽑은 유저는 게임이 불공정해졌다고 주장한다.",
+                       "ImageID":  "1000002080",
+                       "ConditionFlag":  "None",
+                       "ConditionStat":  "None",
+                       "ConditionStatType":  "None",
+                       "ConditionOperator":  "None",
+                       "ConditionValue":  0,
+                       "ActivePopups":  [
+                                            "CommunityBoard",
+                                            "BudgetReport"
+                                        ],
+                       "ChoiceIDs":  [
+                                         "CH_016",
+                                         "CH_017",
+                                         "CH_018"
+                                     ]
+                   },
+                   {
+                       "EventID":  "EVT_007",
+                       "Phase":  "중반부",
+                       "Title":  "개발팀 번아웃 조짐",
+                       "Description":  "잦은 긴급 패치와 주말 대응으로 개발팀의 피로가 누적되고 있다. 사내 메신저에는 이 일정으로는 다음 업데이트 품질을 보장하기 어렵다는 말이 올라왔다.",
+                       "ImageID":  "1000002085",
+                       "ConditionFlag":  "None",
+                       "ConditionStat":  "None",
+                       "ConditionStatType":  "None",
+                       "ConditionOperator":  "None",
+                       "ConditionValue":  0,
+                       "ActivePopups":  [
+                                            "DevStatus",
+                                            "CommunityBoard"
+                                        ],
+                       "ChoiceIDs":  [
+                                         "CH_019",
+                                         "CH_020",
+                                         "CH_021"
+                                     ]
+                   },
+                   {
+                       "EventID":  "EVT_008",
+                       "Phase":  "후반부",
+                       "Title":  "복귀 유저 적응 실패",
+                       "Description":  "복귀 유저들이 시스템을 이해하지 못하고 이탈하고 있다. 커뮤니티에서는 복귀했는데 뭘 해야 할지 모르겠다는 글과 그 정도도 모르면 접으라는 반응이 동시에 올라오고 있다.",
+                       "ImageID":  "1000002083",
+                       "ConditionFlag":  "None",
+                       "ConditionStat":  "None",
+                       "ConditionStatType":  "None",
+                       "ConditionOperator":  "None",
+                       "ConditionValue":  0,
+                       "ActivePopups":  [
+                                            "UserAnalysis",
+                                            "CommunityBoard"
+                                        ],
+                       "ChoiceIDs":  [
+                                         "CH_022",
+                                         "CH_023",
+                                         "CH_024"
+                                     ]
+                   },
+                   {
+                       "EventID":  "EVT_009",
+                       "Phase":  "후반부",
+                       "Title":  "BM 패키지 가격 논란",
+                       "Description":  "새로 출시된 한정 패키지 가격이 지나치게 높다는 비판이 나오고 있다. 매출은 오르고 있지만, 커뮤니티에서는 게임이 점점 돈 냄새만 난다는 반응이 확산 중이다.",
+                       "ImageID":  "1000002086",
+                       "ConditionFlag":  "None",
+                       "ConditionStat":  "None",
+                       "ConditionStatType":  "None",
+                       "ConditionOperator":  "None",
+                       "ConditionValue":  0,
+                       "ActivePopups":  [
+                                            "BudgetReport",
+                                            "CommunityBoard"
+                                        ],
+                       "ChoiceIDs":  [
+                                         "CH_025",
+                                         "CH_026",
+                                         "CH_027"
+                                     ]
+                   },
+                   {
+                       "EventID":  "EVT_010",
+                       "Phase":  "후반부",
+                       "Title":  "대형 업데이트 버그",
+                       "Description":  "대형 업데이트 이후 일부 유저의 아이템이 사라지는 버그가 발생했다. 서버 로그 확인이 필요하지만, 이미 커뮤니티에는 피해 인증글이 올라오고 있다.",
+                       "ImageID":  "1000002084",
+                       "ConditionFlag":  "None",
+                       "ConditionStat":  "None",
+                       "ConditionStatType":  "None",
+                       "ConditionOperator":  "None",
+                       "ConditionValue":  0,
+                       "ActivePopups":  [
+                                            "ServerStatus",
+                                            "DevStatus",
+                                            "CommunityBoard"
+                                        ],
+                       "ChoiceIDs":  [
+                                         "CH_028",
+                                         "CH_029",
+                                         "CH_030"
+                                     ]
+                   },
+                   {
+                       "EventID":  "EVT_011",
+                       "Phase":  "후반부",
+                       "Title":  "유명 스트리머 저격 영상",
+                       "Description":  "유명 스트리머가 게임 운영 문제를 다룬 영상을 올렸다. 영상 제목은 자극적이고, 커뮤니티 밖 유저들까지 논란을 접하기 시작했다.",
+                       "ImageID":  "1000002082",
+                       "ConditionFlag":  "None",
+                       "ConditionStat":  "None",
+                       "ConditionStatType":  "None",
+                       "ConditionOperator":  "None",
+                       "ConditionValue":  0,
+                       "ActivePopups":  [
+                                            "CommunityBoard",
+                                            "UserAnalysis"
+                                        ],
+                       "ChoiceIDs":  [
+                                         "CH_031",
+                                         "CH_032",
+                                         "CH_033"
+                                     ]
+                   },
+                   {
+                       "EventID":  "EVT_012",
+                       "Phase":  "후반부",
+                       "Title":  "경영진 매출 압박",
+                       "Description":  "최근 운영 이슈로 유저 여론은 흔들리고 있지만, 경영진은 이번 주 매출 회복을 요구하고 있다. 운영팀은 단기 매출과 유저 신뢰 사이에서 결정을 내려야 한다.",
+                       "ImageID":  "1000002087",
+                       "ConditionFlag":  "None",
+                       "ConditionStat":  "None",
+                       "ConditionStatType":  "None",
+                       "ConditionOperator":  "None",
+                       "ConditionValue":  0,
+                       "ActivePopups":  [
+                                            "BudgetReport",
+                                            "CommunityBoard",
+                                            "DevStatus"
+                                        ],
+                       "ChoiceIDs":  [
+                                         "CH_034",
+                                         "CH_035",
+                                         "CH_036"
+                                     ]
+                   }
+               ],
+    "choices":  [
+                    {
+                        "ChoiceID":  "CH_001",
+                        "ChoiceName":  "즉시 사과한다",
+                        "Description":  "부적절한 대응이었습니다. 불편을 드려 죄송합니다.",
+                        "StatChange_User":  0,
+                        "StatChange_Public":  10,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  0,
+                        "StatChange_Budget":  0,
+                        "ResultFlag":  "SNS_즉시사과",
+                        "ResultComment":  "그래도 바로 사과한 건 인정.",
+                        "result_summary":  "공식 계정이 빠르게 사과하면서 논란은 크게 번지지 않았다. 일부 유저는 사과가 빨랐으니 지켜보자는 반응을 보였다.",
+                        "reaction_community":  [
+                                                   "그래도 바로 사과한 건 인정.",
+                                                   "말실수는 빡치는데 대응은 빠르네.",
+                                                   "이제 공식 계정 담당자 교육 좀 해라.",
+                                                   "사과문 말투는 괜찮은 듯?",
+                                                   "이번엔 넘어가는데 다음엔 진짜 안 봐준다."
+                                               ],
+                        "reaction_internal":  [
+
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_002",
+                        "ChoiceName":  "답글을 삭제하고 조용히 넘긴다",
+                        "Description":  "일단 답글만 삭제하면 가라앉겠지...?",
+                        "StatChange_User":  -5,
+                        "StatChange_Public":  -15,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  0,
+                        "StatChange_Budget":  0,
+                        "ResultFlag":  "SNS_삭제은폐",
+                        "ResultComment":  "삭제하면 없던 일이 되냐?",
+                        "result_summary":  "문제의 답글은 사라졌지만 이미 캡처본이 커뮤니티에 퍼졌다. 삭제 자체가 은폐 시도로 해석되며 여론이 더 나빠졌다.",
+                        "reaction_community":  [
+                                                   "삭제하면 없던 일이 되냐?",
+                                                   "캡처 다 있는데 왜 지움ㅋㅋ",
+                                                   "운영진 또 조용히 묻으려 하네.",
+                                                   "사과도 없이 삭제만 하는 건 좀 역하다.",
+                                                   "공식 계정 운영 누가 하는 거임?"
+                                               ],
+                        "reaction_internal":  [
+
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_003",
+                        "ChoiceName":  "악성 유저의 과민 반응이라고 선을 긋는다",
+                        "Description":  "일부 유저의 과도한 해석으로 보입니다.",
+                        "StatChange_User":  -15,
+                        "StatChange_Public":  -30,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  0,
+                        "StatChange_Budget":  0,
+                        "ResultFlag":  "SNS_유저탓",
+                        "ResultComment":  "와 이걸 유저 탓으로 돌리네.",
+                        "result_summary":  "운영진이 책임을 유저에게 돌렸다는 인식이 퍼졌다. 커뮤니티는 운영진의 태도 문제를 중심으로 급격히 불타기 시작했다.",
+                        "reaction_community":  [
+                                                   "와 이걸 유저 탓으로 돌리네.",
+                                                   "운영진 공식 입장이 이거면 끝난 거 아님?",
+                                                   "이 게임은 유저가 문제래요 여러분.",
+                                                   "조롱해놓고 과민 반응ㅋㅋ 진짜 레전드.",
+                                                   "나 오늘부터 접속 안 함."
+                                               ],
+                        "reaction_internal":  [
+
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_004",
+                        "ChoiceName":  "보상을 추가 지급한다",
+                        "Description":  "기다려주신 보답으로 추가 보상을 지급하겠습니다.",
+                        "StatChange_User":  5,
+                        "StatChange_Public":  15,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  0,
+                        "StatChange_Budget":  -15,
+                        "ResultFlag":  "점검_추가보상",
+                        "ResultComment":  "그래 이 정도는 줘야지.",
+                        "result_summary":  "추가 보상 지급으로 불만은 빠르게 완화되었다. 다만 예정보다 많은 재화가 풀리면서 운영 예산과 보상 재고에 부담이 생겼다.",
+                        "reaction_community":  [
+                                                   "그래 이 정도는 줘야지.",
+                                                   "늦었지만 보상 추가는 잘했다.",
+                                                   "연장점검은 빡치는데 보상은 납득."
+                                               ],
+                        "reaction_internal":  [
+
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+                                                    "보상 규모가 예상보다 큽니다. 다음 점검에서는 기준을 명확히 잡으세요.",
+                                                    "단기 여론 대응은 좋지만, 반복되면 비용 구조가 무너집니다."
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_005",
+                        "ChoiceName":  "원래 공지한 보상만 유지한다",
+                        "Description":  "사전 고지된 기준에 따라 보상이 지급됩니다.",
+                        "StatChange_User":  -5,
+                        "StatChange_Public":  -15,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  0,
+                        "StatChange_Budget":  0,
+                        "ResultFlag":  "점검_보상불만",
+                        "ResultComment":  "3시간 밀리고 이게 끝?",
+                        "result_summary":  "운영팀은 기존 기준을 유지했지만, 유저들은 이를 형식적인 대응으로 받아들였다. 점검 시간에 대한 보상이 부족하다는 불만이 계속 확산되었다.",
+                        "reaction_community":  [
+                                                   "3시간 밀리고 이게 끝?",
+                                                   "운영은 유저 시간 공짜인 줄 아나.",
+                                                   "보상 기준 진짜 짜다.",
+                                                   "이러니까 점검 공지 볼 때마다 불안함.",
+                                                   "다음에도 이럴 거면 그냥 미리 말해라."
+                                               ],
+                        "reaction_internal":  [
+
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_006",
+                        "ChoiceName":  "보상 대신 사과 공지를 올린다",
+                        "Description":  "불편을 드려 죄송합니다. 추후 안정적인 서비스를 제공하겠습니다.",
+                        "StatChange_User":  -5,
+                        "StatChange_Public":  5,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  0,
+                        "StatChange_Budget":  0,
+                        "ResultFlag":  "점검_사과공지",
+                        "ResultComment":  "사과문은 괜찮은데 그래서 보상은?",
+                        "result_summary":  "사과 공지는 올라왔지만 실질 보상이 없다는 점에서 반응이 갈렸다. 일부 유저는 진정성을 인정했지만, 다수는 말뿐인 사과라고 받아들였다.",
+                        "reaction_community":  [
+                                                   "사과문은 괜찮은데 그래서 보상은?",
+                                                   "말이라도 한 건 낫긴 함.",
+                                                   "공지 문구는 정상인데 실속이 없네.",
+                                                   "다음부터는 점검 시간 좀 맞춰라.",
+                                                   "사과문으로 출석 보상 못 받는 거 복구됨?"
+                                               ],
+                        "reaction_internal":  [
+
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_007",
+                        "ChoiceName":  "긴급 점검을 진행한다",
+                        "Description":  "안정적인 접속 환경을 위해 긴급 점검을 진행합니다.",
+                        "StatChange_User":  -5,
+                        "StatChange_Public":  -5,
+                        "StatChange_Server":  25,
+                        "StatChange_Dev":  -5,
+                        "StatChange_Budget":  0,
+                        "ResultFlag":  "서버_긴급점검",
+                        "ResultComment":  "접속 안 되던 거보단 점검이 낫긴 함.",
+                        "result_summary":  "긴급 점검으로 서버 문제는 빠르게 안정화되었다. 하지만 갑작스러운 접속 차단 때문에 일부 유저의 불만이 발생했고, 개발팀도 추가 대응에 투입되었다.",
+                        "reaction_community":  [
+                                                   "접속 안 되던 거보단 점검이 낫긴 함.",
+                                                   "또 긴급점검이냐 진짜."
+                                               ],
+                        "reaction_internal":  [
+                                                  "긴급 점검 들어가면 오늘 배포 검수는 또 밀립니다..."
+                                              ],
+                        "reaction_server":  [
+                                                "[INFO] Login queue stabilized after emergency maintenance.",
+                                                "[WARN] Peak traffic session forcibly terminated."
+                                            ],
+                        "reaction_management":  [
+
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_008",
+                        "ChoiceName":  "임시 서버 증설을 진행한다",
+                        "Description":  "접속 대기열 완화를 위해 임시 서버를 증설합니다.",
+                        "StatChange_User":  5,
+                        "StatChange_Public":  10,
+                        "StatChange_Server":  20,
+                        "StatChange_Dev":  0,
+                        "StatChange_Budget":  -20,
+                        "ResultFlag":  "서버_임시증설",
+                        "ResultComment":  "오 대기열 줄었다.",
+                        "result_summary":  "임시 서버 증설로 접속 대기열이 완화되었다. 유저 반응은 긍정적이었지만, 단기 인프라 비용이 크게 증가했다.",
+                        "reaction_community":  [
+                                                   "오 대기열 줄었다.",
+                                                   "이번엔 대응 빨랐네.",
+                                                   "서버 증설 바로 한 건 칭찬함."
+                                               ],
+                        "reaction_internal":  [
+
+                                              ],
+                        "reaction_server":  [
+                                                "[INFO] Temporary capacity expansion applied."
+                                            ],
+                        "reaction_management":  [
+                                                    "임시 서버 비용이 예상보다 높습니다. 장기 증설 여부는 별도 검토하세요."
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_009",
+                        "ChoiceName":  "공지만 올리고 상황을 지켜본다",
+                        "Description":  "현재 접속 지연 현상을 확인 중입니다.",
+                        "StatChange_User":  -10,
+                        "StatChange_Public":  -10,
+                        "StatChange_Server":  -10,
+                        "StatChange_Dev":  0,
+                        "StatChange_Budget":  0,
+                        "ResultFlag":  "서버_방치",
+                        "ResultComment":  "확인 중만 몇 시간째냐.",
+                        "result_summary":  "운영팀은 문제를 인지했다는 공지만 올렸지만, 실제 접속 문제는 계속되었다. 대기열이 길어지며 유저 이탈과 여론 악화가 동시에 발생했다.",
+                        "reaction_community":  [
+                                                   "확인 중만 몇 시간째냐.",
+                                                   "출석 못 받았는데 공지만 올리면 끝?"
+                                               ],
+                        "reaction_internal":  [
+
+                                              ],
+                        "reaction_server":  [
+                                                "[WARN] Login queue length increasing.",
+                                                "[ERROR] Session timeout reports rising.",
+                                                "[WARN] Peak traffic not resolved. Capacity remains insufficient."
+                                            ],
+                        "reaction_management":  [
+
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_010",
+                        "ChoiceName":  "이벤트 난이도를 낮춘다",
+                        "Description":  "더 많은 유저가 즐길 수 있도록 난이도를 조정합니다.",
+                        "StatChange_User":  10,
+                        "StatChange_Public":  10,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  -10,
+                        "StatChange_Budget":  0,
+                        "ResultFlag":  "이벤트_난이도완화",
+                        "ResultComment":  "이제 할 만해졌다.",
+                        "result_summary":  "난이도 조정 이후 일반 유저의 이벤트 참여율이 회복되었다. 다만 급한 밸런스 수정으로 개발팀에 추가 작업이 발생했다.",
+                        "reaction_community":  [
+                                                   "이제 할 만해졌다.",
+                                                   "처음부터 이 정도였으면 욕 덜 먹었을 듯.",
+                                                   "보상 먹을 길은 생겼네."
+                                               ],
+                        "reaction_internal":  [
+                                                  "이벤트 수치 다시 조정해서 오늘 안에 빌드 올리겠습니다.",
+                                                  "다음 이벤트는 기획 단계에서 난이도 구간부터 다시 봐야 할 듯요."
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_011",
+                        "ChoiceName":  "공략 가이드를 제공한다",
+                        "Description":  "이벤트 공략 가이드를 공식 채널에 공개합니다.",
+                        "StatChange_User":  5,
+                        "StatChange_Public":  5,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  -5,
+                        "StatChange_Budget":  0,
+                        "ResultFlag":  "이벤트_공략제공",
+                        "ResultComment":  "공략 보니까 어느 정도 이해는 됨.",
+                        "result_summary":  "공식 공략 가이드가 공개되며 일부 유저의 클리어율이 개선되었다. 난이도 자체는 유지되었기 때문에 근본적인 불만은 완전히 사라지지 않았다.",
+                        "reaction_community":  [
+                                                   "공략 보니까 어느 정도 이해는 됨.",
+                                                   "아니 공략이 필요한 난이도면 문제 있는 거 아님?",
+                                                   "그래도 공식 가이드 올린 건 괜찮다."
+                                               ],
+                        "reaction_internal":  [
+                                                  "가이드 이미지랑 영상 급하게 묶어서 올렸습니다.",
+                                                  "문의량은 조금 줄었는데 난이도 불만은 남아 있습니다."
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_012",
+                        "ChoiceName":  "고난도 이벤트라는 입장을 유지한다",
+                        "Description":  "도전적인 플레이 경험을 의도한 이벤트입니다.",
+                        "StatChange_User":  -10,
+                        "StatChange_Public":  -20,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  5,
+                        "StatChange_Budget":  0,
+                        "ResultFlag":  "이벤트_고난도유지",
+                        "ResultComment":  "상위 1%만 유저냐?",
+                        "result_summary":  "운영팀은 이벤트 의도를 유지했지만, 일반 유저들은 배제당했다고 느꼈다. 개발 리소스는 아꼈으나 커뮤니티 여론은 크게 악화되었다.",
+                        "reaction_community":  [
+                                                   "보상을 걸어놓고 고난도라고 하면 뭐 어쩌라는 거임?",
+                                                   "상위 1%만 유저냐?",
+                                                   "이벤트가 아니라 입장컷이네.",
+                                                   "도전적 경험 같은 소리 하네."
+                                               ],
+                        "reaction_internal":  [
+                                                  "추가 수정은 안 해서 이번 주 일정은 유지됩니다."
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_013",
+                        "ChoiceName":  "대규모 로그 조사를 진행한다",
+                        "Description":  "비정상 플레이 기록을 전수 조사하겠습니다.",
+                        "StatChange_User":  0,
+                        "StatChange_Public":  15,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  -15,
+                        "StatChange_Budget":  0,
+                        "ResultFlag":  "핵_전수조사",
+                        "ResultComment":  "전수조사 한다니까 일단 기다려봄.",
+                        "result_summary":  "운영팀이 전수 조사를 선언하며 공정성 회복 의지를 보였다. 하지만 로그 분석에 개발팀 리소스가 투입되면서 다른 작업 일정이 밀리기 시작했다.",
+                        "reaction_community":  [
+                                                   "전수조사 한다니까 일단 기다려봄.",
+                                                   "이번엔 제대로 잡아라.",
+                                                   "랭킹전 신뢰도 걸린 문제임."
+                                               ],
+                        "reaction_internal":  [
+                                                  "로그 범위가 커서 분석 시간이 꽤 걸립니다.",
+                                                  "랭킹전 데이터 먼저 뽑고 이후 계정별 패턴 보겠습니다."
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_014",
+                        "ChoiceName":  "의심 계정을 즉시 임시 제재한다",
+                        "Description":  "공정한 플레이 환경을 위해 의심 계정을 임시 제한합니다.",
+                        "StatChange_User":  5,
+                        "StatChange_Public":  20,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  -10,
+                        "StatChange_Budget":  0,
+                        "ResultFlag":  "핵_임시제재",
+                        "ResultComment":  "일단 빠르게 막은 건 좋다.",
+                        "result_summary":  "의심 계정에 대한 빠른 임시 제재로 커뮤니티 여론이 크게 회복되었다. 다만 오제재 가능성 때문에 개발팀과 CS팀의 확인 부담이 증가했다.",
+                        "reaction_community":  [
+                                                   "일단 빠르게 막은 건 좋다.",
+                                                   "랭킹 드디어 정상화되나?",
+                                                   "억울한 사람 없게 후속 확인은 해라."
+                                               ],
+                        "reaction_internal":  [
+                                                  "임시 제재 대상 이의신청 들어오면 로그 확인 필요합니다.",
+                                                  "오제재 케이스 나오면 다시 불탈 수 있습니다."
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_015",
+                        "ChoiceName":  "증거가 부족하다고 발표한다",
+                        "Description":  "현재까지 명확한 비정상 기록은 확인되지 않았습니다.",
+                        "StatChange_User":  -15,
+                        "StatChange_Public":  -25,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  5,
+                        "StatChange_Budget":  0,
+                        "ResultFlag":  "핵_방치",
+                        "ResultComment":  "저 기록이 정상이라고?",
+                        "result_summary":  "운영팀은 신중한 입장을 택했지만, 유저들은 이를 방치로 받아들였다. 정상 플레이 유저들의 박탈감이 커지며 경쟁 콘텐츠 신뢰도가 하락했다.",
+                        "reaction_community":  [
+                                                   "증거가 부족한 게 아니라 보기 싫은 거 아님?",
+                                                   "저 기록이 정상이라고?",
+                                                   "랭킹전 왜 함? 핵이 이기는데.",
+                                                   "운영진이 핵을 방치한다는 말이 괜히 나오겠냐.",
+                                                   "공정성 터진 게임은 오래 못 감."
+                                               ],
+                        "reaction_internal":  [
+
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_016",
+                        "ChoiceName":  "긴급 너프한다",
+                        "Description":  "게임 밸런스 유지를 위해 성능을 조정합니다.",
+                        "StatChange_User":  5,
+                        "StatChange_Public":  10,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  -10,
+                        "StatChange_Budget":  -10,
+                        "ResultFlag":  "밸런스_긴급너프",
+                        "ResultComment":  "너프는 맞는데 뽑은 사람 보상은?",
+                        "result_summary":  "메타 붕괴는 빠르게 완화되었지만, 해당 캐릭터에 과금한 유저들의 반발이 발생했다. 밸런스 조정 작업과 보상 검토로 개발팀과 예산에 부담이 생겼다.",
+                        "reaction_community":  [
+                                                   "너프는 맞는데 뽑은 사람 보상은?",
+                                                   "그래도 바로 잡은 건 다행."
+                                               ],
+                        "reaction_internal":  [
+                                                  "수치 조정 빌드 오늘 안에 반영하겠습니다."
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+                                                    "신규 캐릭터 매출 직후 너프는 환불 민원 리스크가 큽니다.",
+                                                    "보상 범위를 최소화할 수 있는 안을 같이 가져오세요."
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_017",
+                        "ChoiceName":  "다음 정기 패치까지 보류한다",
+                        "Description":  "충분한 데이터를 수집한 뒤 조정 여부를 검토하겠습니다.",
+                        "StatChange_User":  -10,
+                        "StatChange_Public":  -15,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  5,
+                        "StatChange_Budget":  0,
+                        "ResultFlag":  "밸런스_보류",
+                        "ResultComment":  "다음 패치까지 이걸 버티라고?",
+                        "result_summary":  "개발팀의 긴급 작업 부담은 줄었지만, PvP 메타는 계속 왜곡되었다. 유저들은 운영팀이 문제를 알고도 방치한다고 느꼈다.",
+                        "reaction_community":  [
+                                                   "다음 패치까지 이걸 버티라고?",
+                                                   "이미 메타 박살났는데 데이터 더 본대ㅋㅋ",
+                                                   "못 뽑은 사람은 그냥 지라는 거네.",
+                                                   "이 정도면 방치지 검토가 아님."
+                                               ],
+                        "reaction_internal":  [
+                                                  "긴급 수정은 없어져서 이번 주 일정은 유지 가능합니다."
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_018",
+                        "ChoiceName":  "카운터 캐릭터 출시를 예고한다",
+                        "Description":  "새로운 전략적 대응 수단을 준비 중입니다.",
+                        "StatChange_User":  -5,
+                        "StatChange_Public":  -10,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  -10,
+                        "StatChange_Budget":  15,
+                        "ResultFlag":  "밸런스_카운터출시",
+                        "ResultComment":  "사기캐 잡으려면 또 뽑으라고?",
+                        "result_summary":  "운영팀은 직접 너프 대신 신규 캐릭터로 대응하려 했다. 단기 매출 기대는 생겼지만, 유저들은 문제를 과금으로 해결하려 한다고 반발했다.",
+                        "reaction_community":  [
+                                                   "사기캐 잡으려면 또 뽑으라고?",
+                                                   "밸런스 문제가 아니라 매출 기회로 보네."
+                                               ],
+                        "reaction_internal":  [
+                                                  "카운터 캐릭터 일정 앞당기면 검수 시간이 부족합니다."
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+                                                    "매출 회복 가능성은 있습니다. 다만 여론 악화 리스크가 큽니다.",
+                                                    "출시 메시지를 전략 다양화로 포장할 필요가 있습니다."
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_019",
+                        "ChoiceName":  "다음 업데이트를 연기한다",
+                        "Description":  "완성도 확보를 위해 업데이트 일정을 조정합니다.",
+                        "StatChange_User":  -5,
+                        "StatChange_Public":  -10,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  25,
+                        "StatChange_Budget":  0,
+                        "ResultFlag":  "개발_업데이트연기",
+                        "ResultComment":  "완성도 때문이라면 이해는 하는데 일정 좀 지켜라.",
+                        "result_summary":  "개발팀의 피로 누적은 완화되었지만, 업데이트를 기다리던 유저들의 불만이 생겼다. 품질 확보를 위한 결정이었지만 커뮤니티에서는 일정 관리 실패로 받아들여졌다.",
+                        "reaction_community":  [
+                                                   "또 연기냐.",
+                                                   "완성도 때문이라면 이해는 하는데 일정 좀 지켜라.",
+                                                   "업데이트 기다리던 사람은 뭐가 됨?"
+                                               ],
+                        "reaction_internal":  [
+                                                  "하... 그래도 이번 연기는 진짜 필요했습니다.",
+                                                  "QA 시간 확보된 건 다행입니다. 이번엔 제대로 잡고 가죠."
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_020",
+                        "ChoiceName":  "외주 지원을 투입한다",
+                        "Description":  "일정 부담을 줄이기 위해 외부 지원을 요청합니다.",
+                        "StatChange_User":  0,
+                        "StatChange_Public":  5,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  15,
+                        "StatChange_Budget":  -20,
+                        "ResultFlag":  "개발_외주지원",
+                        "ResultComment":  "외주라도 넣어서 일정 맞추는 건 낫지.",
+                        "result_summary":  "외부 인력 투입으로 개발팀의 부담은 일부 줄었다. 하지만 추가 비용이 발생했고, 외주 품질 관리에 대한 우려도 남았다.",
+                        "reaction_community":  [
+                                                   "외주라도 넣어서 일정 맞추는 건 낫지."
+                                               ],
+                        "reaction_internal":  [
+                                                  "외주 쪽 작업물 검수는 내부에서 한 번 더 봐야 합니다.",
+                                                  "일단 당장 불 끄는 데는 도움 됩니다."
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+                                                    "외주 비용은 승인하되, 추가 지출 사유를 명확히 남기세요.",
+                                                    "이번 건은 예외 처리입니다. 반복되면 구조 문제입니다."
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_021",
+                        "ChoiceName":  "기존 일정을 강행한다",
+                        "Description":  "예정된 업데이트는 일정대로 진행합니다.",
+                        "StatChange_User":  5,
+                        "StatChange_Public":  5,
+                        "StatChange_Server":  -5,
+                        "StatChange_Dev":  -25,
+                        "StatChange_Budget":  0,
+                        "ResultFlag":  "개발_일정강행",
+                        "ResultComment":  "업데이트 제때 나온 건 좋네.",
+                        "result_summary":  "업데이트 일정은 지켜졌지만 개발팀의 피로가 크게 누적되었다. 무리한 일정으로 인해 다음 패치 품질과 서버 안정성에도 불안 요소가 생겼다.",
+                        "reaction_community":  [
+                                                   "업데이트 제때 나온 건 좋네."
+                                               ],
+                        "reaction_internal":  [
+                                                  "이 일정으로 계속 가면 다음 주는 진짜 못 버팁니다.",
+                                                  "테스트 시간이 너무 부족했습니다.",
+                                                  "핫픽스 각오해야 할 것 같습니다."
+                                              ],
+                        "reaction_server":  [
+                                                "[WARN] New build deployed with limited validation window."
+                                            ],
+                        "reaction_management":  [
+
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_022",
+                        "ChoiceName":  "복귀 유저 가이드를 제공한다",
+                        "Description":  "복귀 유저를 위한 성장 가이드와 추천 루트를 제공합니다.",
+                        "StatChange_User":  15,
+                        "StatChange_Public":  5,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  -10,
+                        "StatChange_Budget":  0,
+                        "ResultFlag":  "복귀_가이드제공",
+                        "ResultComment":  "복귀했는데 뭐 해야 할지 드디어 보임.",
+                        "result_summary":  "복귀 유저가 따라갈 수 있는 성장 경로가 제공되며 이탈률이 완화되었다. 가이드 제작과 검수로 개발팀에 추가 업무가 발생했다.",
+                        "reaction_community":  [
+                                                   "이런 가이드 진작 좀 만들지.",
+                                                   "복귀했는데 뭐 해야 할지 드디어 보임.",
+                                                   "뉴비/복귀용 동선 생긴 건 좋다."
+                                               ],
+                        "reaction_internal":  [
+                                                  "복귀 루트 표기랑 추천 성장 재화 정리해서 올렸습니다.",
+                                                  "다음엔 인게임 튜토리얼로 넣어야 할 것 같습니다."
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_023",
+                        "ChoiceName":  "복귀 보상을 지급한다",
+                        "Description":  "복귀 유저의 빠른 적응을 위해 보상을 지급합니다.",
+                        "StatChange_User":  20,
+                        "StatChange_Public":  -5,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  0,
+                        "StatChange_Budget":  -15,
+                        "ResultFlag":  "복귀_보상지급",
+                        "ResultComment":  "복귀 보상 좋네. 다시 찍먹해봄.",
+                        "result_summary":  "복귀 유저 수가 빠르게 증가했다. 그러나 기존 유저 사이에서는 역차별 논란이 발생했고, 예산도 감소했다.",
+                        "reaction_community":  [
+                                                   "복귀 보상 좋네. 다시 찍먹해봄.",
+                                                   "기존 유저는 뭐 없냐?",
+                                                   "또 접었다 오면 이득인 구조냐."
+                                               ],
+                        "reaction_internal":  [
+
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+                                                    "복귀율은 올랐지만 보상 재화 지출이 큽니다.",
+                                                    "기존 유저 반발 관리가 필요합니다."
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_024",
+                        "ChoiceName":  "커뮤니티 자율 정보 공유에 맡긴다",
+                        "Description":  "유저들의 공략 공유가 활발히 이루어지길 기대합니다.",
+                        "StatChange_User":  -15,
+                        "StatChange_Public":  5,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  5,
+                        "StatChange_Budget":  0,
+                        "ResultFlag":  "복귀_자율방치",
+                        "ResultComment":  "복귀했는데 진짜 뭐부터 해야 함?",
+                        "result_summary":  "운영팀은 추가 리소스를 들이지 않았지만, 복귀 유저의 혼란은 계속되었다. 고인물 유저의 공략글은 늘었지만, 복귀 유저 다수는 적응에 실패했다.",
+                        "reaction_community":  [
+                                                   "복귀했는데 진짜 뭐부터 해야 함?",
+                                                   "공략 찾아보라는데 공략도 너무 많음.",
+                                                   "운영이 할 일을 유저한테 떠넘기네.",
+                                                   "그래도 고인물들이 정리해주는 건 고맙다."
+                                               ],
+                        "reaction_internal":  [
+                                                  "별도 가이드 작업은 없어서 이번 주 일정은 유지됩니다."
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_025",
+                        "ChoiceName":  "패키지 가격을 인하한다",
+                        "Description":  "더 합리적인 가격으로 상품 구성을 조정합니다.",
+                        "StatChange_User":  5,
+                        "StatChange_Public":  15,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  0,
+                        "StatChange_Budget":  -15,
+                        "ResultFlag":  "BM_가격인하",
+                        "ResultComment":  "이 가격이면 납득 가능.",
+                        "result_summary":  "패키지 가격 조정으로 여론은 일부 회복되었다. 하지만 예상 매출이 낮아지며 경영진의 우려가 커졌다.",
+                        "reaction_community":  [
+                                                   "이 가격이면 납득 가능.",
+                                                   "욕 먹고 내린 거긴 한데 그래도 내렸네.",
+                                                   "처음 가격은 진짜 선 넘었음."
+                                               ],
+                        "reaction_internal":  [
+
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+                                                    "가격 인하로 단기 매출 예상치가 낮아졌습니다.",
+                                                    "여론 회복 효과와 매출 감소분을 같이 보고하세요."
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_026",
+                        "ChoiceName":  "구성품을 추가한다",
+                        "Description":  "기존 가격은 유지하되 상품 가치를 높이겠습니다.",
+                        "StatChange_User":  5,
+                        "StatChange_Public":  10,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  -5,
+                        "StatChange_Budget":  -5,
+                        "ResultFlag":  "BM_구성품추가",
+                        "ResultComment":  "구성 늘어난 건 괜찮은데 가격은 여전히 세다.",
+                        "result_summary":  "가격은 유지했지만 구성품 추가로 체감 가치는 개선되었다. 커뮤니티 반응은 완전히 회복되진 않았고, 구성 조정 작업으로 개발팀에 추가 부담이 생겼다.",
+                        "reaction_community":  [
+                                                   "구성 늘어난 건 괜찮은데 가격은 여전히 세다.",
+                                                   "처음부터 이렇게 냈으면 욕 덜 먹었을 듯.",
+                                                   "그래도 빈 패키지는 아니게 됐네."
+                                               ],
+                        "reaction_internal":  [
+                                                  "패키지 구성 변경 반영했습니다. 스토어 검수 다시 필요합니다.",
+                                                  "이벤트 배너도 수정해야 합니다."
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_027",
+                        "ChoiceName":  "한정 판매를 그대로 유지한다",
+                        "Description":  "현재 상품은 한정 기획 상품으로 예정대로 판매됩니다.",
+                        "StatChange_User":  -15,
+                        "StatChange_Public":  -25,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  0,
+                        "StatChange_Budget":  25,
+                        "ResultFlag":  "BM_고가강행",
+                        "ResultComment":  "이제 게임이 아니라 결제창임.",
+                        "result_summary":  "단기 매출은 크게 상승했지만, 과금 압박에 대한 반발이 폭발했다. 유저들은 운영팀이 신뢰보다 수익을 우선한다고 인식하기 시작했다.",
+                        "reaction_community":  [
+                                                   "역시 돈 냄새 맡으면 안 바꾸네.",
+                                                   "한정 팔이 진짜 역겹다.",
+                                                   "이제 게임이 아니라 결제창임."
+                                               ],
+                        "reaction_internal":  [
+
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+                                                    "매출 지표는 매우 좋습니다.",
+                                                    "다만 여론 악화가 장기 리텐션에 영향을 줄 수 있으니 모니터링하세요."
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_028",
+                        "ChoiceName":  "즉시 롤백한다",
+                        "Description":  "피해 확산을 막기 위해 업데이트 이전 상태로 롤백합니다.",
+                        "StatChange_User":  -5,
+                        "StatChange_Public":  10,
+                        "StatChange_Server":  10,
+                        "StatChange_Dev":  -15,
+                        "StatChange_Budget":  -5,
+                        "ResultFlag":  "버그_즉시롤백",
+                        "ResultComment":  "롤백이라도 한 건 맞다.",
+                        "result_summary":  "피해 확산은 빠르게 멈췄지만, 업데이트 내용이 되돌아가며 일부 유저가 불편을 겪었다. 롤백 과정에서 서버와 개발팀 모두 긴급 대응에 투입되었다.",
+                        "reaction_community":  [
+                                                   "롤백이라도 한 건 맞다.",
+                                                   "내 아이템 날아간 것보단 이게 낫지."
+                                               ],
+                        "reaction_internal":  [
+                                                  "롤백 이후 데이터 정합성 확인 필요합니다."
+                                              ],
+                        "reaction_server":  [
+                                                "[INFO] Rollback procedure initiated."
+                                            ],
+                        "reaction_management":  [
+                                                    "롤백에 따른 보상 비용과 민원 대응 비용을 산정하세요."
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_029",
+                        "ChoiceName":  "피해자만 개별 복구한다",
+                        "Description":  "피해 계정을 확인하여 순차적으로 복구하겠습니다.",
+                        "StatChange_User":  0,
+                        "StatChange_Public":  5,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  -25,
+                        "StatChange_Budget":  0,
+                        "ResultFlag":  "버그_개별복구",
+                        "ResultComment":  "피해자만 복구하는 건 맞는데 빨리 해라.",
+                        "result_summary":  "전체 서비스 중단은 피했지만, 피해 계정 확인에 큰 리소스가 투입되었다. 개별 복구가 늦어지면 추가 민원이 발생할 가능성이 남았다.",
+                        "reaction_community":  [
+                                                   "피해자만 복구하는 건 맞는데 빨리 해라.",
+                                                   "나는 아직 문의 답변도 못 받음."
+                                               ],
+                        "reaction_internal":  [
+                                                  "피해 로그 대조량이 예상보다 많습니다.",
+                                                  "계정별 복구 처리라 시간이 꽤 걸립니다.",
+                                                  "CS 쪽 문의 폭주 중입니다."
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_030",
+                        "ChoiceName":  "임시 보상을 지급하고 조사를 미룬다",
+                        "Description":  "우선 전체 유저에게 사과 보상을 지급합니다.",
+                        "StatChange_User":  5,
+                        "StatChange_Public":  5,
+                        "StatChange_Server":  -10,
+                        "StatChange_Dev":  5,
+                        "StatChange_Budget":  -20,
+                        "ResultFlag":  "버그_조사지연",
+                        "ResultComment":  "보상은 받았는데 내 아이템은?",
+                        "result_summary":  "전체 보상으로 당장의 불만은 일부 줄었지만, 원인 조사는 지연되었다. 예산이 줄고 서버 로그 문제는 남아 있어 같은 문제가 반복될 위험이 생겼다.",
+                        "reaction_community":  [
+                                                   "보상은 받았는데 내 아이템은?",
+                                                   "원인도 모르고 보상만 뿌리는 거냐."
+                                               ],
+                        "reaction_internal":  [
+                                                  "조사 미루면 다음 패치 때 다시 터질 수 있습니다."
+                                              ],
+                        "reaction_server":  [
+                                                "[WARN] Root cause analysis postponed."
+                                            ],
+                        "reaction_management":  [
+                                                    "전체 보상 비용이 큽니다. 재발 시 추가 비용은 더 커집니다."
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_031",
+                        "ChoiceName":  "공식 해명문을 낸다",
+                        "Description":  "제기된 문제에 대해 사실관계와 개선 계획을 안내드립니다.",
+                        "StatChange_User":  0,
+                        "StatChange_Public":  10,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  -5,
+                        "StatChange_Budget":  0,
+                        "ResultFlag":  "스트리머_공식해명",
+                        "ResultComment":  "공식 입장 나온 건 다행.",
+                        "result_summary":  "공식 해명문을 통해 논란의 일부 쟁점이 정리되었다. 다만 해명문 작성과 사실 확인 과정에 내부 리소스가 투입되었다.",
+                        "reaction_community":  [
+                                                   "해명문 보니까 일부는 오해였네.",
+                                                   "그래도 문제 자체가 사라진 건 아님.",
+                                                   "공식 입장 나온 건 다행."
+                                               ],
+                        "reaction_internal":  [
+                                                  "영상 내용 팩트체크해서 정리했습니다.",
+                                                  "표현 하나 잘못 쓰면 다시 불탈 수 있습니다."
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_032",
+                        "ChoiceName":  "스트리머와 비공개로 소통한다",
+                        "Description":  "오해를 줄이기 위해 당사자와 직접 소통하겠습니다.",
+                        "StatChange_User":  5,
+                        "StatChange_Public":  5,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  0,
+                        "StatChange_Budget":  -5,
+                        "ResultFlag":  "스트리머_비공개소통",
+                        "ResultComment":  "당사자랑 얘기했다니까 일단 지켜봄.",
+                        "result_summary":  "스트리머와의 직접 소통으로 논란 확산은 일부 완화되었다. 하지만 외부 영향력자 대응에 비용과 시간이 들어갔고, 투명성 논란 가능성도 남았다.",
+                        "reaction_community":  [
+                                                   "당사자랑 얘기했다니까 일단 지켜봄.",
+                                                   "비공개 소통이면 뭘 어떻게 했다는 건데?",
+                                                   "영상 후속 입장 봐야 알 듯."
+                                               ],
+                        "reaction_internal":  [
+
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+                                                    "인플루언서 관리 비용은 제한적으로 승인합니다.",
+                                                    "비공개 대응은 투명성 문제로 번지지 않게 관리하세요."
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_033",
+                        "ChoiceName":  "대응하지 않는다",
+                        "Description":  "일시적인 이슈로 보고 별도 대응하지 않습니다.",
+                        "StatChange_User":  -20,
+                        "StatChange_Public":  -20,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  5,
+                        "StatChange_Budget":  0,
+                        "ResultFlag":  "스트리머_무대응",
+                        "ResultComment":  "대응 안 하는 거 보면 맞는 말인가 보네.",
+                        "result_summary":  "운영팀은 별도 대응을 하지 않았지만, 영상은 계속 확산되었다. 커뮤니티 밖 유저들까지 논란을 접하면서 신규/복귀 유입에 악영향이 생겼다.",
+                        "reaction_community":  [
+                                                   "대응 안 하는 거 보면 맞는 말인가 보네.",
+                                                   "스트리머 영상 보고 왔는데 이 게임 상태 왜 이럼?",
+                                                   "운영진 침묵 중ㅋㅋ",
+                                                   "논란 커지는데 공지 하나 없는 게 레전드.",
+                                                   "친구한테 추천하려다 영상 보고 접음."
+                                               ],
+                        "reaction_internal":  [
+
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_034",
+                        "ChoiceName":  "저가형 패키지를 출시한다",
+                        "Description":  "부담 없는 가격대의 패키지로 매출을 보완합니다.",
+                        "StatChange_User":  0,
+                        "StatChange_Public":  5,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  -5,
+                        "StatChange_Budget":  15,
+                        "ResultFlag":  "매출_저가패키지",
+                        "ResultComment":  "이 정도 가격이면 살 만함.",
+                        "result_summary":  "부담 없는 가격대의 패키지로 매출이 소폭 회복되었다. 커뮤니티 반발은 크지 않았지만, 개발팀에는 상품 구성과 배너 작업이 추가되었다.",
+                        "reaction_community":  [
+                                                   "이 정도 가격이면 살 만함.",
+                                                   "비싼 패키지보다 이런 게 낫다."
+                                               ],
+                        "reaction_internal":  [
+                                                  "저가 패키지 구성은 바로 반영 가능합니다."
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+                                                    "매출 회복 폭은 크지 않지만 여론 리스크는 낮습니다.",
+                                                    "단기 압박 해소용으로는 무난한 선택입니다."
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_035",
+                        "ChoiceName":  "고가 한정 패키지를 출시한다",
+                        "Description":  "한정 상품을 통해 단기 매출을 확보합니다.",
+                        "StatChange_User":  -15,
+                        "StatChange_Public":  -25,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  0,
+                        "StatChange_Budget":  30,
+                        "ResultFlag":  "매출_고가패키지",
+                        "ResultComment":  "이 와중에 고가 패키지?",
+                        "result_summary":  "단기 매출은 크게 상승했지만, 커뮤니티 신뢰도는 급격히 하락했다. 운영팀이 위기 상황을 수익화한다는 인식이 퍼졌다.",
+                        "reaction_community":  [
+                                                   "이 와중에 고가 패키지?",
+                                                   "운영 사고를 돈으로 메꾸려는 거냐.",
+                                                   "진짜 유저를 지갑으로만 보네."
+                                               ],
+                        "reaction_internal":  [
+
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+                                                    "이번 주 매출 목표는 초과 달성했습니다.",
+                                                    "다만 여론 악화가 다음 주 지표에 반영될 수 있습니다."
+                                                ]
+                    },
+                    {
+                        "ChoiceID":  "CH_036",
+                        "ChoiceName":  "매출보다 신뢰 회복을 우선한다",
+                        "Description":  "이번 주는 수익보다 운영 안정화와 신뢰 회복에 집중합니다.",
+                        "StatChange_User":  5,
+                        "StatChange_Public":  15,
+                        "StatChange_Server":  0,
+                        "StatChange_Dev":  5,
+                        "StatChange_Budget":  -20,
+                        "ResultFlag":  "매출_신뢰우선",
+                        "ResultComment":  "이번엔 돈보다 운영 안정화 먼저 보는 듯?",
+                        "result_summary":  "운영팀은 단기 매출보다 안정화와 신뢰 회복을 우선했다. 커뮤니티 반응은 개선되었고 개발팀 부담도 줄었지만, 예산 압박은 커졌다.",
+                        "reaction_community":  [
+                                                   "이번엔 돈보다 운영 안정화 먼저 보는 듯?",
+                                                   "이런 판단은 좀 믿음 간다."
+                                               ],
+                        "reaction_internal":  [
+                                                  "이번 주는 무리한 상품 작업 없어서 안정화에 집중할 수 있습니다."
+                                              ],
+                        "reaction_server":  [
+
+                                            ],
+                        "reaction_management":  [
+                                                    "매출 공백은 다음 주 계획에서 보완해야 합니다.",
+                                                    "신뢰 회복 효과가 실제 리텐션으로 이어지는지 확인하세요."
+                                                ]
+                    }
+                ]
 }
