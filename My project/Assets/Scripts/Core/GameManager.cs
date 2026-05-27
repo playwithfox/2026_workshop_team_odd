@@ -4,6 +4,7 @@ using UnityEngine; // MonoBehaviour, SerializeField, Random, Mathf 같은 Unity 
 public class GameManager : MonoBehaviour // Unity 오브젝트에 붙일 수 있는 게임 진행 관리자 클래스입니다.
 { // GameManager 클래스의 시작입니다.
     private GameStats gamestats = new GameStats(); // 게임의 지표를 관리하는 GameStats 클래스의 인스턴스를 생성합니다.
+	// (변경사항)클래스 안으로 넣고 private으로 지정
     
 #region Game State
     [Header("Game Settings")] // Inspector에서 게임 설정 항목을 보기 좋게 구분해 줍니다.
@@ -13,6 +14,7 @@ public class GameManager : MonoBehaviour // Unity 오브젝트에 붙일 수 있
     private bool isGameOver; // 게임 오버 상태인지 저장합니다.
     public int CurrentDay => currentDay; // 다른 스크립트가 현재 날짜를 읽을 수 있게 합니다.
     public bool IsGameOver => isGameOver; // 다른 스크립트가 게임 오버 여부를 읽을 수 있게 합니다.
+	public GameStats Stats => gamestats; // (추가)지표값을 외부에서 읽을 수 있게 합니다.
     #endregion
     public void StartGame() // 게임을 처음 시작할 때 호출하는 함수입니다.
     { // StartGame 함수의 시작입니다.
