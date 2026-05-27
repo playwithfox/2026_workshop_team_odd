@@ -1,8 +1,9 @@
 using System.Collections.Generic; // Dictionary 같은 컬렉션 자료구조를 사용하기 위해 필요합니다.
 using UnityEngine; // MonoBehaviour, SerializeField, Random, Mathf 같은 Unity 기능을 사용하기 위해 필요합니다.
-Gamestats gamestats = new Gamestats(); // 게임의 지표를 관리하는 GameStats 클래스의 인스턴스를 생성합니다.
+//Gamestats gamestats = new Gamestats(); // 게임의 지표를 관리하는 GameStats 클래스의 인스턴스를 생성합니다.
 public class GameManager : MonoBehaviour // Unity 오브젝트에 붙일 수 있는 게임 진행 관리자 클래스입니다.
 { // GameManager 클래스의 시작입니다.
+    private GameStats gamestats = new GameStats(); // 게임의 지표를 관리하는 GameStats 클래스의 인스턴스를 생성합니다.
     
 #region Game State
     [Header("Game Settings")] // Inspector에서 게임 설정 항목을 보기 좋게 구분해 줍니다.
