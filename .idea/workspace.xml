@@ -12,52 +12,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cec1bd4c-07bb-44bd-9081-38d5204bf6fd" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/budget_test.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/budget_test.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/community_test.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/community_test.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/developer_test.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/developer_test.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/server_test.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/server_test.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/user_test.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/user_test.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/사건카드_목록/카드_BM패키지가격논란.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/사건카드_목록/카드_BM패키지가격논란.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/사건카드_목록/카드_개발팀번아웃조짐.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/사건카드_목록/카드_개발팀번아웃조짐.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/사건카드_목록/카드_경영진매출압박.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/사건카드_목록/카드_경영진매출압박.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/사건카드_목록/카드_공식SNS말실수.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/사건카드_목록/카드_공식SNS말실수.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/사건카드_목록/카드_대형업데이트버그.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/사건카드_목록/카드_대형업데이트버그.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/사건카드_목록/카드_복귀유저적응실패.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/사건카드_목록/카드_복귀유저적응실패.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/사건카드_목록/카드_사기캐릭터밸런스논란.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/사건카드_목록/카드_사기캐릭터밸런스논란.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/사건카드_목록/카드_서버접속지연.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/사건카드_목록/카드_서버접속지연.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/사건카드_목록/카드_신규이벤트난이도논란.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/사건카드_목록/카드_신규이벤트난이도논란.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/사건카드_목록/카드_유명스트리머저격영상.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/사건카드_목록/카드_유명스트리머저격영상.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/사건카드_목록/카드_점검보상부족논란.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/사건카드_목록/카드_점검보상부족논란.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/사건카드_목록/카드_핵매크로의혹확산.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/사건카드_목록/카드_핵매크로의혹확산.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/선택지1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/선택지1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/선택지2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/선택지2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/선택지3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/선택지3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/Core/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/Core/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/UI/EventList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/UI/EventList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/UI/EventPanelUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/UI/EventPanelUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="38384" />
+    <option name="cachedIndexableFilesCount" value="38488" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
