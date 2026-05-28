@@ -17,13 +17,6 @@ public class DayPanelUI : MonoBehaviour
     [SerializeField] private Image devIcon;
     [SerializeField] private Image budgetIcon;
 
-    [Header("Stat Values")]
-    [SerializeField] private TMP_Text userValueText;
-    [SerializeField] private TMP_Text publicValueText;
-    [SerializeField] private TMP_Text serverValueText;
-    [SerializeField] private TMP_Text devValueText;
-    [SerializeField] private TMP_Text budgetValueText;
-
     [Header("Icon Sprites")]
     [SerializeField] private Sprite userSprite;
     [SerializeField] private Sprite publicSprite;
@@ -38,12 +31,10 @@ public class DayPanelUI : MonoBehaviour
 
     public void Refresh()
     {
-        if (gameManager == null)
+        if (!ValidateReferences())
         {
             return;
         }
-
-        GameStats stats = gameManager.Stats;
 
         dayText.text = $"D - {gameManager.CurrentDay}";
 
@@ -53,10 +44,54 @@ public class DayPanelUI : MonoBehaviour
         devIcon.sprite = devSprite;
         budgetIcon.sprite = budgetSprite;
 
-        userValueText.text = stats.User.ToString();
-        publicValueText.text = stats.Public.ToString();
-        serverValueText.text = stats.Server.ToString();
-        devValueText.text = stats.Dev.ToString();
-        budgetValueText.text = stats.Budget.ToString();
+    }
+
+    private bool ValidateReferences()
+    {
+        bool isValid = true;
+
+        if (gameManager == null)
+        {
+            Debug.LogError("DayPanelUI: GameManager is not assigned.", this);
+            isValid = false;
+        }
+
+        if (dayText == null)
+        {
+            Debug.LogError("DayPanelUI: Day Text is not assigned.", this);
+            isValid = false;
+        }
+
+        if (userIcon == null)
+        {
+            Debug.LogError("DayPanelUI: User Icon is not assigned.", this);
+            isValid = false;
+        }
+
+        if (publicIcon == null)
+        {
+            Debug.LogError("DayPanelUI: Public Icon is not assigned.", this);
+            isValid = false;
+        }
+
+        if (serverIcon == null)
+        {
+            Debug.LogError("DayPanelUI: Server Icon is not assigned.", this);
+            isValid = false;
+        }
+
+        if (devIcon == null)
+        {
+            Debug.LogError("DayPanelUI: Dev Icon is not assigned.", this);
+            isValid = false;
+        }
+
+        if (budgetIcon == null)
+        {
+            Debug.LogError("DayPanelUI: Budget Icon is not assigned.", this);
+            isValid = false;
+        }
+
+        return isValid;
     }
 }

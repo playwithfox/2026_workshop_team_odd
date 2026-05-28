@@ -10,6 +10,9 @@ using UnityEngine;
       [SerializeField] private CanvasGroup dayPanelGroup;
       [SerializeField] private CanvasGroup eventPanelGroup;
 
+      [Header("Event Card Intro")]
+      [SerializeField] private EventCardIntroUI eventCardIntroUI;
+
       [Header("Day")]
       [SerializeField] private RectTransform dayFrom;
       [SerializeField] private RectTransform dayTo;
@@ -56,11 +59,6 @@ using UnityEngine;
           }
       }
 
-      private void Start()
-      {
-          ScheduleAutoTransition();
-      }
-
       private void OnDestroy()
       {
           if (autoTransitionTween != null && autoTransitionTween.IsActive())
@@ -71,6 +69,19 @@ using UnityEngine;
           if (transitionSequence != null && transitionSequence.IsActive())
           {
               transitionSequence.Kill();
+          }
+      }
+
+      public void BeginAutoTransition()
+      {
+          ScheduleAutoTransition();
+      }
+
+      public void CancelAutoTransition()
+      {
+          if (autoTransitionTween != null && autoTransitionTween.IsActive())
+          {
+              autoTransitionTween.Kill();
           }
       }
 
@@ -117,6 +128,11 @@ using UnityEngine;
               eventPanelGroup.interactable = false;
           }
 
+          if (dayPanelGroup != null)
+          {
+              dayPanelGroup.alpha = 1f;
+          }
+
           transitionSequence = DOTween.Sequence();
 
           transitionSequence.Join(dayFrom.DOMove(dayTo.position, duration).SetEase(moveEase));
@@ -126,21 +142,11 @@ using UnityEngine;
           transitionSequence.Join(devIconFrom.DOMove(devIconTo.position, duration).SetEase(moveEase));
           transitionSequence.Join(budgetIconFrom.DOMove(budgetIconTo.position, duration).SetEase(moveEase));
 
-          if (dayPanelGroup != null)
-          {
-              transitionSequence.Join(dayPanelGroup.DOFade(0f, duration * 0.8f));
-          }
-
-          if (eventPanelGroup != null)
-          {
-              transitionSequence.Insert(duration * 0.4f, eventPanelGroup.DOFade(1f, duration * 0.6f));
-          }
-
           transitionSequence.OnComplete(() =>
           {
-              if (dayPanel != null)
+              if (eventCardIntroUI != null)
               {
-                  dayPanel.SetActive(false);
+                  eventCardIntroUI.PrepareIntro();
               }
 
               if (eventPanelGroup != null)
@@ -150,7 +156,17 @@ using UnityEngine;
                   eventPanelGroup.interactable = true;
               }
 
+              if (dayPanel != null)
+              {
+                  dayPanel.SetActive(false);
+              }
+
               ResetDayPanelObjects();
+
+              if (eventCardIntroUI != null)
+              {
+                  eventCardIntroUI.PlayIntro();
+              }
 
               isTransitioning = false;
           });
