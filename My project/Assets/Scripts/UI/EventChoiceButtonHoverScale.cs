@@ -17,6 +17,7 @@ public class EventChoiceButtonHoverScale : MonoBehaviour, IPointerEnterHandler, 
     private readonly List<Vector3> originalTextScales = new List<Vector3>();
     private Vector2 baseSize;
     private bool configured;
+    private bool interactionEnabled = true;
 
     private void Awake()
     {
@@ -42,13 +43,14 @@ public class EventChoiceButtonHoverScale : MonoBehaviour, IPointerEnterHandler, 
 
         baseSize = buttonRectTransform.sizeDelta;
         configured = true;
+        interactionEnabled = true;
 
         ApplyNormalState();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (!configured)
+        if (!configured || !interactionEnabled)
         {
             return;
         }
@@ -58,7 +60,7 @@ public class EventChoiceButtonHoverScale : MonoBehaviour, IPointerEnterHandler, 
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (!configured)
+        if (!configured || !interactionEnabled)
         {
             return;
         }
@@ -68,7 +70,7 @@ public class EventChoiceButtonHoverScale : MonoBehaviour, IPointerEnterHandler, 
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (!configured)
+        if (!configured || !interactionEnabled)
         {
             return;
         }
@@ -78,7 +80,7 @@ public class EventChoiceButtonHoverScale : MonoBehaviour, IPointerEnterHandler, 
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        if (!configured)
+        if (!configured || !interactionEnabled)
         {
             return;
         }
@@ -107,14 +109,16 @@ public class EventChoiceButtonHoverScale : MonoBehaviour, IPointerEnterHandler, 
             return;
         }
 
-        Transform existing = parent.Find("HoverBackground");
+        string hoverObjectName = $"{buttonRectTransform.name}_HoverBackground";
+        Transform existing = parent.Find(hoverObjectName);
         if (existing != null)
         {
             hoverImage = existing.GetComponent<Image>();
+            UpdateHoverImageVisuals();
             return;
         }
 
-        GameObject hoverObject = new GameObject("HoverBackground", typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
+        GameObject hoverObject = new GameObject(hoverObjectName, typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
         hoverObject.transform.SetParent(parent, false);
         hoverObject.transform.SetSiblingIndex(buttonRectTransform.GetSiblingIndex());
 
@@ -123,11 +127,21 @@ public class EventChoiceButtonHoverScale : MonoBehaviour, IPointerEnterHandler, 
 
         hoverImage = hoverObject.GetComponent<Image>();
         hoverImage.raycastTarget = false;
+        UpdateHoverImageVisuals();
+        hoverImage.enabled = false;
+    }
+
+    private void UpdateHoverImageVisuals()
+    {
+        if (hoverImage == null)
+        {
+            return;
+        }
+
         hoverImage.sprite = buttonImage != null ? buttonImage.sprite : null;
         hoverImage.type = buttonImage != null ? buttonImage.type : Image.Type.Simple;
         hoverImage.preserveAspect = buttonImage != null && buttonImage.preserveAspect;
         hoverImage.color = buttonImage != null ? buttonImage.color : Color.white;
-        hoverImage.enabled = false;
     }
 
     private static void CopyTransformState(RectTransform source, RectTransform target)
@@ -187,6 +201,21 @@ public class EventChoiceButtonHoverScale : MonoBehaviour, IPointerEnterHandler, 
         ApplyNormalState();
     }
 
+    public void SetInteractionEnabled(bool enabled)
+    {
+        interactionEnabled = enabled;
+
+        if (!configured)
+        {
+            return;
+        }
+
+        if (!interactionEnabled)
+        {
+            ApplyNormalState();
+        }
+    }
+
     private void SetHoverVisual(bool visible)
     {
         if (hoverImage == null || buttonRectTransform == null)
@@ -196,6 +225,7 @@ public class EventChoiceButtonHoverScale : MonoBehaviour, IPointerEnterHandler, 
 
         RectTransform hoverRect = hoverImage.rectTransform;
         CopyTransformState(buttonRectTransform, hoverRect);
+        UpdateHoverImageVisuals();
         hoverRect.sizeDelta = visible
             ? new Vector2(hoverWidth, baseSize.y)
             : baseSize;
