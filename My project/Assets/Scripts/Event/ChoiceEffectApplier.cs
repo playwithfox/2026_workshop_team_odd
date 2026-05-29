@@ -33,7 +33,12 @@ public static class ChoiceEffectApplier
             Dev = stats.Dev,
             Budget = stats.Budget,
             ResultFlag = choice.ResultFlag,
-            ResultComment = choice.ResultComment
+            ResultComment = choice.ResultComment,
+            result_summary = choice.result_summary,
+            reaction_community = choice.reaction_community,
+            reaction_internal = choice.reaction_internal,
+            reaction_server = choice.reaction_server,
+            reaction_management = choice.reaction_management
         };
     }
 
