@@ -144,7 +144,7 @@
       "EventID": "EVT_011",
       "Phase": "후반부",
       "Title": "최종 업데이트 승인",
-      "Description": "운영팀이 마지막 대형 업데이트 배포 승인을 요청했습니다. 성공하면 분위기를 뒤집을 수 있지만 실패하면 남은 신뢰까지 흔들립니다.",
+        "Description": "운영팀이 마지막 대형 업데이트 배포 승인을 요청했습니다. 성공하면 분위기를 뒤집을 수 있지만 실패하면 남은 신뢰까지 흔들립니다.",
       "ImageID": "img_final_update",
       "ConditionFlag": "None",
       "ConditionStat": "None",

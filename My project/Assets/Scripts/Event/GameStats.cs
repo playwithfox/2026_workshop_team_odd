@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class GameStats
+public class  GameStats
 {
     private const int MinStatValue = 0;
     private const int MaxStatValue = 100;
