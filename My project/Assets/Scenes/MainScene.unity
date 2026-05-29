@@ -1955,6 +1955,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1549327788}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1068845328}
         m_TargetAssemblyTypeName: TitleScreenUI, Assembly-CSharp
         m_MethodName: StartGame
@@ -2523,7 +2535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c78a9ad202f339048a9c9d4a8658ca01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DayPanelUI
-  gameManager: {fileID: 1549327786}
+  gameManager: {fileID: 1549327788}
   dayText: {fileID: 928679608}
   userIcon: {fileID: 2034805649}
   publicIcon: {fileID: 431426101}
@@ -3340,7 +3352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e4c5e03592d31e44938121c6e8877ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TitleScreenUI
-  gameManager: {fileID: 1549327786}
+  gameManager: {fileID: 1549327788}
   titlePanel: {fileID: 2029046271}
   dayPanel: {fileID: 704496162}
   eventPanel: {fileID: 1137236810}
@@ -3487,7 +3499,7 @@ MonoBehaviour:
   reactionDelay: 0.5
   choiceMoveDuration: 0.8
   choiceMoveEase: 10
-  gameManager: {fileID: 1549327786}
+  gameManager: {fileID: 1549327788}
 --- !u!225 &1137236815
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -4797,27 +4809,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1549327787}
-  - component: {fileID: 1549327786}
+  - component: {fileID: 1549327788}
+  - component: {fileID: 1549327789}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: GameManager+CallEnding
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1549327786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1549327785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2db2f2d2485516f4fb40422daa57781f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  maxDay: 7
 --- !u!4 &1549327787
 Transform:
   m_ObjectHideFlags: 0
@@ -4833,6 +4833,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1549327788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549327785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d708d0a4ec7a62a4fbe75f6b7edce12d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  maxDay: 7
+  callEnding: {fileID: 1549327789}
+--- !u!114 &1549327789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549327785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d6fd209fb8049e4a843a295896dfbcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CallEnding
+  endingImage: {fileID: 0}
+  endingTitle: {fileID: 0}
+  endingBody: {fileID: 0}
+  gamemanager: {fileID: 1549327788}
 --- !u!1 &1552138176
 GameObject:
   m_ObjectHideFlags: 0
@@ -6208,7 +6238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e4c5e03592d31e44938121c6e8877ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TitleScreenUI
-  gameManager: {fileID: 1549327786}
+  gameManager: {fileID: 0}
   titlePanel: {fileID: 2029046271}
   dayPanel: {fileID: 704496162}
   eventPanel: {fileID: 1137236810}

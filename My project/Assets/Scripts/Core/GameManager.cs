@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour // Unity 오브젝트에 붙일 수 있
     
 #region Game State
     [Header("Game Settings")] // Inspector에서 게임 설정 항목을 보기 좋게 구분해 줍니다.
+    [Header("Stats")]
     [SerializeField] private int maxDay = 7; // 게임이 몇 일차까지 진행되는지 정합니다.
     [SerializeField] private CallEnding callEnding; // 엔딩을 보여주는 CallEnding 컴포넌트를 연결하기 위한 변수입니다.
     private int currentDay = 1; // 현재 날짜를 저장합니다.
