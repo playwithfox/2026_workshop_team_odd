@@ -7,12 +7,12 @@ public class GameManager : MonoBehaviour // Unity 오브젝트에 붙일 수 있
     [Header("Game Settings")] // Inspector에서 게임 설정 항목을 보기 좋게 구분해 줍니다.
     [SerializeField] private int maxDay = 7; // 게임이 몇 일차까지 진행되는지 정합니다.
     [SerializeField] private CallEnding callEnding; // 엔딩을 보여주는 CallEnding 컴포넌트를 연결하기 위한 변수입니다.
-    [Header("Stats")] // Inspector에서 지표 관련 항목을 보기 좋게 구분해 줍니다.
     private int currentDay = 1; // 현재 날짜를 저장합니다.
     private bool isGameOver; // 게임 오버 상태인지 저장합니다.
     public int CurrentDay => currentDay; // 다른 스크립트가 현재 날짜를 읽을 수 있게 합니다.
     public bool IsGameOver => isGameOver; // 다른 스크립트가 게임 오버 여부를 읽을 수 있게 합니다.
     GameStats gamestats = new GameStats(); // 게임의 지표를 관리하는 GameStats 클래스의 인스턴스를 생성합니다.
+    public GameStats Stats => gamestats; // 다른 스크립트가 게임 지표를 읽을 수 있게 합니다.
 
     #endregion
     public void StartGame() // 게임을 처음 시작할 때 호출하는 함수입니다.
