@@ -1,29 +1,49 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class EventPanelUI : MonoBehaviour
 {
-	[Header("Day")]
-	[SerializeField] private TMP_Text dayText;
+    [Header("Day")]
+    [SerializeField] private TMP_Text dayText;
 
     [SerializeField] private TMP_Text titleText;
     [SerializeField] private TMP_Text descriptionText;
     [SerializeField] private Image eventImage;
 
-	[Header("Choices")]
+    [Header("Choices")]
     [SerializeField] private Button[] choiceButtons;
-	[SerializeField] private TMP_Text[] choiceNameTexts;
-	[SerializeField] private TMP_Text[] choiceDescriptionTexts;
-    [SerializeField] private TMP_Text resultCommentText;
+    [SerializeField] private TMP_Text[] choiceNameTexts;
+    [SerializeField] private TMP_Text[] choiceDescriptionTexts;
+    [SerializeField] private RectTransform reactionTargetButton;
+    [SerializeField] private GameObject reactionPanel;
+    [SerializeField] private float selectionFadeDuration = 0.8f;
+    [SerializeField] private float reactionDelay = 0.5f;
+    [SerializeField] private float choiceMoveDuration = 0.8f;
+    [SerializeField] private Ease choiceMoveEase = Ease.InOutCubic;
 
     private EventListData eventListData;
-	[SerializeField] private GameManager gameManager;
-	private GameStats Stats => gameManager.Stats;
-    private List<string> usedEventIds = new List<string>();
+    [SerializeField] private GameManager gameManager;
+    private GameStats Stats => gameManager.Stats;
+    private readonly List<string> usedEventIds = new List<string>();
+    private readonly List<CanvasGroup> choiceCanvasGroups = new List<CanvasGroup>();
+    private Sequence choiceTransitionSequence;
+    private Sequence selectionFadeSequence;
+    private SpriteRenderer eventCardSpriteRenderer;
+    private Color eventCardSpriteColor = Color.white;
+    private CanvasGroup titleCanvasGroup;
+    private CanvasGroup descriptionCanvasGroup;
+    private CanvasGroup eventImageCanvasGroup;
 
-	private EventData currentEvent;
+    private EventData currentEvent;
+
+    private void Awake()
+    {
+        HideReactionPanel();
+        CacheEventCardVisuals();
+    }
 
     private void Start()
     {
@@ -33,6 +53,8 @@ public class EventPanelUI : MonoBehaviour
             return;
         }
 
+        HideReactionPanel();
+
         TextAsset json = Resources.Load<TextAsset>("EventList");
         if (json == null)
         {
@@ -41,11 +63,13 @@ public class EventPanelUI : MonoBehaviour
         }
 
         eventListData = JsonUtility.FromJson<EventListData>(json.text);
+        ConfigureChoiceButtons();
+        ResetEventCardVisualState();
 
-		if (dayText != null)
-		{
-			dayText.text = $"D - {gameManager.CurrentDay}";
-		}
+        if (dayText != null)
+        {
+            dayText.text = $"D - {gameManager.CurrentDay}";
+        }
 
         List<EventData> dayOneEvents = EventRandomSelector.PickEventsForDay(
             gameManager.CurrentDay,
@@ -63,13 +87,15 @@ public class EventPanelUI : MonoBehaviour
             titleText.text = "오늘 발생한 사건 없음";
             descriptionText.text = "조건에 맞는 사건이 없습니다.";
             eventImage.sprite = null;
-			HideChoiceButtons();
+            HideChoiceButtons();
         }
     }
 
     public void ShowEvent(EventData eventData)
     {
-		currentEvent = eventData;
+        currentEvent = eventData;
+
+        ResetEventCardVisualState();
 
         titleText.text = eventData.Title;
         descriptionText.text = eventData.Description;
@@ -77,15 +103,51 @@ public class EventPanelUI : MonoBehaviour
         Sprite sprite = Resources.Load<Sprite>("UI_Images/사건카드_목록/" + eventData.ImageID);
         eventImage.sprite = sprite;
 
-		if (resultCommentText != null)
-        {
-            resultCommentText.text = "";
-        }
-
         SetupChoices(eventData);
     }
 
-	private void SetupChoices(EventData eventData)
+    private void ConfigureChoiceButtons()
+    {
+        if (choiceButtons == null)
+        {
+            return;
+        }
+
+        for (int i = 0; i < choiceButtons.Length; i++)
+        {
+            ConfigureChoiceButton(choiceButtons[i]);
+        }
+    }
+
+    private void ConfigureChoiceButton(Button button)
+    {
+        if (button == null)
+        {
+            return;
+        }
+
+        button.transition = Selectable.Transition.None;
+
+        EventChoiceButtonHoverScale hoverScale = button.GetComponent<EventChoiceButtonHoverScale>();
+        if (hoverScale == null)
+        {
+            hoverScale = button.gameObject.AddComponent<EventChoiceButtonHoverScale>();
+        }
+
+        hoverScale.Configure(button.GetComponent<RectTransform>(), 760f);
+
+        CanvasGroup canvasGroup = GetOrAddCanvasGroup(button.gameObject);
+        canvasGroup.alpha = 1f;
+        canvasGroup.interactable = true;
+        canvasGroup.blocksRaycasts = true;
+
+        if (!choiceCanvasGroups.Contains(canvasGroup))
+        {
+            choiceCanvasGroups.Add(canvasGroup);
+        }
+    }
+
+    private void SetupChoices(EventData eventData)
     {
         HideChoiceButtons();
 
@@ -99,8 +161,7 @@ public class EventPanelUI : MonoBehaviour
             }
 
             Button button = choiceButtons[i];
-
-            //TMP_Text buttonText = button.GetComponentInChildren<TMP_Text>();
+            ConfigureChoiceButton(button);
 
             button.gameObject.SetActive(true);
             button.interactable = true;
@@ -110,17 +171,18 @@ public class EventPanelUI : MonoBehaviour
                 choiceNameTexts[i].text = choice.ChoiceName;
             }
 
-			if (i < choiceDescriptionTexts.Length && choiceDescriptionTexts[i] != null)
-			{
-				choiceDescriptionTexts[i].text = choice.Description;
-			}
+            if (i < choiceDescriptionTexts.Length && choiceDescriptionTexts[i] != null)
+            {
+                choiceDescriptionTexts[i].text = choice.Description;
+            }
 
             button.onClick.RemoveAllListeners();
 
             ChoiceData selectedChoice = choice;
+            Button selectedButton = button;
             button.onClick.AddListener(() =>
             {
-                OnChoiceSelected(selectedChoice);
+                OnChoiceSelected(selectedChoice, selectedButton);
             });
         }
     }
@@ -138,37 +200,301 @@ public class EventPanelUI : MonoBehaviour
         return null;
     }
 
-    private void OnChoiceSelected(ChoiceData choice)
+    private void OnChoiceSelected(ChoiceData choice, Button selectedButton)
     {
-        ChoiceResult result = ChoiceEffectApplier.Apply(choice, Stats);
+        PlayChoiceSelectionTransition(selectedButton, choice);
+    }
 
-        if (resultCommentText != null && result != null)
+    private void PlayChoiceSelectionTransition(Button selectedButton, ChoiceData choice)
+    {
+        if (selectedButton == null)
         {
-            resultCommentText.text = result.ResultComment;
+            return;
+        }
+
+        EventChoiceButtonHoverScale hoverScale = selectedButton.GetComponent<EventChoiceButtonHoverScale>();
+        if (hoverScale != null)
+        {
+            hoverScale.ResetVisualState();
+        }
+
+        if (selectionFadeSequence != null && selectionFadeSequence.IsActive())
+        {
+            selectionFadeSequence.Kill();
         }
 
         foreach (Button button in choiceButtons)
         {
             button.interactable = false;
         }
+
+        selectionFadeSequence = DOTween.Sequence();
+
+        FadeEventCard(selectionFadeSequence);
+        FadeUnselectedChoiceButtons(selectionFadeSequence, selectedButton);
+        selectionFadeSequence.AppendInterval(reactionDelay);
+
+        selectionFadeSequence.OnComplete(() =>
+        {
+            HideFadedEventCard();
+            HideUnselectedChoiceButtons(selectedButton);
+            BeginReactionTransition(selectedButton, choice);
+        });
+    }
+
+    private void ApplyChoiceResult(ChoiceData choice)
+    {
+        ChoiceEffectApplier.Apply(choice, Stats);
+    }
+
+    private void BeginReactionTransition(Button selectedButton, ChoiceData choice)
+    {
+        GameObject resolvedReactionPanel = ResolveReactionPanel();
+        if (resolvedReactionPanel != null && !resolvedReactionPanel.activeSelf)
+        {
+            resolvedReactionPanel.SetActive(true);
+        }
+
+        if (reactionTargetButton == null)
+        {
+            reactionTargetButton = FindReactionTargetButton(resolvedReactionPanel);
+        }
+
+        RectTransform selectedRect = selectedButton.GetComponent<RectTransform>();
+        if (selectedRect == null)
+        {
+            ApplyChoiceResult(choice);
+            return;
+        }
+
+        if (choiceTransitionSequence != null && choiceTransitionSequence.IsActive())
+        {
+            choiceTransitionSequence.Kill();
+        }
+
+        Vector3 targetPosition = reactionTargetButton != null ? reactionTargetButton.position : selectedRect.position;
+        Vector2 targetSize = reactionTargetButton != null ? reactionTargetButton.sizeDelta : selectedRect.sizeDelta;
+        Vector2 startSize = selectedRect.sizeDelta;
+        Vector3 targetScale = new Vector3(
+            startSize.x == 0f ? 1f : targetSize.x / startSize.x,
+            startSize.y == 0f ? 1f : targetSize.y / startSize.y,
+            selectedRect.localScale.z
+        );
+
+        choiceTransitionSequence = DOTween.Sequence();
+        choiceTransitionSequence.Join(selectedRect.DOMove(targetPosition, choiceMoveDuration).SetEase(choiceMoveEase));
+        choiceTransitionSequence.Join(selectedRect.DOScale(targetScale, choiceMoveDuration).SetEase(choiceMoveEase));
+        choiceTransitionSequence.OnComplete(() =>
+        {
+            if (reactionTargetButton != null)
+            {
+                selectedRect.position = reactionTargetButton.position;
+                selectedRect.localScale = targetScale;
+            }
+
+            ApplyChoiceResult(choice);
+        });
+    }
+
+    private RectTransform FindReactionTargetButton(GameObject resolvedReactionPanel)
+    {
+        if (resolvedReactionPanel == null)
+        {
+            return null;
+        }
+
+        Transform target = resolvedReactionPanel.transform.Find("OptionButton_1");
+        return target != null ? target.GetComponent<RectTransform>() : null;
+    }
+
+    private void HideReactionPanel()
+    {
+        GameObject target = ResolveReactionPanel();
+        if (target != null)
+        {
+            target.SetActive(false);
+        }
+    }
+
+    private void CacheEventCardVisuals()
+    {
+        titleCanvasGroup = GetOrAddCanvasGroup(titleText != null ? titleText.gameObject : null);
+        descriptionCanvasGroup = GetOrAddCanvasGroup(descriptionText != null ? descriptionText.gameObject : null);
+        eventImageCanvasGroup = GetOrAddCanvasGroup(eventImage != null ? eventImage.gameObject : null);
+
+        Transform eventCardRoot = null;
+        if (titleText != null)
+        {
+            eventCardRoot = titleText.transform.parent;
+        }
+
+        if (eventCardRoot != null)
+        {
+            eventCardSpriteRenderer = eventCardRoot.GetComponent<SpriteRenderer>();
+            if (eventCardSpriteRenderer != null)
+            {
+                eventCardSpriteColor = eventCardSpriteRenderer.color;
+            }
+        }
+    }
+
+    private void ResetEventCardVisualState()
+    {
+        SetCanvasGroupAlpha(titleCanvasGroup, 1f);
+        SetCanvasGroupAlpha(descriptionCanvasGroup, 1f);
+        SetCanvasGroupAlpha(eventImageCanvasGroup, 1f);
+        SetSpriteRendererAlpha(eventCardSpriteRenderer, 1f);
+    }
+
+    private void FadeEventCard(Sequence sequence)
+    {
+        AppendCanvasGroupFade(sequence, titleCanvasGroup, 0f, selectionFadeDuration);
+        AppendCanvasGroupFade(sequence, descriptionCanvasGroup, 0f, selectionFadeDuration);
+        AppendCanvasGroupFade(sequence, eventImageCanvasGroup, 0f, selectionFadeDuration);
+        AppendSpriteRendererFade(sequence, eventCardSpriteRenderer, 0f, selectionFadeDuration);
+    }
+
+    private void FadeUnselectedChoiceButtons(Sequence sequence, Button selectedButton)
+    {
+        if (choiceButtons == null)
+        {
+            return;
+        }
+
+        for (int i = 0; i < choiceButtons.Length; i++)
+        {
+            Button button = choiceButtons[i];
+            if (button == null || button == selectedButton)
+            {
+                continue;
+            }
+
+            CanvasGroup canvasGroup = GetOrAddCanvasGroup(button.gameObject);
+            AppendCanvasGroupFade(sequence, canvasGroup, 0f, selectionFadeDuration);
+        }
+    }
+
+    private void HideFadedEventCard()
+    {
+        SetCanvasGroupAlpha(titleCanvasGroup, 0f);
+        SetCanvasGroupAlpha(descriptionCanvasGroup, 0f);
+        SetCanvasGroupAlpha(eventImageCanvasGroup, 0f);
+        SetSpriteRendererAlpha(eventCardSpriteRenderer, 0f);
+    }
+
+    private void HideUnselectedChoiceButtons(Button selectedButton)
+    {
+        if (choiceButtons == null)
+        {
+            return;
+        }
+
+        for (int i = 0; i < choiceButtons.Length; i++)
+        {
+            Button button = choiceButtons[i];
+            if (button == null || button == selectedButton)
+            {
+                continue;
+            }
+
+            CanvasGroup canvasGroup = GetOrAddCanvasGroup(button.gameObject);
+            SetCanvasGroupAlpha(canvasGroup, 0f);
+            button.gameObject.SetActive(false);
+        }
+    }
+
+    private static void AppendCanvasGroupFade(Sequence sequence, CanvasGroup canvasGroup, float targetAlpha, float duration)
+    {
+        if (sequence == null || canvasGroup == null)
+        {
+            return;
+        }
+
+        sequence.Join(canvasGroup.DOFade(targetAlpha, duration));
+    }
+
+    private static void AppendSpriteRendererFade(Sequence sequence, SpriteRenderer spriteRenderer, float targetAlpha, float duration)
+    {
+        if (sequence == null || spriteRenderer == null)
+        {
+            return;
+        }
+
+        sequence.Join(spriteRenderer.DOFade(targetAlpha, duration));
+    }
+
+    private static void SetCanvasGroupAlpha(CanvasGroup canvasGroup, float alpha)
+    {
+        if (canvasGroup == null)
+        {
+            return;
+        }
+
+        canvasGroup.alpha = alpha;
+        canvasGroup.interactable = alpha > 0f;
+        canvasGroup.blocksRaycasts = alpha > 0f;
+    }
+
+    private void SetSpriteRendererAlpha(SpriteRenderer spriteRenderer, float alpha)
+    {
+        if (spriteRenderer == null)
+        {
+            return;
+        }
+
+        Color color = eventCardSpriteColor;
+        color.a = alpha;
+        spriteRenderer.color = color;
+    }
+
+    private static CanvasGroup GetOrAddCanvasGroup(GameObject target)
+    {
+        if (target == null)
+        {
+            return null;
+        }
+
+        CanvasGroup canvasGroup = target.GetComponent<CanvasGroup>();
+        if (canvasGroup == null)
+        {
+            canvasGroup = target.AddComponent<CanvasGroup>();
+        }
+
+        return canvasGroup;
+    }
+
+    private GameObject ResolveReactionPanel()
+    {
+        if (reactionPanel != null)
+        {
+            return reactionPanel;
+        }
+
+        GameObject found = GameObject.Find("ReactionPanel");
+        if (found != null)
+        {
+            reactionPanel = found;
+        }
+
+        return reactionPanel;
     }
 
     private void HideChoiceButtons()
     {
-    	for (int i = 0; i < choiceButtons.Length; i++)
-      	{
-       		choiceButtons[i].onClick.RemoveAllListeners();
-      	    choiceButtons[i].gameObject.SetActive(false);
-	
-       	  	if (i < choiceNameTexts.Length && choiceNameTexts[i] != null)
-         	{
-              	choiceNameTexts[i].text = "";
-          	}
+        for (int i = 0; i < choiceButtons.Length; i++)
+        {
+            choiceButtons[i].onClick.RemoveAllListeners();
+            choiceButtons[i].gameObject.SetActive(false);
 
-          	if (i < choiceDescriptionTexts.Length && choiceDescriptionTexts[i] != null)
-          	{
-              	choiceDescriptionTexts[i].text = "";
-          	}
-      	}
+            if (i < choiceNameTexts.Length && choiceNameTexts[i] != null)
+            {
+                choiceNameTexts[i].text = "";
+            }
+
+            if (i < choiceDescriptionTexts.Length && choiceDescriptionTexts[i] != null)
+            {
+                choiceDescriptionTexts[i].text = "";
+            }
+        }
     }
 }

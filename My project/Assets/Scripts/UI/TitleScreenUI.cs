@@ -1,4 +1,3 @@
-// 시작 화면 UI 작동
 using UnityEngine;
 
 public class TitleScreenUI : MonoBehaviour
@@ -10,6 +9,7 @@ public class TitleScreenUI : MonoBehaviour
     [SerializeField] private GameObject titlePanel;
     [SerializeField] private GameObject dayPanel;
     [SerializeField] private GameObject eventPanel;
+    [SerializeField] private GameObject reactionPanel;
 
     [Header("Transitions")]
     [SerializeField] private DayToEventTransitionUI dayToEventTransitionUI;
@@ -32,6 +32,8 @@ public class TitleScreenUI : MonoBehaviour
         {
             eventPanel.SetActive(false);
         }
+
+        HideReactionPanel();
 
         if (dayToEventTransitionUI != null)
         {
@@ -94,10 +96,37 @@ public class TitleScreenUI : MonoBehaviour
             eventPanel.SetActive(false);
         }
 
+        HideReactionPanel();
+
         if (dayToEventTransitionUI != null)
         {
             dayToEventTransitionUI.BeginAutoTransition();
         }
+    }
+
+    private void HideReactionPanel()
+    {
+        GameObject target = ResolveReactionPanel();
+        if (target != null)
+        {
+            target.SetActive(false);
+        }
+    }
+
+    private GameObject ResolveReactionPanel()
+    {
+        if (reactionPanel != null)
+        {
+            return reactionPanel;
+        }
+
+        GameObject found = GameObject.Find("ReactionPanel");
+        if (found != null)
+        {
+            reactionPanel = found;
+        }
+
+        return reactionPanel;
     }
 
     public void ExitGame()

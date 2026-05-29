@@ -9,8 +9,8 @@ public class EventCardIntroUI : MonoBehaviour
     [SerializeField] private RectTransform[] optionButtons;
 
     [Header("Positions")]
-    [SerializeField] private Vector2 centerPosition = new Vector2(0f, 338f);
-    [SerializeField] private Vector2 finalPosition = new Vector2(-460f, 338f);
+    [SerializeField] private Vector2 centerPosition = new Vector2(0f, -80f);
+    [SerializeField] private Vector2 finalPosition = new Vector2(-460f, -80f);
 
     [Header("Timing")]
     [SerializeField] private float startDelay = 1f;
@@ -48,7 +48,7 @@ public class EventCardIntroUI : MonoBehaviour
 
         SaveOriginalValues();
 
-        eventCard.pivot = new Vector2(originalPivot.x, 1f);
+        eventCard.pivot = new Vector2(0.5f, 0.5f);
         eventCard.anchoredPosition = centerPosition;
         eventCard.localScale = new Vector3(originalScale.x, 0f, originalScale.z);
 
@@ -117,7 +117,7 @@ public class EventCardIntroUI : MonoBehaviour
                 continue;
             }
 
-            optionButton.pivot = new Vector2(optionOriginalPivots[i].x, 1f);
+            optionButton.pivot = new Vector2(0.5f, 0.5f);
             optionButton.localScale = new Vector3(optionOriginalScales[i].x, 0f, optionOriginalScales[i].z);
         }
     }
