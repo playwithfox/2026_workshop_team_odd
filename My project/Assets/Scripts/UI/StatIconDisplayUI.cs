@@ -53,6 +53,85 @@ public class StatTierSprites
         return eightyOneToHundredSprite;
     }
 }
+public class StatTierChangeSprites
+{
+    [Header("0")]
+    [SerializeField] private Sprite zeroSpriteUp;
+    [SerializeField] private Sprite zeroSpriteDown;
+
+    [Header("1 - 20")]
+    [SerializeField] private Sprite oneToTwentySpriteUp;
+    [SerializeField] private Sprite oneToTwentySpriteDown;
+
+    [Header("21 - 40")]
+    [SerializeField] private Sprite twentyOneToFortySpriteUp;
+    [SerializeField] private Sprite twentyOneToFortySpriteDown;
+
+    [Header("41 - 60")]
+    [SerializeField] private Sprite fortyOneToSixtySpriteUp;
+    [SerializeField] private Sprite fortyOneToSixtySpriteDown;
+
+    [Header("61 - 80")]
+    [SerializeField] private Sprite sixtyOneToEightySpriteUp;
+    [SerializeField] private Sprite sixtyOneToEightySpriteDown;
+
+    [Header("81 - 100")]
+    [SerializeField] private Sprite eightyOneToHundredSpriteUp;
+    [SerializeField] private Sprite eightyOneToHundredSpriteDown;
+
+    public Sprite GetSpriteChanged(int value, int beforeValue)
+    {
+        if (value <= 0)
+        {
+            if (value > beforeValue)
+            {
+                return zeroSpriteUp;
+            }
+            return zeroSpriteDown;
+        }
+        if (value <= 20)
+        {
+            if (value > beforeValue)
+            {
+                return oneToTwentySpriteUp;
+            }
+            return oneToTwentySpriteDown;
+        }
+
+        if (value <= 40)
+        {
+            if (value > beforeValue)
+            {
+                return twentyOneToFortySpriteUp;
+            }
+            return twentyOneToFortySpriteDown;
+        }
+
+        if (value <= 60)
+        {
+            if (value > beforeValue)
+            {
+                return fortyOneToSixtySpriteUp;
+            }
+            return fortyOneToSixtySpriteDown;
+        }
+
+        if (value <= 80)
+        {
+            if (value > beforeValue)
+            {
+                return sixtyOneToEightySpriteUp;
+            }
+            return sixtyOneToEightySpriteDown;
+        }
+
+        if (value > beforeValue)
+        {
+            return eightyOneToHundredSpriteUp;
+        }
+        return eightyOneToHundredSpriteDown;
+    }
+}
 
 public class StatIconDisplayUI : MonoBehaviour
 {
@@ -67,7 +146,7 @@ public class StatIconDisplayUI : MonoBehaviour
     [SerializeField] private Image serverIcon;
     [SerializeField] private Image devIcon;
     [SerializeField] private Image budgetIcon;
-
+    #region Stat Sprites
     [Header("User Sprites")]
     [SerializeField] private StatTierSprites userSprites;
 
@@ -82,6 +161,30 @@ public class StatIconDisplayUI : MonoBehaviour
 
     [Header("Budget Sprites")]
     [SerializeField] private StatTierSprites budgetSprites;
+    #endregion
+    
+    #region Stat Change Sprites
+    [Header("User Change Sprites")]
+    [Header("User Sprites Up/Down")]
+    [SerializeField] private StatTierSprites userSpritesUp;
+    [SerializeField] private StatTierSprites userSpritesDown;
+
+    [Header("Public Sprites Up/Down")]
+    [SerializeField] private StatTierSprites publicSpritesUp;
+    [SerializeField] private StatTierSprites publicSpritesDown;
+
+    [Header("Server Sprites Up/Down")]
+    [SerializeField] private StatTierSprites serverSpritesUp;
+    [SerializeField] private StatTierSprites serverSpritesDown;
+
+    [Header("Dev Sprites Up/Down")]
+    [SerializeField] private StatTierSprites devSpritesUp;
+    [SerializeField] private StatTierSprites devSpritesDown;
+
+    [Header("Budget Sprites Up/Down")]
+    [SerializeField] private StatTierSprites budgetSpritesUp;
+    [SerializeField] private StatTierSprites budgetSpritesDown;
+    #endregion
 
     private void OnEnable()
     {
@@ -126,6 +229,39 @@ public class StatIconDisplayUI : MonoBehaviour
             }
 
             display.Refresh();
+        }
+    }
+    public void RefreshChanged()
+    {
+        if (!ValidateReferences())
+        {
+            return;
+        }
+
+        GameStats stats = gameManager.Stats;
+        if (stats == null)
+        {
+            return;
+        }
+
+        SetIcon(userIcon, userSprites != null ? userSprites.GetSpriteChanged(stats.User,stats.BeforeUser) : null);
+        SetIcon(publicIcon, publicSprites != null ? publicSprites.GetSpriteChanged(stats.Public,stats.BeforePublic) : null);
+        SetIcon(serverIcon, serverSprites != null ? serverSprites.GetSpriteChanged(stats.Server,stats.BeforeServer) : null);
+        SetIcon(devIcon, devSprites != null ? devSprites.GetSpriteChanged(stats.Dev,stats.BeforeDev) : null);
+        SetIcon(budgetIcon, budgetSprites != null ? budgetSprites.GetSpriteChanged(stats.Budget,stats.BeforeBudget) : null);
+    }
+    public static void RefreshAllChanged()
+    {
+        for (int i = activeDisplays.Count - 1; i >= 0; i--)
+        {
+            StatIconDisplayUI display = activeDisplays[i];
+            if (display == null)
+            {
+                activeDisplays.RemoveAt(i);
+                continue;
+            }
+
+            display.RefreshChanged();
         }
     }
 

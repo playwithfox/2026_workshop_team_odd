@@ -4456,6 +4456,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241762796}
   m_CullTransparentMesh: 1
+--- !u!1 &1261490309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1261490311}
+  - component: {fileID: 1261490310}
+  m_Layer: 0
+  m_Name: CallEnding
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1261490310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261490309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d6fd209fb8049e4a843a295896dfbcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CallEnding
+  endingImage: {fileID: 0}
+  endingTitle: {fileID: 0}
+  endingBody: {fileID: 0}
+  gamemanager: {fileID: 1549327788}
+--- !u!4 &1261490311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261490309}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 866.71643, y: 567.2972, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1309414138
 GameObject:
   m_ObjectHideFlags: 0
@@ -5300,9 +5348,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1549327787}
   - component: {fileID: 1549327788}
-  - component: {fileID: 1549327789}
   m_Layer: 0
-  m_Name: GameManager+CallEnding
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5336,23 +5383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   maxDay: 7
-  callEnding: {fileID: 1549327789}
---- !u!114 &1549327789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1549327785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d6fd209fb8049e4a843a295896dfbcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CallEnding
-  endingImage: {fileID: 0}
-  endingTitle: {fileID: 0}
-  endingBody: {fileID: 0}
-  gamemanager: {fileID: 1549327788}
+  callEnding: {fileID: 1261490310}
 --- !u!1 &1552138176
 GameObject:
   m_ObjectHideFlags: 0
@@ -6441,7 +6472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e4c5e03592d31e44938121c6e8877ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TitleScreenUI
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1549327788}
   titlePanel: {fileID: 2029046271}
   dayPanel: {fileID: 704496162}
   eventPanel: {fileID: 1137236810}
@@ -6921,6 +6952,7 @@ SceneRoots:
   - {fileID: 1552138180}
   - {fileID: 311022381}
   - {fileID: 1549327787}
+  - {fileID: 1261490311}
   - {fileID: 1355772983}
   - {fileID: 1068845329}
   - {fileID: 291064567}

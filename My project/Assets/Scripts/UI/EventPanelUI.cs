@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
@@ -313,7 +314,8 @@ public class EventPanelUI : MonoBehaviour
             }
 
             ApplyChoiceResult(choice);
-            StatIconDisplayUI.RefreshAll();
+            StatIconDisplayUI.RefreshAllChanged();
+            StartCoroutine(RefreshAfterDelay());
         });
     }
 
@@ -550,4 +552,10 @@ public class EventPanelUI : MonoBehaviour
             }
         }
     }
+    private IEnumerator RefreshAfterDelay()
+{
+    yield return new WaitForSeconds(0.5f);
+
+    StatIconDisplayUI.RefreshAll();
+}
 }
