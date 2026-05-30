@@ -1,12 +1,30 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class CallEnding : MonoBehaviour
 {
+    public enum EndingStatType
+    {
+        User,
+        Public,
+        Server,
+        Dev,
+        Budget
+    }
+
     [SerializeField] private Image endingImage;
     [SerializeField] private TMP_Text endingTitle;
     [SerializeField] private TMP_Text endingBody;
     [SerializeField] private GameManager gamemanager;
+
+    public struct EndingData
+    {
+        public EndingStatType StatType;
+        public string ImageId;
+        public string Title;
+        public string Body;
+    }
 
     public void ShowEnding(string imageID, string title, string body)
     {
@@ -18,12 +36,13 @@ public class CallEnding : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning($"엔딩 이미지를 찾을 수 없음: {imageID}");
+            Debug.LogWarning($"Ending image not found: {imageID}");
         }
 
         endingTitle.text = title;
         endingBody.text = body;
     }
+
     public void ShowEnding_Good(string imageID)
     {
         Sprite sprite = Resources.Load<Sprite>($"EndingImages/{imageID}");
@@ -34,40 +53,98 @@ public class CallEnding : MonoBehaviour
         }
         else
         {
-            endingImage.sprite = null; // 이미지가 없을 때는 빈 이미지로 설정합니다.
-            Debug.LogWarning($"엔딩 이미지를 찾을 수 없음: {imageID}");
+            endingImage.sprite = null;
+            Debug.LogWarning($"Good ending image not found: {imageID}");
         }
 
         endingTitle.text = "승리!";
-        endingBody.text = "'아무튼 서비스는 이어질 겁니다.'";
+        endingBody.text = "아무튼 서비스는 이어질 겁니다.";
     }
+
     public void PrintEnding(GameStats gamestats)
     {
-        if (gamemanager.IsGameOver){
-            if (gamestats.User <= 0)
+        if (gamemanager != null && gamemanager.IsGameOver)
+        {
+            if (TryGetBadEndingData(gamestats, out EndingData endingData))
             {
-                ShowEnding("유저 수/0명/1779701060510", "서비스 종료", "게임은 켜져 있지만, 접속하는 사람은 없었습니다.");
-            }
-            else if (gamestats.Public <= 0)
-            {
-                ShowEnding("커뮤니티 신뢰/0단계(최하)/1779701068123", "신뢰 붕괴", "공식 공지보다 유저 캡처본이 더 신뢰받기 시작했습니다.");
-            }
-            else if (gamestats.Server <= 0)
-            {
-                ShowEnding("서버 상태/0칸/1779701069028", "서버 다운", "접속할 수 없는 게임은 운영할 수도 없습니다.");
-            }
-            else if (gamestats.Dev <= 0)
-            {
-                ShowEnding("개발팀/0단계(최하)/1779701096913", "개발팀 붕괴", "다음 패치는 더 이상 올라오지 않았습니다.");
-            }
-            else if (gamestats.Budget <= 0)
-            {
-                ShowEnding("운영 예산/0단계/1779701103445", "예산 고갈", "운영 계획은 남았지만, 집행할 돈이 없었습니다.");
+                ShowEnding(endingData.ImageId, endingData.Title, endingData.Body);
             }
         }
         else
         {
             ShowEnding_Good("imageid");
         }
+    }
+
+    public bool TryGetBadEndingData(GameStats gamestats, out EndingData endingData)
+    {
+        endingData = default;
+
+        if (gamestats == null)
+        {
+            return false;
+        }
+
+        if (gamestats.User <= 0)
+        {
+            endingData = new EndingData
+            {
+                StatType = EndingStatType.User,
+                ImageId = "user_ending_zero",
+                Title = "소통의 종료",
+                Body = "게임은 끝났지만, 작업을 함께하는 동료는 없었습니다."
+            };
+            return true;
+        }
+
+        if (gamestats.Public <= 0)
+        {
+            endingData = new EndingData
+            {
+                StatType = EndingStatType.Public,
+                ImageId = "public_ending_zero",
+                Title = "여론 붕괴",
+                Body = "공식 공지보다 너무 늦게 도착한 안내문이 여론을 흔들기 시작했습니다."
+            };
+            return true;
+        }
+
+        if (gamestats.Server <= 0)
+        {
+            endingData = new EndingData
+            {
+                StatType = EndingStatType.Server,
+                ImageId = "server_ending_zero",
+                Title = "서버 다운",
+                Body = "작동하는 서버가 없어서 게임은 더 이상 진행될 수 없습니다."
+            };
+            return true;
+        }
+
+        if (gamestats.Dev <= 0)
+        {
+            endingData = new EndingData
+            {
+                StatType = EndingStatType.Dev,
+                ImageId = "dev_ending_zero",
+                Title = "개발자 붕괴",
+                Body = "다음 수정은 없고, 화면은 더 이상 아름답지 않았습니다."
+            };
+            return true;
+        }
+
+        if (gamestats.Budget <= 0)
+        {
+            endingData = new EndingData
+            {
+                StatType = EndingStatType.Budget,
+                ImageId = "budget_ending_zero",
+                Title = "예산 고갈",
+                Body = "예산 계획은 끝났지만, 진행할 돈은 남아있지 않았습니다."
+            };
+            return true;
+        }
+
+        return false;
     }
 }

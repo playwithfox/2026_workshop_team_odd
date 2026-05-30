@@ -74,6 +74,24 @@ public class EventCardIntroUI : MonoBehaviour
         AppendOptionButtonReveals();
     }
 
+    public float GetIntroDuration()
+    {
+        int optionCount = optionButtons != null ? optionButtons.Length : 0;
+        float optionRevealTotal = 0f;
+
+        for (int i = 0; i < optionCount; i++)
+        {
+            optionRevealTotal += optionRevealDuration;
+
+            if (i > 0)
+            {
+                optionRevealTotal += optionInterval;
+            }
+        }
+
+        return startDelay + revealDuration + holdDelay + moveDuration + optionStartDelay + optionRevealTotal;
+    }
+
     private void SaveOriginalValues()
     {
         if (hasSavedOriginalValues)

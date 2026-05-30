@@ -10,6 +10,9 @@ public class TitleScreenUI : MonoBehaviour
     [SerializeField] private GameObject dayPanel;
     [SerializeField] private GameObject eventPanel;
     [SerializeField] private GameObject reactionPanel;
+    [SerializeField] private GameObject resultPanel;
+    [SerializeField] private GameObject badEndPanel;
+    [SerializeField] private GameObject goodEndPanel;
 
     [Header("Transitions")]
     [SerializeField] private DayToEventTransitionUI dayToEventTransitionUI;
@@ -17,6 +20,11 @@ public class TitleScreenUI : MonoBehaviour
     private void Start()
     {
         ValidateReferences();
+
+        if (gameManager != null)
+        {
+            gameManager.ResetGameState();
+        }
 
         if (titlePanel != null)
         {
@@ -34,6 +42,9 @@ public class TitleScreenUI : MonoBehaviour
         }
 
         HideReactionPanel();
+        HideResultPanel();
+        HideBadEndPanel();
+        HideGoodEndPanel();
 
         if (dayToEventTransitionUI != null)
         {
@@ -97,6 +108,9 @@ public class TitleScreenUI : MonoBehaviour
         }
 
         HideReactionPanel();
+        HideResultPanel();
+        HideBadEndPanel();
+        HideGoodEndPanel();
 
         if (dayToEventTransitionUI != null)
         {
@@ -107,6 +121,33 @@ public class TitleScreenUI : MonoBehaviour
     private void HideReactionPanel()
     {
         GameObject target = ResolveReactionPanel();
+        if (target != null)
+        {
+            target.SetActive(false);
+        }
+    }
+
+    private void HideResultPanel()
+    {
+        GameObject target = ResolveResultPanel();
+        if (target != null)
+        {
+            target.SetActive(false);
+        }
+    }
+
+    private void HideBadEndPanel()
+    {
+        GameObject target = ResolveBadEndPanel();
+        if (target != null)
+        {
+            target.SetActive(false);
+        }
+    }
+
+    private void HideGoodEndPanel()
+    {
+        GameObject target = ResolveGoodEndPanel();
         if (target != null)
         {
             target.SetActive(false);
@@ -127,6 +168,82 @@ public class TitleScreenUI : MonoBehaviour
         }
 
         return reactionPanel;
+    }
+
+    private GameObject ResolveResultPanel()
+    {
+        if (resultPanel != null)
+        {
+            return resultPanel;
+        }
+
+        GameObject found = GameObject.Find("ResultPanel");
+        if (found != null)
+        {
+            resultPanel = found;
+        }
+
+        return resultPanel;
+    }
+
+    private GameObject ResolveBadEndPanel()
+    {
+        if (badEndPanel != null)
+        {
+            return badEndPanel;
+        }
+
+        GameObject found = GameObject.Find("BadEndPanel");
+        if (found != null)
+        {
+            badEndPanel = found;
+        }
+
+        return badEndPanel;
+    }
+
+    private GameObject ResolveGoodEndPanel()
+    {
+        if (goodEndPanel != null)
+        {
+            return goodEndPanel;
+        }
+
+        GameObject found = GameObject.Find("GoodEndPanel");
+        if (found != null)
+        {
+            goodEndPanel = found;
+        }
+
+        return goodEndPanel;
+    }
+
+    public void ShowTitleScreen()
+    {
+        if (gameManager != null)
+        {
+            gameManager.ResetGameState();
+        }
+
+        if (titlePanel != null)
+        {
+            titlePanel.SetActive(true);
+        }
+
+        if (dayPanel != null)
+        {
+            dayPanel.SetActive(false);
+        }
+
+        if (eventPanel != null)
+        {
+            eventPanel.SetActive(false);
+        }
+
+        HideReactionPanel();
+        HideResultPanel();
+        HideBadEndPanel();
+        HideGoodEndPanel();
     }
 
     public void ExitGame()

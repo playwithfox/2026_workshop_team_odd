@@ -43,7 +43,7 @@ public static class EventRandomSelector
 
         random = random ?? new Random();
 
-        int eventCount = EventDaySchedule.GetEventCount(day);
+        int eventCount = EventDaySchedule.GetEventCountForDay(day);
         List<EventData> candidates = GetCandidates(allEvents, stats, usedEventIds, requireConditions);
 
         while (selectedEvents.Count < eventCount && candidates.Count > 0)

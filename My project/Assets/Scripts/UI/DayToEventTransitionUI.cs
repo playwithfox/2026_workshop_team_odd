@@ -12,6 +12,7 @@ using UnityEngine;
 
       [Header("Event Card Intro")]
       [SerializeField] private EventCardIntroUI eventCardIntroUI;
+      [SerializeField] private EventPanelUI eventPanelUI;
 
       [Header("Day")]
       [SerializeField] private RectTransform dayFrom;
@@ -156,6 +157,11 @@ using UnityEngine;
                   eventPanelGroup.interactable = true;
               }
 
+              if (eventPanelUI != null)
+              {
+                  eventPanelUI.RefreshCurrentDayEvent();
+              }
+
               if (eventCardIntroUI != null)
               {
                   eventCardIntroUI.PlayIntro();
@@ -173,5 +179,38 @@ using UnityEngine;
           serverIconStartPosition = serverIconFrom.position;
           devIconStartPosition = devIconFrom.position;
           budgetIconStartPosition = budgetIconFrom.position;
+      }
+
+      public void ResetToStartPositions()
+      {
+          if (dayFrom != null)
+          {
+              dayFrom.position = dayStartPosition;
+          }
+
+          if (userIconFrom != null)
+          {
+              userIconFrom.position = userIconStartPosition;
+          }
+
+          if (publicIconFrom != null)
+          {
+              publicIconFrom.position = publicIconStartPosition;
+          }
+
+          if (serverIconFrom != null)
+          {
+              serverIconFrom.position = serverIconStartPosition;
+          }
+
+          if (devIconFrom != null)
+          {
+              devIconFrom.position = devIconStartPosition;
+          }
+
+          if (budgetIconFrom != null)
+          {
+              budgetIconFrom.position = budgetIconStartPosition;
+          }
       }
   }

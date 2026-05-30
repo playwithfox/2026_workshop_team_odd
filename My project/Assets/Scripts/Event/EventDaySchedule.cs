@@ -1,3 +1,4 @@
+/*
 using System.Collections.Generic;
 
 public static class EventDaySchedule
@@ -18,3 +19,4 @@ public static class EventDaySchedule
         return EventCountByDay.TryGetValue(day, out int count) ? count : 0;
     }
 }
+*/

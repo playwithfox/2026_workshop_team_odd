@@ -7,9 +7,15 @@ using UnityEngine.UI;
 
 public class EventPanelUI : MonoBehaviour
 {
+    private enum EventPhase
+    {
+        Early,
+        Mid,
+        Late
+    }
+
     [Header("Day")]
     [SerializeField] private TMP_Text dayText;
-
     [SerializeField] private TMP_Text titleText;
     [SerializeField] private TMP_Text descriptionText;
     [SerializeField] private Image eventImage;
@@ -18,6 +24,7 @@ public class EventPanelUI : MonoBehaviour
     [SerializeField] private Button[] choiceButtons;
     [SerializeField] private TMP_Text[] choiceNameTexts;
     [SerializeField] private TMP_Text[] choiceDescriptionTexts;
+    [SerializeField] private EventCardIntroUI eventCardIntroUI;
     [SerializeField] private RectTransform reactionTargetButton;
     [SerializeField] private GameObject reactionPanel;
     [SerializeField] private ReactionPanelUI reactionPanelUI;
@@ -28,9 +35,10 @@ public class EventPanelUI : MonoBehaviour
 
     private EventListData eventListData;
     [SerializeField] private GameManager gameManager;
-    private GameStats Stats => gameManager.Stats;
+    private GameStats Stats => gameManager != null ? gameManager.Stats : null;
+
     private readonly List<string> usedEventIds = new List<string>();
-    private readonly List<CanvasGroup> choiceCanvasGroups = new List<CanvasGroup>();
+    private Vector3[] choiceButtonStartPositions;
     private Sequence choiceTransitionSequence;
     private Sequence selectionFadeSequence;
     private SpriteRenderer eventCardSpriteRenderer;
@@ -47,6 +55,20 @@ public class EventPanelUI : MonoBehaviour
     {
         HideReactionPanel();
         CacheEventCardVisuals();
+        ResolveEventCardIntroUI();
+    }
+
+    private void OnDisable()
+    {
+        if (selectionFadeSequence != null && selectionFadeSequence.IsActive())
+        {
+            selectionFadeSequence.Kill();
+        }
+
+        if (choiceTransitionSequence != null && choiceTransitionSequence.IsActive())
+        {
+            choiceTransitionSequence.Kill();
+        }
     }
 
     private void Start()
@@ -68,35 +90,64 @@ public class EventPanelUI : MonoBehaviour
 
         eventListData = JsonUtility.FromJson<EventListData>(json.text);
         ConfigureChoiceButtons();
-        ResetEventCardVisualState();
+        CacheChoiceButtonStartPositions();
+        BeginDayForCurrentDay();
 
         if (dayText != null)
         {
             dayText.text = $"D - {gameManager.CurrentDay}";
         }
 
-        List<EventData> dayOneEvents = EventRandomSelector.PickEventsForDay(
-            gameManager.CurrentDay,
-            eventListData.events,
-            Stats,
-            usedEventIds
-        );
-
-        if (dayOneEvents.Count > 0)
+        EventData firstEvent = PickEventForCurrentPhase();
+        if (firstEvent != null)
         {
-            ShowEvent(dayOneEvents[0]);
+            ShowEvent(firstEvent);
         }
         else
         {
-            titleText.text = "오늘 발생한 사건 없음";
-            descriptionText.text = "조건에 맞는 사건이 없습니다.";
-            eventImage.sprite = null;
-            HideChoiceButtons();
+            ShowEmptyEventState();
+        }
+    }
+
+    public void RefreshCurrentDayEvent()
+    {
+        if (gameManager == null || eventListData == null)
+        {
+            return;
+        }
+
+        if (EventDaySchedule.CurrentDay != gameManager.CurrentDay)
+        {
+            BeginDayForCurrentDay();
+        }
+
+        ResetChoiceButtonPositions();
+
+        if (dayText != null)
+        {
+            dayText.text = $"D - {gameManager.CurrentDay}";
+        }
+
+        EventData nextEvent = PickEventForCurrentPhase();
+        if (nextEvent != null)
+        {
+            ShowEvent(nextEvent);
+        }
+        else
+        {
+            ShowEmptyEventState();
+            EventDaySchedule.ForceFinishCurrentDay();
         }
     }
 
     public void ShowEvent(EventData eventData)
     {
+        if (eventData == null)
+        {
+            ShowEmptyEventState();
+            return;
+        }
+
         currentEvent = eventData;
 
         if (eventCardRootObject != null)
@@ -104,15 +155,28 @@ public class EventPanelUI : MonoBehaviour
             eventCardRootObject.SetActive(true);
         }
 
+        ResetChoiceButtonPositions();
         ResetEventCardVisualState();
 
         titleText.text = eventData.Title;
         descriptionText.text = eventData.Description;
 
-        Sprite sprite = Resources.Load<Sprite>("UI_Images/사건카드_목록/" + eventData.ImageID);
+        Sprite sprite = Resources.Load<Sprite>($"UI_Images/사건카드_목록/{eventData.ImageID}");
         eventImage.sprite = sprite;
+        if (sprite == null)
+        {
+            Debug.LogWarning($"EventPanelUI: Event image not found for ImageID '{eventData.ImageID}'.", this);
+        }
 
         SetupChoices(eventData);
+        PlayEventCardIntro();
+        StartCoroutine(EnableChoiceButtonsAfterIntro());
+    }
+
+    public void BeginDayForCurrentDay()
+    {
+        EventDaySchedule.BeginDay(gameManager.CurrentDay);
+        usedEventIds.Clear();
     }
 
     private void ConfigureChoiceButtons()
@@ -125,6 +189,96 @@ public class EventPanelUI : MonoBehaviour
         for (int i = 0; i < choiceButtons.Length; i++)
         {
             ConfigureChoiceButton(choiceButtons[i]);
+        }
+    }
+
+    private void CacheChoiceButtonStartPositions()
+    {
+        if (choiceButtons == null)
+        {
+            return;
+        }
+
+        choiceButtonStartPositions = new Vector3[choiceButtons.Length];
+        for (int i = 0; i < choiceButtons.Length; i++)
+        {
+            RectTransform rectTransform = choiceButtons[i] != null ? choiceButtons[i].GetComponent<RectTransform>() : null;
+            choiceButtonStartPositions[i] = rectTransform != null ? rectTransform.position : Vector3.zero;
+        }
+    }
+
+    public void ResetChoiceButtonPositions()
+    {
+        if (choiceButtons == null || choiceButtonStartPositions == null)
+        {
+            return;
+        }
+
+        for (int i = 0; i < choiceButtons.Length && i < choiceButtonStartPositions.Length; i++)
+        {
+            Button button = choiceButtons[i];
+            if (button == null)
+            {
+                continue;
+            }
+
+            RectTransform rectTransform = button.GetComponent<RectTransform>();
+            if (rectTransform == null)
+            {
+                continue;
+            }
+
+            rectTransform.position = choiceButtonStartPositions[i];
+        }
+    }
+
+    public void ResetChoiceButtonsForNextRound()
+    {
+        if (choiceButtons == null)
+        {
+            return;
+        }
+
+        if (selectionFadeSequence != null && selectionFadeSequence.IsActive())
+        {
+            selectionFadeSequence.Kill();
+        }
+
+        if (choiceTransitionSequence != null && choiceTransitionSequence.IsActive())
+        {
+            choiceTransitionSequence.Kill();
+        }
+
+        ResetChoiceButtonPositions();
+
+        for (int i = 0; i < choiceButtons.Length; i++)
+        {
+            Button button = choiceButtons[i];
+            if (button == null)
+            {
+                continue;
+            }
+
+            CanvasGroup canvasGroup = button.GetComponent<CanvasGroup>();
+            if (canvasGroup != null)
+            {
+                canvasGroup.alpha = 1f;
+                canvasGroup.interactable = true;
+                canvasGroup.blocksRaycasts = true;
+            }
+
+            button.onClick.RemoveAllListeners();
+            button.gameObject.SetActive(false);
+
+            if (i < choiceNameTexts.Length && choiceNameTexts[i] != null)
+            {
+                choiceNameTexts[i].text = string.Empty;
+            }
+
+            if (i < choiceDescriptionTexts.Length && choiceDescriptionTexts[i] != null)
+            {
+                choiceDescriptionTexts[i].text = string.Empty;
+            }
         }
     }
 
@@ -149,21 +303,20 @@ public class EventPanelUI : MonoBehaviour
         canvasGroup.alpha = 1f;
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
-
-        if (!choiceCanvasGroups.Contains(canvasGroup))
-        {
-            choiceCanvasGroups.Add(canvasGroup);
-        }
     }
 
     private void SetupChoices(EventData eventData)
     {
+        if (choiceButtons == null)
+        {
+            return;
+        }
+
         HideChoiceButtons();
 
         for (int i = 0; i < eventData.ChoiceIDs.Count && i < choiceButtons.Length; i++)
         {
             ChoiceData choice = FindChoiceById(eventData.ChoiceIDs[i]);
-
             if (choice == null)
             {
                 continue;
@@ -173,7 +326,15 @@ public class EventPanelUI : MonoBehaviour
             ConfigureChoiceButton(button);
 
             button.gameObject.SetActive(true);
-            button.interactable = true;
+            button.interactable = false;
+
+            CanvasGroup canvasGroup = GetOrAddCanvasGroup(button.gameObject);
+            if (canvasGroup != null)
+            {
+                canvasGroup.alpha = 1f;
+                canvasGroup.interactable = false;
+                canvasGroup.blocksRaycasts = false;
+            }
 
             if (i < choiceNameTexts.Length && choiceNameTexts[i] != null)
             {
@@ -198,15 +359,123 @@ public class EventPanelUI : MonoBehaviour
 
     private ChoiceData FindChoiceById(string choiceId)
     {
+        if (eventListData == null || eventListData.choices == null)
+        {
+            return null;
+        }
+
         foreach (ChoiceData choice in eventListData.choices)
         {
-            if (choice.ChoiceID == choiceId)
+            if (choice != null && choice.ChoiceID == choiceId)
             {
                 return choice;
             }
         }
 
         return null;
+    }
+
+    private EventData PickEventForCurrentPhase()
+    {
+        if (gameManager == null || eventListData == null || eventListData.events == null)
+        {
+            return null;
+        }
+
+        EventPhase currentPhase = GetCurrentPhase(gameManager.CurrentDay);
+        List<EventData> filteredEvents = new List<EventData>();
+
+        foreach (EventData eventData in eventListData.events)
+        {
+            if (eventData == null)
+            {
+                continue;
+            }
+
+            if (!MatchesCurrentPhase(eventData, currentPhase))
+            {
+                continue;
+            }
+
+            if (usedEventIds.Contains(eventData.EventID))
+            {
+                continue;
+            }
+
+            if (Stats != null && !eventData.IsAvailable(Stats))
+            {
+                continue;
+            }
+
+            filteredEvents.Add(eventData);
+        }
+
+        if (filteredEvents.Count == 0)
+        {
+            return null;
+        }
+
+        int selectedIndex = Random.Range(0, filteredEvents.Count);
+        EventData selectedEvent = filteredEvents[selectedIndex];
+        usedEventIds.Add(selectedEvent.EventID);
+        return selectedEvent;
+    }
+
+    private static EventPhase GetCurrentPhase(int day)
+    {
+        if (day <= 3)
+        {
+            return EventPhase.Early;
+        }
+
+        if (day <= 5)
+        {
+            return EventPhase.Mid;
+        }
+
+        return EventPhase.Late;
+    }
+
+    private static bool MatchesCurrentPhase(EventData eventData, EventPhase currentPhase)
+    {
+        string phaseValue = GetPhaseValue(eventData);
+        if (string.IsNullOrEmpty(phaseValue))
+        {
+            return true;
+        }
+
+        string normalized = phaseValue.Trim().ToUpperInvariant();
+        return currentPhase switch
+        {
+            EventPhase.Early => normalized.Contains("EARLY") || normalized.Contains("전반"),
+            EventPhase.Mid => normalized.Contains("MID") || normalized.Contains("중반"),
+            EventPhase.Late => normalized.Contains("LATE") || normalized.Contains("후반"),
+            _ => true
+        };
+    }
+
+    private static string GetPhaseValue(EventData eventData)
+    {
+        if (eventData == null)
+        {
+            return string.Empty;
+        }
+
+        System.Type eventType = eventData.GetType();
+
+        var phaseProperty = eventType.GetProperty("Phase");
+        if (phaseProperty != null && phaseProperty.PropertyType == typeof(string))
+        {
+            return phaseProperty.GetValue(eventData) as string ?? string.Empty;
+        }
+
+        var phaseField = eventType.GetField("Phase");
+        if (phaseField != null && phaseField.FieldType == typeof(string))
+        {
+            return phaseField.GetValue(eventData) as string ?? string.Empty;
+        }
+
+        return string.Empty;
     }
 
     private void OnChoiceSelected(ChoiceData choice, Button selectedButton)
@@ -234,7 +503,10 @@ public class EventPanelUI : MonoBehaviour
 
         foreach (Button button in choiceButtons)
         {
-            button.interactable = false;
+            if (button != null)
+            {
+                button.interactable = false;
+            }
         }
 
         selectionFadeSequence = DOTween.Sequence();
@@ -262,6 +534,12 @@ public class EventPanelUI : MonoBehaviour
         if (resolvedReactionPanel != null && !resolvedReactionPanel.activeSelf)
         {
             resolvedReactionPanel.SetActive(true);
+        }
+
+        ReactionPanelUI resolvedReactionPanelUI = ResolveReactionPanelUI();
+        if (resolvedReactionPanelUI != null)
+        {
+            resolvedReactionPanelUI.PrepareForReactionDisplay();
         }
 
         if (reactionTargetButton == null)
@@ -307,9 +585,10 @@ public class EventPanelUI : MonoBehaviour
                 hoverScale.SetInteractionEnabled(false);
             }
 
-            ReactionPanelUI resolvedReactionPanelUI = ResolveReactionPanelUI();
+            resolvedReactionPanelUI = ResolveReactionPanelUI();
             if (resolvedReactionPanelUI != null)
             {
+                resolvedReactionPanelUI.SetSelectedChoiceButton(selectedButton);
                 resolvedReactionPanelUI.ShowReaction(choice);
             }
 
@@ -534,28 +813,140 @@ public class EventPanelUI : MonoBehaviour
         return reactionPanelUI;
     }
 
-    private void HideChoiceButtons()
+    private EventCardIntroUI ResolveEventCardIntroUI()
     {
+        if (eventCardIntroUI != null)
+        {
+            return eventCardIntroUI;
+        }
+
+        if (eventCardRootObject != null)
+        {
+            eventCardIntroUI = eventCardRootObject.GetComponent<EventCardIntroUI>();
+            if (eventCardIntroUI == null)
+            {
+                eventCardIntroUI = eventCardRootObject.GetComponentInChildren<EventCardIntroUI>(true);
+            }
+        }
+
+        if (eventCardIntroUI == null)
+        {
+            eventCardIntroUI = GetComponentInChildren<EventCardIntroUI>(true);
+        }
+
+        return eventCardIntroUI;
+    }
+
+    private void PlayEventCardIntro()
+    {
+        EventCardIntroUI introUI = ResolveEventCardIntroUI();
+        if (introUI == null)
+        {
+            Debug.LogWarning("EventPanelUI: EventCardIntroUI is not assigned.", this);
+            return;
+        }
+
+        introUI.PrepareIntro();
+        introUI.PlayIntro();
+    }
+
+    private IEnumerator EnableChoiceButtonsAfterIntro()
+    {
+        EventCardIntroUI introUI = ResolveEventCardIntroUI();
+        if (introUI != null)
+        {
+            yield return new WaitForSeconds(introUI.GetIntroDuration());
+        }
+        else
+        {
+            yield return null;
+        }
+
+        if (choiceButtons == null)
+        {
+            yield break;
+        }
+
         for (int i = 0; i < choiceButtons.Length; i++)
         {
-            choiceButtons[i].onClick.RemoveAllListeners();
-            choiceButtons[i].gameObject.SetActive(false);
+            Button button = choiceButtons[i];
+            if (button == null || !button.gameObject.activeSelf)
+            {
+                continue;
+            }
+
+            button.interactable = true;
+
+            CanvasGroup canvasGroup = GetOrAddCanvasGroup(button.gameObject);
+            if (canvasGroup != null)
+            {
+                canvasGroup.interactable = true;
+                canvasGroup.blocksRaycasts = true;
+            }
+        }
+    }
+
+    private void HideChoiceButtons()
+    {
+        if (choiceButtons == null)
+        {
+            return;
+        }
+
+        for (int i = 0; i < choiceButtons.Length; i++)
+        {
+            Button button = choiceButtons[i];
+            if (button == null)
+            {
+                continue;
+            }
+
+            button.onClick.RemoveAllListeners();
+            button.gameObject.SetActive(false);
 
             if (i < choiceNameTexts.Length && choiceNameTexts[i] != null)
             {
-                choiceNameTexts[i].text = "";
+                choiceNameTexts[i].text = string.Empty;
             }
 
             if (i < choiceDescriptionTexts.Length && choiceDescriptionTexts[i] != null)
             {
-                choiceDescriptionTexts[i].text = "";
+                choiceDescriptionTexts[i].text = string.Empty;
             }
         }
     }
-    private IEnumerator RefreshAfterDelay()
-{
-    yield return new WaitForSeconds(2f);
 
-    StatIconDisplayUI.RefreshAll();
-}
+    private void ShowEmptyEventState()
+    {
+        currentEvent = null;
+        HideChoiceButtons();
+
+        if (eventCardRootObject != null)
+        {
+            eventCardRootObject.SetActive(true);
+        }
+
+        ResetEventCardVisualState();
+
+        if (titleText != null)
+        {
+            titleText.text = "No event available";
+        }
+
+        if (descriptionText != null)
+        {
+            descriptionText.text = string.Empty;
+        }
+
+        if (eventImage != null)
+        {
+            eventImage.sprite = null;
+        }
+    }
+
+    private IEnumerator RefreshAfterDelay()
+    {
+        yield return new WaitForSeconds(2f);
+        StatIconDisplayUI.RefreshAll();
+    }
 }
