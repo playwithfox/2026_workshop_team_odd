@@ -22,7 +22,6 @@ public class GameManager : MonoBehaviour // Unity 오브젝트에 붙일 수 있
         isGameOver = false; // 게임 오버 상태를 해제합니다.
         gamestats.InitializeRandom(); // 게임 지표를 랜덤한 초기값으로 설정합니다.
         Debug.Log("게임 시작"); // 콘솔에 게임 시작 로그를 출력합니다.
-        Debug.Log($"{currentDay}일차 시작"); // 콘솔에 현재 날짜 시작 로그를 출력합니다.
     } // StartGame 함수의 끝입니다.
 
     private void CheckGameOver() // 지표 중 하나라도 최소값에 도달했는지 확인하는 함수입니다.
@@ -69,9 +68,4 @@ public class GameManager : MonoBehaviour // Unity 오브젝트에 붙일 수 있
             callEnding.PrintEnding(gamestats); // CallEnding 컴포넌트의 ShowEnding_Good 함수를 호출해서 굿 엔딩을 보여줍니다.
         } // else문의 끝입니다.
     } // CheckEnding 함수의 끝입니다.
-    public void isthisreal()
-    {
-        gamestats.User = 0;
-        CheckGameOver();
-    }
 } // GameManager 클래스의 끝입니다.
