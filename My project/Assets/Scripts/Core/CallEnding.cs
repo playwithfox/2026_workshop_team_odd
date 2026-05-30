@@ -34,6 +34,7 @@ public class CallEnding : MonoBehaviour
         }
         else
         {
+            endingImage.sprite = null; // 이미지가 없을 때는 빈 이미지로 설정합니다.
             Debug.LogWarning($"엔딩 이미지를 찾을 수 없음: {imageID}");
         }
 
