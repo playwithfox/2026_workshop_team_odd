@@ -554,7 +554,7 @@ public class EventPanelUI : MonoBehaviour
     }
     private IEnumerator RefreshAfterDelay()
 {
-    yield return new WaitForSeconds(0.5f);
+    yield return new WaitForSeconds(2f);
 
     StatIconDisplayUI.RefreshAll();
 }

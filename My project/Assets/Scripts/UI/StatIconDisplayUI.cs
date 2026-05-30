@@ -7,21 +7,33 @@ public class StatTierSprites
 {
     [Header("0")]
     [SerializeField] private Sprite zeroSprite;
+    [SerializeField] private Sprite zeroSpriteUp;
+    [SerializeField] private Sprite zeroSpriteDown;
 
     [Header("1 - 20")]
     [SerializeField] private Sprite oneToTwentySprite;
+    [SerializeField] private Sprite oneToTwentySpriteUp;
+    [SerializeField] private Sprite oneToTwentySpriteDown;
 
     [Header("21 - 40")]
     [SerializeField] private Sprite twentyOneToFortySprite;
+    [SerializeField] private Sprite twentyOneToFortySpriteUp;
+    [SerializeField] private Sprite twentyOneToFortySpriteDown;
 
     [Header("41 - 60")]
     [SerializeField] private Sprite fortyOneToSixtySprite;
+    [SerializeField] private Sprite fortyOneToSixtySpriteUp;
+    [SerializeField] private Sprite fortyOneToSixtySpriteDown;
 
     [Header("61 - 80")]
     [SerializeField] private Sprite sixtyOneToEightySprite;
+    [SerializeField] private Sprite sixtyOneToEightySpriteUp;
+    [SerializeField] private Sprite sixtyOneToEightySpriteDown;
 
     [Header("81 - 100")]
     [SerializeField] private Sprite eightyOneToHundredSprite;
+    [SerializeField] private Sprite eightyOneToHundredSpriteUp;
+    [SerializeField] private Sprite eightyOneToHundredSpriteDown;
 
     public Sprite GetSprite(int value)
     {
@@ -52,33 +64,6 @@ public class StatTierSprites
 
         return eightyOneToHundredSprite;
     }
-}
-public class StatTierChangeSprites
-{
-    [Header("0")]
-    [SerializeField] private Sprite zeroSpriteUp;
-    [SerializeField] private Sprite zeroSpriteDown;
-
-    [Header("1 - 20")]
-    [SerializeField] private Sprite oneToTwentySpriteUp;
-    [SerializeField] private Sprite oneToTwentySpriteDown;
-
-    [Header("21 - 40")]
-    [SerializeField] private Sprite twentyOneToFortySpriteUp;
-    [SerializeField] private Sprite twentyOneToFortySpriteDown;
-
-    [Header("41 - 60")]
-    [SerializeField] private Sprite fortyOneToSixtySpriteUp;
-    [SerializeField] private Sprite fortyOneToSixtySpriteDown;
-
-    [Header("61 - 80")]
-    [SerializeField] private Sprite sixtyOneToEightySpriteUp;
-    [SerializeField] private Sprite sixtyOneToEightySpriteDown;
-
-    [Header("81 - 100")]
-    [SerializeField] private Sprite eightyOneToHundredSpriteUp;
-    [SerializeField] private Sprite eightyOneToHundredSpriteDown;
-
     public Sprite GetSpriteChanged(int value, int beforeValue)
     {
         if (value <= 0)
@@ -87,7 +72,14 @@ public class StatTierChangeSprites
             {
                 return zeroSpriteUp;
             }
+            else if (value < beforeValue)
+             {
             return zeroSpriteDown;
+             }
+            else if (value == beforeValue)
+             {
+                return zeroSprite;
+             }
         }
         if (value <= 20)
         {
@@ -95,7 +87,14 @@ public class StatTierChangeSprites
             {
                 return oneToTwentySpriteUp;
             }
-            return oneToTwentySpriteDown;
+            else if (value < beforeValue)
+            {
+                return oneToTwentySpriteDown;
+            }
+            else if (value == beforeValue)
+            {
+                return oneToTwentySprite;
+            }
         }
 
         if (value <= 40)
@@ -104,7 +103,14 @@ public class StatTierChangeSprites
             {
                 return twentyOneToFortySpriteUp;
             }
-            return twentyOneToFortySpriteDown;
+            else if (value < beforeValue)
+            {
+                return twentyOneToFortySpriteDown;
+            }
+            else if (value == beforeValue)
+            {
+                return twentyOneToFortySprite;
+            }
         }
 
         if (value <= 60)
@@ -113,7 +119,14 @@ public class StatTierChangeSprites
             {
                 return fortyOneToSixtySpriteUp;
             }
-            return fortyOneToSixtySpriteDown;
+            else if (value < beforeValue)
+            {
+                return fortyOneToSixtySpriteDown;
+            }
+                else if (value == beforeValue)
+                {
+                    return fortyOneToSixtySprite;
+                }
         }
 
         if (value <= 80)
@@ -122,17 +135,33 @@ public class StatTierChangeSprites
             {
                 return sixtyOneToEightySpriteUp;
             }
-            return sixtyOneToEightySpriteDown;
+            else if (value < beforeValue)
+            {
+                return sixtyOneToEightySpriteDown;
+            }
+            else if (value == beforeValue)
+            {
+                return sixtyOneToEightySprite;
+            }
         }
-
-        if (value > beforeValue)
+        if (value <= 100)
         {
-            return eightyOneToHundredSpriteUp;
+            if (value > beforeValue)
+            {
+                return eightyOneToHundredSpriteUp;
+            }
+            else if (value < beforeValue)
+            {
+                return eightyOneToHundredSpriteDown;
+            }
+            else if (value == beforeValue)
+            {
+                return eightyOneToHundredSprite;
+            }
         }
-        return eightyOneToHundredSpriteDown;
+        return null;
     }
 }
-
 public class StatIconDisplayUI : MonoBehaviour
 {
     private static readonly List<StatIconDisplayUI> activeDisplays = new List<StatIconDisplayUI>();
@@ -162,30 +191,6 @@ public class StatIconDisplayUI : MonoBehaviour
     [Header("Budget Sprites")]
     [SerializeField] private StatTierSprites budgetSprites;
     #endregion
-    
-    #region Stat Change Sprites
-    [Header("User Change Sprites")]
-    [Header("User Sprites Up/Down")]
-    [SerializeField] private StatTierSprites userSpritesUp;
-    [SerializeField] private StatTierSprites userSpritesDown;
-
-    [Header("Public Sprites Up/Down")]
-    [SerializeField] private StatTierSprites publicSpritesUp;
-    [SerializeField] private StatTierSprites publicSpritesDown;
-
-    [Header("Server Sprites Up/Down")]
-    [SerializeField] private StatTierSprites serverSpritesUp;
-    [SerializeField] private StatTierSprites serverSpritesDown;
-
-    [Header("Dev Sprites Up/Down")]
-    [SerializeField] private StatTierSprites devSpritesUp;
-    [SerializeField] private StatTierSprites devSpritesDown;
-
-    [Header("Budget Sprites Up/Down")]
-    [SerializeField] private StatTierSprites budgetSpritesUp;
-    [SerializeField] private StatTierSprites budgetSpritesDown;
-    #endregion
-
     private void OnEnable()
     {
         Register();
