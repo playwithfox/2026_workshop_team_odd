@@ -15,11 +15,11 @@ public class  GameStats
 
     public void InitializeRandom()
     {
-        User = GetRandomStatValue(85, 95);
-        Public = GetRandomStatValue(50, 60);
-        Server = GetRandomStatValue(75, 85);
-        Dev = GetRandomStatValue(70, 80);
-        Budget = GetRandomStatValue(80, 90);
+        User = GetRandomStatValue(1,100);
+        Public = GetRandomStatValue(1,100);
+        Server = GetRandomStatValue(1,100);
+        Dev = GetRandomStatValue(1,100);
+        Budget = GetRandomStatValue(1,100);
         Flags.Clear();
     }
 
