@@ -26,9 +26,9 @@ public class ImageGradient : BaseMeshEffect
         base.OnDisable();
     }
 
-    protected override void OnValidate()
+    protected void OnValidate()
     {
-        base.OnValidate();
+        //base.OnValidate();
         gradientEndPoint = Mathf.Clamp01(gradientEndPoint);
         leftAlpha = Mathf.Clamp01(leftAlpha);
         centerAlpha = Mathf.Clamp01(centerAlpha);
