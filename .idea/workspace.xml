@@ -10,258 +10,8 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efd8219d-0ea1-4db8-9982-fe36b25a684e" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="cec1bd4c-07bb-44bd-9081-38d5204bf6fd" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CODEX_HANDOFF.md" beforeDir="false" afterPath="$PROJECT_DIR$/CODEX_HANDOFF.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/.vsconfig" beforeDir="false" afterPath="$PROJECT_DIR$/My project/.vsconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/DefaultVolumeProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/DefaultVolumeProfile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/DefaultVolumeProfile.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/DefaultVolumeProfile.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/InputSystem_Actions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/InputSystem_Actions.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/InputSystem_Actions.inputactions.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/InputSystem_Actions.inputactions.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/EventList.json" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/EventList.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/EventList.json.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/EventList.json.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/budget_test.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/budget_test.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/community_test.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/community_test.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/developer_test.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/developer_test.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/server_test.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/server_test.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/user_test.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/user_test.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/0단계(최하).meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/0단계(최하).meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/0단계(최하)/1779701096913.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/0단계(최하)/1779701096913.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/0단계(최하)/1779701096958.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/0단계(최하)/1779701096958.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/0단계(최하)/1779701097015.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/0단계(최하)/1779701097015.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/1단계.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/1단계.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/1단계/1779701096684.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/1단계/1779701096684.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/1단계/1779701096733.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/1단계/1779701096733.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/1단계/1779701096835.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/1단계/1779701096835.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/2단계.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/2단계.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/2단계/1779701096490.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/2단계/1779701096490.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/2단계/1779701096538.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/2단계/1779701096538.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/2단계/1779701096610.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/2단계/1779701096610.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/3단계.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/3단계.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/3단계/1779701069588.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/3단계/1779701069588.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/3단계/1779701069638.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/3단계/1779701069638.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/3단계/1779701096414.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/3단계/1779701096414.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/4단계.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/4단계.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/4단계/1779701069384.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/4단계/1779701069384.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/4단계/1779701069450.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/4단계/1779701069450.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/4단계/1779701069527.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/4단계/1779701069527.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/5단계(최상).meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/5단계(최상).meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/5단계(최상)/1779701069198.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/5단계(최상)/1779701069198.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/5단계(최상)/1779701069248.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/5단계(최상)/1779701069248.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/5단계(최상)/1779701069308.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/개발팀/5단계(최상)/1779701069308.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/0칸.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/0칸.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/0칸/1779701069028.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/0칸/1779701069028.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/0칸/1779701069077.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/0칸/1779701069077.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/0칸/1779701069143.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/0칸/1779701069143.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/1칸.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/1칸.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/1칸/1779701068857.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/1칸/1779701068857.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/1칸/1779701068907.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/1칸/1779701068907.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/1칸/1779701068971.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/1칸/1779701068971.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/2칸.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/2칸.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/2칸/1779701068703.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/2칸/1779701068703.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/2칸/1779701068743.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/2칸/1779701068743.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/2칸/1779701068801.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/2칸/1779701068801.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/3칸.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/3칸.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/3칸/1779701068501.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/3칸/1779701068501.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/3칸/1779701068541.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/3칸/1779701068541.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/3칸/1779701068626.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/3칸/1779701068626.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/4칸.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/4칸.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/4칸/1779701068330.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/4칸/1779701068330.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/4칸/1779701068369.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/4칸/1779701068369.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/4칸/1779701068435.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/서버 상태/4칸/1779701068435.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/0단계.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/0단계.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/0단계/1779701103445.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/0단계/1779701103445.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/0단계/1779701103500.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/0단계/1779701103500.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/0단계/1779701103575.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/0단계/1779701103575.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/1단계.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/1단계.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/1단계/1779701103265.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/1단계/1779701103265.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/1단계/1779701103307.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/1단계/1779701103307.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/1단계/1779701103369.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/1단계/1779701103369.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/2단계.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/2단계.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/2단계/1779701103082.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/2단계/1779701103082.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/2단계/1779701103121.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/2단계/1779701103121.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/2단계/1779701103199.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/2단계/1779701103199.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/3단계.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/3단계.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/3단계/1779701102888.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/3단계/1779701102888.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/3단계/1779701102952.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/3단계/1779701102952.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/3단계/1779701103019.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/3단계/1779701103019.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/4단계.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/4단계.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/4단계/1779701102707.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/4단계/1779701102707.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/4단계/1779701102746.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/4단계/1779701102746.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/4단계/1779701102806.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/4단계/1779701102806.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/5단계(최상).meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/5단계(최상).meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/5단계(최상)/1779701102430.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/5단계(최상)/1779701102430.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/5단계(최상)/1779701102520.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/5단계(최상)/1779701102520.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/5단계(최상)/1779701102621.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/운영 예산/5단계(최상)/1779701102621.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/0명.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/0명.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/0명/1779701060510.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/0명/1779701060510.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/0명/1779701060554.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/0명/1779701060554.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/0명/1779701060633.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/0명/1779701060633.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/1명.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/1명.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/1명/1779701060370.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/1명/1779701060370.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/1명/1779701060408.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/1명/1779701060408.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/1명/1779701060452.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/1명/1779701060452.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/2명.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/2명.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/2명/1779701060197.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/2명/1779701060197.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/2명/1779701060236.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/2명/1779701060236.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/2명/1779701060320.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/2명/1779701060320.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/3명.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/3명.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/3명/1779701060027.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/3명/1779701060027.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/3명/1779701060090.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/3명/1779701060090.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/3명/1779701060146.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/3명/1779701060146.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/4명.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/4명.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/4명/1779701059850.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/4명/1779701059850.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/4명/1779701059907.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/4명/1779701059907.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/4명/1779701059959.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/4명/1779701059959.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/5명.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/5명.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/5명/1779701059668.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/5명/1779701059668.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/5명/1779701059769.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/5명/1779701059769.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/5명/asdf.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/유저 수/5명/asdf.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/0단계(최하).meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/0단계(최하).meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/0단계(최하)/1779701068123.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/0단계(최하)/1779701068123.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/0단계(최하)/1779701068169.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/0단계(최하)/1779701068169.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/0단계(최하)/1779701068248.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/0단계(최하)/1779701068248.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/1단계.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/1단계.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/1단계/1779701060681.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/1단계/1779701060681.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/1단계/1779701060757.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/1단계/1779701060757.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/1단계/1779701060828.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/1단계/1779701060828.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/2단계.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/2단계.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/2단계/1779701060894.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/2단계/1779701060894.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/2단계/1779701060944.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/2단계/1779701060944.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/2단계/1779701061058.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/2단계/1779701061058.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/3단계.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/3단계.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/3단계/1779701061120.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/3단계/1779701061120.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/3단계/1779701061211.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/3단계/1779701061211.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/3단계/1779701061291.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/3단계/1779701061291.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/4단계.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/4단계.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/4단계/1779701061355.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/4단계/1779701061355.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/4단계/1779701061392.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/4단계/1779701061392.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/4단계/1779701067785.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/4단계/1779701067785.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/5단계(최상).meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/5단계(최상).meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/5단계(최상)/1779701067944.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/5단계(최상)/1779701067944.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/5단계(최상)/1779701067997.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/5단계(최상)/1779701067997.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/5단계(최상)/1779701068065.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Icon_Images/커뮤니티 신뢰/5단계(최상)/1779701068065.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Stats.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Stats.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Stats/active_user.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Stats/active_user.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Stats/active_user.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Stats/active_user.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Stats/community_trust.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Stats/community_trust.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Stats/community_trust.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Stats/community_trust.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Stats/dev_stamina.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Stats/dev_stamina.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Stats/dev_stamina.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Stats/dev_stamina.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Stats/operation_budget.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Stats/operation_budget.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Stats/operation_budget.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Stats/operation_budget.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Stats/server_stability.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Stats/server_stability.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/Stats/server_stability.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/Stats/server_stability.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/날짜.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/날짜.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/사건카드.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/사건카드.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/선택지1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/선택지1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/선택지2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/선택지2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/선택지3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Resources/UI_Images/선택지3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scenes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scenes.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scenes/MainScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scenes/MainScene.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scenes/SampleScene.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/Core.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/Core.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/Core/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/Core/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/Core/GameManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/Core/GameManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/Core/GameStatsBasic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/Core/GameStatsBasic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/Core/GameStatsBasic.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/Core/GameStatsBasic.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/Data.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/Data.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/Data/StatData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/Data/StatData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/Data/StatData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/Data/StatData.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/Event.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/Event.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/Event/ChoiceData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/Event/ChoiceData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/Event/ChoiceData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/Event/ChoiceData.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/Event/ChoiceEffectApplier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/Event/ChoiceEffectApplier.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/Event/ChoiceEffectApplier.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/Event/ChoiceEffectApplier.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/Event/ChoiceResult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/Event/ChoiceResult.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/Event/ChoiceResult.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/Event/ChoiceResult.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/Event/EventData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/Event/EventData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/Event/EventData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/Event/EventData.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/Event/EventDaySchedule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/Event/EventDaySchedule.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/Event/EventDaySchedule.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/Event/EventDaySchedule.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/Event/EventGameSession.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/Event/EventGameSession.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/Event/EventGameSession.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/Event/EventGameSession.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/Event/EventListLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/Event/EventListLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/Event/EventListLoader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/Event/EventListLoader.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/Event/EventRandomSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/Event/EventRandomSelector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/Event/EventRandomSelector.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/Event/EventRandomSelector.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/Event/GameStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/Event/GameStats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Scripts/Event/GameStats.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Scripts/Event/GameStats.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Settings.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Settings.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Settings/Lit2DSceneTemplate.scenetemplate" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Settings/Lit2DSceneTemplate.scenetemplate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Settings/Lit2DSceneTemplate.scenetemplate.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Settings/Lit2DSceneTemplate.scenetemplate.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Settings/Renderer2D.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Settings/Renderer2D.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Settings/Renderer2D.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Settings/Renderer2D.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Settings/Scenes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Settings/Scenes.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Settings/Scenes/URP2DSceneTemplate.unity" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Settings/Scenes/URP2DSceneTemplate.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Settings/Scenes/URP2DSceneTemplate.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Settings/Scenes/URP2DSceneTemplate.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Settings/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Settings/UniversalRP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/Settings/UniversalRP.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/Settings/UniversalRP.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Assets/UniversalRenderPipelineGlobalSettings.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Assets/UniversalRenderPipelineGlobalSettings.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/My project/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/ProjectSettings/AudioManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/ProjectSettings/AudioManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/ProjectSettings/ClusterInputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/ProjectSettings/ClusterInputManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/ProjectSettings/EditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/ProjectSettings/InputManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/ProjectSettings/MemorySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/ProjectSettings/MemorySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/ProjectSettings/MultiplayerManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/ProjectSettings/MultiplayerManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/ProjectSettings/NetworkManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/ProjectSettings/NetworkManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/ProjectSettings/PresetManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/ProjectSettings/PresetManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/My project/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/ProjectSettings/TimeManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/ProjectSettings/TimeManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/ProjectSettings/VFXManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/ProjectSettings/VFXManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/ProjectSettings/VersionControlSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/ProjectSettings/VersionControlSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My project/ProjectSettings/XRSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/My project/ProjectSettings/XRSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ClusterInputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ClusterInputManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/MemorySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/MemorySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/MultiplayerManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/MultiplayerManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PresetManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PresetManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/VersionControlSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/VersionControlSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -269,7 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="37079" />
+    <option name="cachedIndexableFilesCount" value="38447" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -287,73 +37,28 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/My project/Assets/Scripts/Core/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/My project/Assets/Scripts/Core/GameStatsBasic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/My project/Assets/Scripts/Data/StatData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/My project/Assets/Scripts/Event/ChoiceData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/My project/Assets/Scripts/Event/ChoiceEffectApplier.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/My project/Assets/Scripts/Event/EventData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/My project/Assets/Scripts/Event/EventDaySchedule.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/My project/Assets/Scripts/Event/EventRandomSelector.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/My project/Assets/Scripts/Event/GameStats.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/My project/Assets/Scripts/Event/GameStats.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/My project/Assets/Scripts/UI/DayPanelUI.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/My project/Assets/Scripts/UI/DayToEventTransitionUI.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/My project/Assets/Scripts/UI/EventCardIntroUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/My project/Assets/Scripts/UI/EventChoiceButtonHoverScale.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/My project/Assets/Scripts/UI/EventList.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/My project/Assets/Scripts/UI/EventPanelUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/My project/Assets/Scripts/UI/TitleScreenUI.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
-  <component name="NextEditCompletionFeaturesState">
-    <decayedCancelled>
-      <entry key="MS100" value="1.4204482076268574" />
-      <entry key="MS500" value="1.8408976614821748" />
-      <entry key="S2" value="1.9910150455528546" />
-      <entry key="S5" value="2.239599754220341" />
-      <entry key="S10" value="2.4981068989209954" />
-      <entry key="S30" value="2.7943637889619852" />
-      <entry key="S60" value="2.891444288392425" />
-      <entry key="M2" value="2.9442053738622307" />
-      <entry key="M5" value="2.977413849612475" />
-      <entry key="M10" value="3.0156666462359016" />
-      <entry key="M15" value="3.1683934708246126" />
-      <entry key="M30" value="4.1722551295409005" />
-      <entry key="H1" value="6.525227683365768" />
-      <entry key="H2" value="12.177480284448588" />
-      <entry key="H4" value="21.96428065694996" />
-      <entry key="D1" value="42.32691578871902" />
-      <entry key="W1" value="47.97298054740287" />
-    </decayedCancelled>
-    <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="0.0" />
-      <entry key="S30" value="0.0" />
-      <entry key="S60" value="0.0" />
-      <entry key="M2" value="0.0" />
-      <entry key="M5" value="0.0" />
-      <entry key="M10" value="0.0" />
-      <entry key="M15" value="0.0" />
-      <entry key="M30" value="0.0" />
-      <entry key="H1" value="0.0" />
-      <entry key="H2" value="0.0" />
-      <entry key="H4" value="0.0" />
-      <entry key="D1" value="0.0" />
-      <entry key="W1" value="0.0" />
-    </decayedSelected>
-    <decayedShown>
-      <entry key="MS100" value="1.3664712677196567" />
-      <entry key="MS500" value="1.8258694988012871" />
-      <entry key="S2" value="1.9868708250553455" />
-      <entry key="S5" value="2.2376689554178455" />
-      <entry key="S10" value="2.4969985698379276" />
-      <entry key="S30" value="2.793939667182577" />
-      <entry key="S60" value="2.8912232640862205" />
-      <entry key="M2" value="2.9440924256649805" />
-      <entry key="M5" value="2.977368057639317" />
-      <entry key="M10" value="3.0156434673865573" />
-      <entry key="M15" value="3.168377309324995" />
-      <entry key="M30" value="4.172244635699101" />
-      <entry key="H1" value="6.525219589062311" />
-      <entry key="H2" value="12.177472979723095" />
-      <entry key="H4" value="21.964274256434496" />
-      <entry key="D1" value="42.32691377841744" />
-      <entry key="W1" value="47.97298022296042" />
-    </decayedShown>
-  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 2
@@ -376,14 +81,15 @@
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;hsmhsm-1&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;gorong__1&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -405,14 +111,27 @@
       <workItem from="1779484858343" duration="155000" />
       <workItem from="1779626537142" duration="1218000" />
       <workItem from="1779716167662" duration="1574000" />
-      <workItem from="1779882580285" duration="659000" />
+      <workItem from="1779806367894" duration="768000" />
+      <workItem from="1779880254061" duration="2528000" />
+      <workItem from="1779887905719" duration="1271000" />
+      <workItem from="1779889717375" duration="7882000" />
+      <workItem from="1779898837244" duration="13542000" />
+      <workItem from="1779992328814" duration="11896000" />
+      <workItem from="1780026657261" duration="481000" />
+      <workItem from="1780028057270" duration="349000" />
+      <workItem from="1780052929119" duration="985000" />
+      <workItem from="1780054513411" duration="86000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityProjectDiscoverer">
+    <option name="unityProjectFolder" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

@@ -156,13 +156,6 @@ using UnityEngine;
                   eventPanelGroup.interactable = true;
               }
 
-              if (dayPanel != null)
-              {
-                  dayPanel.SetActive(false);
-              }
-
-              ResetDayPanelObjects();
-
               if (eventCardIntroUI != null)
               {
                   eventCardIntroUI.PlayIntro();
@@ -180,20 +173,5 @@ using UnityEngine;
           serverIconStartPosition = serverIconFrom.position;
           devIconStartPosition = devIconFrom.position;
           budgetIconStartPosition = budgetIconFrom.position;
-      }
-
-      private void ResetDayPanelObjects()
-      {
-          dayFrom.position = dayStartPosition;
-          userIconFrom.position = userIconStartPosition;
-          publicIconFrom.position = publicIconStartPosition;
-          serverIconFrom.position = serverIconStartPosition;
-          devIconFrom.position = devIconStartPosition;
-          budgetIconFrom.position = budgetIconStartPosition;
-
-          if (dayPanelGroup != null)
-          {
-              dayPanelGroup.alpha = 1f;
-          }
       }
   }

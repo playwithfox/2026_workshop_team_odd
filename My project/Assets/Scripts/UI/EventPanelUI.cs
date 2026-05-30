@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
@@ -19,6 +20,7 @@ public class EventPanelUI : MonoBehaviour
     [SerializeField] private TMP_Text[] choiceDescriptionTexts;
     [SerializeField] private RectTransform reactionTargetButton;
     [SerializeField] private GameObject reactionPanel;
+    [SerializeField] private ReactionPanelUI reactionPanelUI;
     [SerializeField] private float selectionFadeDuration = 0.8f;
     [SerializeField] private float reactionDelay = 0.5f;
     [SerializeField] private float choiceMoveDuration = 0.8f;
@@ -33,6 +35,8 @@ public class EventPanelUI : MonoBehaviour
     private Sequence selectionFadeSequence;
     private SpriteRenderer eventCardSpriteRenderer;
     private Color eventCardSpriteColor = Color.white;
+    private GameObject eventCardRootObject;
+    private CanvasGroup eventCardCanvasGroup;
     private CanvasGroup titleCanvasGroup;
     private CanvasGroup descriptionCanvasGroup;
     private CanvasGroup eventImageCanvasGroup;
@@ -94,6 +98,11 @@ public class EventPanelUI : MonoBehaviour
     public void ShowEvent(EventData eventData)
     {
         currentEvent = eventData;
+
+        if (eventCardRootObject != null)
+        {
+            eventCardRootObject.SetActive(true);
+        }
 
         ResetEventCardVisualState();
 
@@ -292,7 +301,21 @@ public class EventPanelUI : MonoBehaviour
                 selectedRect.localScale = targetScale;
             }
 
+            EventChoiceButtonHoverScale hoverScale = selectedButton.GetComponent<EventChoiceButtonHoverScale>();
+            if (hoverScale != null)
+            {
+                hoverScale.SetInteractionEnabled(false);
+            }
+
+            ReactionPanelUI resolvedReactionPanelUI = ResolveReactionPanelUI();
+            if (resolvedReactionPanelUI != null)
+            {
+                resolvedReactionPanelUI.ShowReaction(choice);
+            }
+
             ApplyChoiceResult(choice);
+            StatIconDisplayUI.RefreshAllChanged();
+            StartCoroutine(RefreshAfterDelay());
         });
     }
 
@@ -330,6 +353,8 @@ public class EventPanelUI : MonoBehaviour
 
         if (eventCardRoot != null)
         {
+            eventCardRootObject = eventCardRoot.gameObject;
+            eventCardCanvasGroup = GetOrAddCanvasGroup(eventCardRootObject);
             eventCardSpriteRenderer = eventCardRoot.GetComponent<SpriteRenderer>();
             if (eventCardSpriteRenderer != null)
             {
@@ -340,6 +365,7 @@ public class EventPanelUI : MonoBehaviour
 
     private void ResetEventCardVisualState()
     {
+        SetCanvasGroupAlpha(eventCardCanvasGroup, 1f);
         SetCanvasGroupAlpha(titleCanvasGroup, 1f);
         SetCanvasGroupAlpha(descriptionCanvasGroup, 1f);
         SetCanvasGroupAlpha(eventImageCanvasGroup, 1f);
@@ -348,6 +374,7 @@ public class EventPanelUI : MonoBehaviour
 
     private void FadeEventCard(Sequence sequence)
     {
+        AppendCanvasGroupFade(sequence, eventCardCanvasGroup, 0f, selectionFadeDuration);
         AppendCanvasGroupFade(sequence, titleCanvasGroup, 0f, selectionFadeDuration);
         AppendCanvasGroupFade(sequence, descriptionCanvasGroup, 0f, selectionFadeDuration);
         AppendCanvasGroupFade(sequence, eventImageCanvasGroup, 0f, selectionFadeDuration);
@@ -376,10 +403,16 @@ public class EventPanelUI : MonoBehaviour
 
     private void HideFadedEventCard()
     {
+        SetCanvasGroupAlpha(eventCardCanvasGroup, 0f);
         SetCanvasGroupAlpha(titleCanvasGroup, 0f);
         SetCanvasGroupAlpha(descriptionCanvasGroup, 0f);
         SetCanvasGroupAlpha(eventImageCanvasGroup, 0f);
         SetSpriteRendererAlpha(eventCardSpriteRenderer, 0f);
+
+        if (eventCardRootObject != null)
+        {
+            eventCardRootObject.SetActive(false);
+        }
     }
 
     private void HideUnselectedChoiceButtons(Button selectedButton)
@@ -479,6 +512,28 @@ public class EventPanelUI : MonoBehaviour
         return reactionPanel;
     }
 
+    private ReactionPanelUI ResolveReactionPanelUI()
+    {
+        if (reactionPanelUI != null)
+        {
+            return reactionPanelUI;
+        }
+
+        GameObject resolvedReactionPanel = ResolveReactionPanel();
+        if (resolvedReactionPanel == null)
+        {
+            return null;
+        }
+
+        reactionPanelUI = resolvedReactionPanel.GetComponent<ReactionPanelUI>();
+        if (reactionPanelUI == null)
+        {
+            reactionPanelUI = resolvedReactionPanel.GetComponentInChildren<ReactionPanelUI>(true);
+        }
+
+        return reactionPanelUI;
+    }
+
     private void HideChoiceButtons()
     {
         for (int i = 0; i < choiceButtons.Length; i++)
@@ -497,4 +552,10 @@ public class EventPanelUI : MonoBehaviour
             }
         }
     }
+    private IEnumerator RefreshAfterDelay()
+{
+    yield return new WaitForSeconds(2f);
+
+    StatIconDisplayUI.RefreshAll();
+}
 }

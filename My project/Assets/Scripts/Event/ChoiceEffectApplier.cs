@@ -9,6 +9,11 @@ public static class ChoiceEffectApplier
             return null;
         }
 
+        stats.BeforeUser = stats.User;
+        stats.BeforePublic = stats.Public;
+        stats.BeforeServer = stats.Server;
+        stats.BeforeDev = stats.Dev;
+        stats.BeforeBudget = stats.Budget;
         stats.User = ClampStat(stats.User + choice.StatChange_User);
         stats.Public = ClampStat(stats.Public + choice.StatChange_Public);
         stats.Server = ClampStat(stats.Server + choice.StatChange_Server);

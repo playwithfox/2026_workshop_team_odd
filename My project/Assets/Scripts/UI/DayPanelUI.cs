@@ -1,28 +1,14 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class DayPanelUI : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private GameManager gameManager;
+    [SerializeField] private StatIconDisplayUI statIconDisplayUI;
 
     [Header("Day")]
     [SerializeField] private TMP_Text dayText;
-
-    [Header("Stat Icons")]
-    [SerializeField] private Image userIcon;
-    [SerializeField] private Image publicIcon;
-    [SerializeField] private Image serverIcon;
-    [SerializeField] private Image devIcon;
-    [SerializeField] private Image budgetIcon;
-
-    [Header("Icon Sprites")]
-    [SerializeField] private Sprite userSprite;
-    [SerializeField] private Sprite publicSprite;
-    [SerializeField] private Sprite serverSprite;
-    [SerializeField] private Sprite devSprite;
-    [SerializeField] private Sprite budgetSprite;
 
     private void OnEnable()
     {
@@ -37,13 +23,15 @@ public class DayPanelUI : MonoBehaviour
         }
 
         dayText.text = $"D - {gameManager.CurrentDay}";
+        if (statIconDisplayUI == null)
+        {
+            statIconDisplayUI = GetComponent<StatIconDisplayUI>();
+        }
 
-        userIcon.sprite = userSprite;
-        publicIcon.sprite = publicSprite;
-        serverIcon.sprite = serverSprite;
-        devIcon.sprite = devSprite;
-        budgetIcon.sprite = budgetSprite;
-
+        if (statIconDisplayUI != null)
+        {
+            statIconDisplayUI.Refresh();
+        }
     }
 
     private bool ValidateReferences()
@@ -62,33 +50,14 @@ public class DayPanelUI : MonoBehaviour
             isValid = false;
         }
 
-        if (userIcon == null)
+        if (statIconDisplayUI == null)
         {
-            Debug.LogError("DayPanelUI: User Icon is not assigned.", this);
-            isValid = false;
+            statIconDisplayUI = GetComponent<StatIconDisplayUI>();
         }
 
-        if (publicIcon == null)
+        if (statIconDisplayUI == null)
         {
-            Debug.LogError("DayPanelUI: Public Icon is not assigned.", this);
-            isValid = false;
-        }
-
-        if (serverIcon == null)
-        {
-            Debug.LogError("DayPanelUI: Server Icon is not assigned.", this);
-            isValid = false;
-        }
-
-        if (devIcon == null)
-        {
-            Debug.LogError("DayPanelUI: Dev Icon is not assigned.", this);
-            isValid = false;
-        }
-
-        if (budgetIcon == null)
-        {
-            Debug.LogError("DayPanelUI: Budget Icon is not assigned.", this);
+            Debug.LogError("DayPanelUI: StatIconDisplayUI is not assigned.", this);
             isValid = false;
         }
 
